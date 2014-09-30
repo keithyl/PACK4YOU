@@ -1,4 +1,5 @@
 PACK4YOU
 ========
 
-IDP~
+This will be the repo for our IDP project:)
+Trying out Github for the first time!
