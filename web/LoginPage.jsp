@@ -12,21 +12,20 @@
     
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <title>Login Page</title>
-    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-  
-  <br/>
-  <br/>
-   
- <br/>
- <br/>
- <header align="center"><strong align="center" style="font-size: 300%">&nbsp;&nbsp;&nbsp;&nbsp;PACK4YOU</strong></header>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>PACK4YOU</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
 
-     <br/><br/><br/><br/>
-
-  <body>
-       <script>
+</head>
+<body>
+     <script>
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '901639033197036',
@@ -43,36 +42,32 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
-	<div class="login">
-		<div class="login-screen">
-			<div class="app-title">
-				<h1>Login</h1>
+ 
+
+<div class="container">
+	<section id="content">
+		<form action="">
+			<h1>PACK4YOU</h1>
+			<div>
+				<input type="text" placeholder="Username" required="" id="username" />
+			</div>
+			<div>
+				<input type="password" placeholder="Password" required="" id="password" />
+			</div>
+			<div>
+				<input type="submit" value="Log in" />
+                                
+				<a href="#">Lost your password?</a>
+				<a href="#">Register</a>
 			</div>
                         
-			<div class="login-form">
-                             <form name="login-form" action="LoginServlet" method="post">
-				<div class="control-group">
-				<input type="text" class="login-field" value="" placeholder="username" id="login-name">
-				<label class="login-field-icon fui-user" for="login-name"></label>
-				</div>
-
-				<div class="control-group">
-				<input type="password" class="login-field" value="" placeholder="password" id="login-pass">
-				<label class="login-field-icon fui-lock" for="login-pass"></label>
-				</div>
-                                
-				<a class="btn btn-primary btn-large btn-block" type="submit">login</a>
-				<a class="login-link" href="#">Lost your password?</a>
-                                <br>
-                                <div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
-                             </form>
-                        </div>
-                             
-		</div>
-	</div>
+                        
+		</form><!-- form -->
+		<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
+	</section><!-- content -->
+</div><!-- container -->
 </body>
-
-</body>
-   
-   
+<div id="bottom-left">
+<a href="https://www.flickr.com/photos/ambsab/11197203555/in/pool-2179950@N25/" style="display:inline; float:bottom;">Cristian Ruberti<a/>
+</div>
 </html>
