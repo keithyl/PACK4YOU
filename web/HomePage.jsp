@@ -44,9 +44,7 @@
       <li><a href="#">Inspiration</a></li>
     
     </ul>
-    <div class="navbar-form navbar-left">
-      <input type="text" class="form-control col-lg-8" placeholder="Search">
-    </div>
+    
     <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Username: Cheuky</a></li>
         <li><a href="#">Settings</a></li>
