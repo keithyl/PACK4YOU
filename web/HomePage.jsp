@@ -55,16 +55,21 @@
   </div>
 </div>
     <div class="form">
+        <div><font color="white">Generate your packing list</font></div>
     <form action="GeneratedPackingList.jsp">
     <label id="first">
-    <input type="text" name="Destination" value="Destination"><br>
+    <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
+    <input type="text" name="Destination" placeholder="Destination"><br>
     </label>
-    <label id="second">
-   <input type="text"  name="BaggageAllowance" value="BaggageAllowance"><br>  
-    </label>
-        <input id="datepicker" type="text" />
-        <input id="datepicker2" type="text" />
-        <input type="submit" value="PACK4ME">
+        <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
+        <input id="datepicker" type="text" placeholder="MM/DD/YY"/>
+        <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
+        <input id="datepicker2" type="text" placeholder="MM/DD/YY"/>
+        <label id="second">
+        <span class="glyphicon glyphicon-briefcase"  style="font-size: 20px"></span>
+        <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)"><br>  
+        </label>
+        <input type="submit" value="PACK4ME" position="bottom">
     </form>
     </div>
           

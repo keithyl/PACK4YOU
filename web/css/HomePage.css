@@ -26,10 +26,14 @@ form {
     border-radius: 4px;
     margin: 0 auto;
     opacity: 0.8;
-    position: relative; top: 100px;
+    position: relative; top: 200px;
   
 }
 
+text{
+   
+
+}
 first{
     display: block;
     background-color: rgb(200, 200, 200);
