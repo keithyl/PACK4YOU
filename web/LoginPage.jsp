@@ -67,7 +67,7 @@
 	</section><!-- content -->
 </div><!-- container -->
 </body>
-<div id="bottom-left">
-<a href="https://www.flickr.com/photos/ambsab/11197203555/in/pool-2179950@N25/" style="display:inline; float:bottom;">Cristian Ruberti<a/>
+<div id="credit">
+<a href="https://www.flickr.com/photos/ambsab/11197203555/in/pool-2179950@N25/">Cristian Ruberti<a/>
 </div>
 </html>

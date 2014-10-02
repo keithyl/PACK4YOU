@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 2, 2014, 2:58:03 PM
+    Author     : keithleng
+*/
+body {
+    background-image: url(../images/NZ.JPG);
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+
+form {
+    background: url(../images/meta_bg_wht.png) 0 0 repeat;
+    background-image: url(../images/meta_bg_wht.png);
+    width: 895px;
+    padding: 18px 18px 12px 16px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin: 0 auto;
+    opacity: 0.8;
+    position: relative; top: 100px;
+  
+}
+
+first{
+    display: block;
+    background-color: rgb(200, 200, 200);
+    width: 200px;
+    float: left;
+    padding: 10px;
+}
+
+second{
+    display: block;
+    background-color: rgb(200, 200, 200);
+    width: 200px;
+    float: right;
+    padding: 10px;
+}
+
