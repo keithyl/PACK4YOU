@@ -19,7 +19,7 @@ public class LoginController {
         boolean isValid = false;
 
         
-        //check whether user is admin/student
+        //check whether user is admin
         if(userid.equals("admin") && password.equals("00000")){
             isValid = true;
         }

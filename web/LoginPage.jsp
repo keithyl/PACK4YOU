@@ -4,7 +4,7 @@
     Author     : Keith Leng
 --%>
 <%
-    String errorMsg = (String) session.getAttribute("errorMsg");
+    String errorMsg = (String) request.getAttribute("errorMsg");
     if(errorMsg == null){
         errorMsg= "";
     }
@@ -46,13 +46,15 @@
 
 <div class="container">
 	<section id="content">
-		<form action="">
+		
 			<h1>PACK4YOU</h1>
+                         <form name="login-form" action="LoginServlet" method="post">
+                             <font color="red"><%=errorMsg%></font>
 			<div>
-				<input type="text" placeholder="Username" required="" id="username" />
+				<input name="username" type="text" placeholder="Username" required="" id="username" />
 			</div>
 			<div>
-				<input type="password" placeholder="Password" required="" id="password" />
+				<input name ="password" type="password" placeholder="Password" required="" id="password" />
 			</div>
 			<div>
 				<input type="submit" value="Log in" />
@@ -60,14 +62,14 @@
 				<a href="#">Lost your password?</a>
 				<a href="#">Register</a>
 			</div>
-                        
+                        </form>
                         
 		</form><!-- form -->
 		<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
 	</section><!-- content -->
 </div><!-- container -->
 </body>
-<div id="credit">
+<label id="credit">
 <a href="https://www.flickr.com/photos/ambsab/11197203555/in/pool-2179950@N25/">Cristian Ruberti<a/>
-</div>
+</label>
 </html>

@@ -30,10 +30,6 @@ form {
   
 }
 
-text{
-   
-
-}
 first{
     display: block;
     background-color: rgb(200, 200, 200);
@@ -48,5 +44,21 @@ second{
     width: 200px;
     float: right;
     padding: 10px;
+}
+
+submit{
+    position: relative;
+    margin: 0 auto;
+    right: 200px;
+}
+
+text{
+   left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
 }
 

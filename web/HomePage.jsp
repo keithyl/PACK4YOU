@@ -15,18 +15,18 @@
         <link href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" media="screen"/>
         <script src="js/jquery-ui.min.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script>
-  $(function() {
-    $( "#datepicker" ).datepicker();
-  });
-  
-  $(function() {
-    $( "#datepicker2" ).datepicker();
-  });
-  </script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        
+        <script>
+          $(function() {
+            $( "#datepicker" ).datepicker();
+          });
+
+          $(function() {
+            $( "#datepicker2" ).datepicker();
+          });
+        </script>
     </head>
     <body>
         <div class="navbar navbar-inverse">
@@ -54,8 +54,9 @@
     </ul>
   </div>
 </div>
+        <label id="text"><font color="white">Generate your packing list</font></label>
     <div class="form">
-        <div><font color="white">Generate your packing list</font></div>
+        
     <form action="GeneratedPackingList.jsp">
     <label id="first">
     <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
@@ -67,9 +68,11 @@
         <input id="datepicker2" type="text" placeholder="MM/DD/YY"/>
         <label id="second">
         <span class="glyphicon glyphicon-briefcase"  style="font-size: 20px"></span>
-        <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)"><br>  
+        <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)">  
         </label>
-        <input type="submit" value="PACK4ME" position="bottom">
+        <label id="submit">
+        <input type="submit" value="PACK4ME">
+        </label>
     </form>
     </div>
           

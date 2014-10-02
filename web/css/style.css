@@ -260,5 +260,13 @@ form:after {
 }
 
 credit{
-    
+   height: 80px;
+width: 240px;
+position: absolute;
+left: 0;
+bottom: 0;
+font-size: 0.9em;
+font-weight: 500;
+opacity: 1;
+  
 }

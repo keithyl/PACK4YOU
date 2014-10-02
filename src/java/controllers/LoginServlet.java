@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
         
         try {
             //retrieve input information 
-            String userID = request.getParameter("userid");
+            String userID = request.getParameter("username");
             String password = request.getParameter("password");
             
             //create new LoginController
@@ -42,7 +42,7 @@ public class LoginServlet extends HttpServlet {
             boolean isValidUser = loginctrl.authenticate(userID, password);
             HttpSession session = request.getSession();
             if(!isValidUser){
-                session.setAttribute("errorMsg","Invalid userid/password");
+                session.setAttribute("errorMsg","Invalid username/password");
                 response.sendRedirect("LoginPage.jsp");
             }else{
                 if(userID.equals("admin")){
