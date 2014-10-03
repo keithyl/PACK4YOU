@@ -14,6 +14,11 @@
 
     <body>
         <%@include file="frames/Header.jsp"%>
+        
+        <label id="page_title">
+            <h5><font color="white">Generate your packing list</font></h5>
+        </label>
+        
         <script>
             $(function () {
                 $("#datepicker").datepicker();
@@ -24,9 +29,7 @@
             });
         </script>
 
-        <label id="text">
-            <h5><font color="white">Generate your packing list</font></h5>
-        </label>
+
 
         <div class="form">
             <form action="GeneratedPackingList.jsp">
