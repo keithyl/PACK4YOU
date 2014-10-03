@@ -52,7 +52,7 @@
     </ul>
   </div>
 </div>
-        <label id="text"><font color="white">Generate your packing list</font></label>
+        <label id="text"><font color="black">Generate your packing list</font></label>
     <div class="form">
         
     <form action="GeneratedPackingList.jsp">
