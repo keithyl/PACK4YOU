@@ -9,70 +9,44 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home Page</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
-        <link href="css/HomePage.css" rel="stylesheet" type="text/css"  media="screen" />
-        <link href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" media="screen"/>
-        <script src="js/jquery-ui.min.js"></script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
-        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-        
-        <script>
-          $(function() {
-            $( "#datepicker" ).datepicker();
-          });
-
-          $(function() {
-            $( "#datepicker2" ).datepicker();
-          });
-        </script>
+        <title>PACK4YOU - Home</title>
     </head>
+
     <body>
-        <div class="navbar navbar-inverse">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-        <a class="navbar-brand" href="#">PACK4YOU</a>
-  </div>
-  <div class="navbar-collapse collapse navbar-inverse-collapse">
-    <ul class="nav navbar-nav">
-      <li><a href="HomePage.jsp">My Packing List</a></li>
-      <li><a href="#">Inspiration</a></li>
-    
-    </ul>
-    
-    <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Username: Cheuky</a></li>
-        <li><a href="#">Settings</a></li>
-        <li><a href="#">Logout</a></li>
-    </ul>
-  </div>
-</div>
-        <label id="text"><font color="black">Generate your packing list</font></label>
-    <div class="form">
-        
-    <form action="GeneratedPackingList.jsp">
-    <label id="first">
-    <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
-    <input type="text" name="Destination" placeholder="Destination"><br>
-    </label>
-        <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
-        <input id="datepicker" type="text" placeholder="MM/DD/YY"/>
-        <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
-        <input id="datepicker2" type="text" placeholder="MM/DD/YY"/>
-        <label id="second">
-        <span class="glyphicon glyphicon-briefcase"  style="font-size: 20px"></span>
-        <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)">  
+        <%@include file="frames/Header.jsp"%>
+        <script>
+            $(function () {
+                $("#datepicker").datepicker();
+            });
+
+            $(function () {
+                $("#datepicker2").datepicker();
+            });
+        </script>
+
+        <label id="text">
+            <h5><font color="white">Generate your packing list</font></h5>
         </label>
-        <label id="submit">
-        <input type="submit" value="PACK4ME">
-        </label>
-    </form>
-    </div>
-          
+
+        <div class="form">
+            <form action="GeneratedPackingList.jsp">
+                <label id="first">
+                    <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
+                    <input type="text" name="Destination" placeholder="Destination"><br>
+                </label>
+                <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
+                <input id="datepicker" type="text" placeholder="MM/DD/YY"/>
+                <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
+                <input id="datepicker2" type="text" placeholder="MM/DD/YY"/>
+                <label id="second">
+                    <span class="glyphicon glyphicon-briefcase"  style="font-size: 20px"></span>
+                    <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)">  
+                </label>
+                <label id="submit">
+                    <input type="submit" value="PACK4ME">
+                </label>
+            </form>
+        </div>
     </body>
+    
 </html>
