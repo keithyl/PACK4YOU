@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/idp/PACK4YOU/web/includes/Header.jsp</file>
+            <file>file:/C:/idp/PACK4YOU/web/ViewInspirations.jsp</file>
             <file>file:/C:/idp/PACK4YOU/web/WEB-INF/web.xml</file>
-            <file>file:/C:/idp/PACK4YOU/web/HomePage.jsp</file>
-            <file>file:/C:/idp/PACK4YOU/web/META-INF/context.xml</file>
+            <file>file:/C:/idp/PACK4YOU/web/css/HomePage.css</file>
+            <file>file:/C:/idp/PACK4YOU/web/Inspiration.jsp</file>
+            <file>file:/C:/idp/PACK4YOU/web/Home.jsp</file>
+            <file>file:/C:/idp/PACK4YOU/web/InspirationForm.jsp</file>
         </group>
     </open-files>
 </project-private>
