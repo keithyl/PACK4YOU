@@ -18,6 +18,6 @@
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
-        <welcome-file>LoginPage.jsp</welcome-file>
+        <welcome-file>HomePage.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
