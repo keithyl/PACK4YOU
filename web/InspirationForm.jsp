@@ -1,4 +1,5 @@
 <div class="form_inspiration">
+     <%@include file="includes/Inspiration.jsp"%>
     <form action="ViewInspirations.jsp">
         <label id="first">
             <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>

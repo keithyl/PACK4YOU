@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <%@include file="includes/Header.jsp"%>
+        <%@include file="includes/MyPackingList.jsp"%>
         
         <label id="page_title">
             <h5><font color="white">Generate your packing list</font></h5>

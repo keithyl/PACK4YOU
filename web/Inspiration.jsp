@@ -12,7 +12,7 @@
         <title>PACK4YOU - Inspiration</title>
     </head>
     <body>
-        <%@include file="includes/Header.jsp"%>
+        <%@include file="includes/Inspiration.jsp"%>
 
         <label id="page_title">
             <h5><font color="white">Inspiration</font></h5>
