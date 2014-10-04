@@ -19,7 +19,7 @@
             <h5><font color="white">View Inspirations</font></h5>
         </label>
 
-        <%@include file="InspirationForm.jsp"%>
+        
 
         <font color="white">
         List of inspirations
