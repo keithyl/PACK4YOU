@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="js/mindmup-editabletable.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <title>PACK4YOU - Home</title>
+        <title>PACK4YOU - Generated Packing List</title>
     </head>
 
     <body>

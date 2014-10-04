@@ -18,18 +18,7 @@
             <h5><font color="white">Inspiration</font></h5>
         </label>
 
-        <%//@include file="includes/InspirationForm.jsp"%>
-        <div class="form_inspiration">
-            <form action="ViewInspirations.jsp">
-                <label id="first">
-                    <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
-                    <input type="text" name="destination" placeholder="Destination"><br>
-                </label>
-                <label id="submit">
-                    <input type="submit" value="Inspire me!">
-                </label>
-            </form>
-        </div>
-        
+        <%@include file="InspirationForm.jsp"%>
+
     </body>
 </html>

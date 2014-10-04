@@ -9,12 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>PACK4YOU - Home</title>
+        <title>PACK4YOU - Home</title>      
     </head>
-
+    
     <body>
         <%@include file="includes/Home.jsp"%>
-        
         <label id="page_title">
             <h5><font color="white">Generate your packing list</font></h5>
         </label>
