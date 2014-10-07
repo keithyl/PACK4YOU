@@ -17,11 +17,11 @@
     <body>
 
         <%@include file="includes/MyPackingList.jsp"%>
-        
+
         <br/>
         <br/>
         <br/>
-        
+
         <label id="page_title">
             <h5><font color="white">Generate your packing list</font></h5>
         </label>
@@ -62,7 +62,35 @@
                 </tfoot>
             </table>
         </div>
-
+                
+        <br/>
+        
+        <font color="white"><h6>Reviews:</h6></font>
+        <div class="">
+            <table id="" class="">
+                <tr bgcolor="white">
+                    <td>User: Matty</td>
+                    <td>A very long comments here...</td>
+                    <td> 123 likes || <a href="#">LIKE</a></td>
+                </tr>
+                <tr bgcolor="white">
+                    <td colspan="3">-------------------------------------------------------------------------------------</td>
+                </tr>
+                <tr bgcolor="white">
+                    <td>User: Kitty</td>
+                    <td>A very long comments here...</td>
+                    <td> 424 likes || <a href="#">LIKE</a></td>
+                </tr>
+                <tr bgcolor="white">
+                    <td colspan="3">-------------------------------------------------------------------------------------</td>
+                </tr>
+                <tr bgcolor="white">
+                    <td>User: Lily</td>
+                    <td>A very long comments here...</td>
+                    <td> 234 likes || <a href="#">LIKE</a></td>
+                </tr>
+            </table>
+        </div>
     </body>
 </body>
 </html>

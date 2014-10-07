@@ -18,7 +18,7 @@
         <br/>
         <br/>
         <br/>
-        
+
         <label id="page_title">
             <h5><font color="white">View Inspirations</font></h5>
         </label>
@@ -35,7 +35,7 @@
                     <td colspan="3" >Packing List 1 - SHANGHAIIIII!!!</td>
                 </tr>
                 <tr bgcolor="white">
-                    <td>User Rating</td>
+                    <td>856 Likes</td>
                     <td><a href="ViewPublicPackingList.jsp">Show details</a></td>
                     <td>By: Bluey</td>
                 </tr>
@@ -44,38 +44,11 @@
                     <td colspan="3" >Packing List 2 - Shanghai in Summer</td>
                 </tr>
                 <tr bgcolor="white">
-                    <td>User Rating</td>
+                    <td>234 Likes</td>
                     <td><a href="ViewPublicPackingList.jsp">Show details</a></td>
                     <td>By: Pinky</td>
                 </tr>
             </table>
-        </div>
-        <br/>
-        <font color="white"><h6>Reviews:</h6></font>
-        <div class="">
-            <table id="" class="">
-                <tr bgcolor="white">
-                    <td>User: Matty</td>
-                    <td>A very long comments here...</td>
-                    <td> 123 likes || <a href="#">LIKE</a></td>
-                </tr>
-                <tr bgcolor="white">
-                    <td colspan="3">-------------------------------------------------------------------------------------</td>
-                </tr>
-                <tr bgcolor="white">
-                    <td>User: Kitty</td>
-                    <td>A very long comments here...</td>
-                    <td> 424 likes || <a href="#">LIKE</a></td>
-                </tr>
-                <tr bgcolor="white">
-                    <td colspan="3">-------------------------------------------------------------------------------------</td>
-                </tr>
-                <tr bgcolor="white">
-                    <td>User: Lily</td>
-                    <td>A very long comments here...</td>
-                    <td> 234 likes || <a href="#">LIKE</a></td>
-                </tr>
-            </table>
-        </div>
+        </div>     
     </body>
 </html>
