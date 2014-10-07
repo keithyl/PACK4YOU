@@ -8,13 +8,7 @@ and open the template in the editor.
     Author     : keithleng
 */
 body {
-    background-image: url(../images/NZ.JPG);
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: top center !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed;
+    background-color: #4775FF;
 }
 
 form {

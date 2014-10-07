@@ -13,7 +13,11 @@
     </head>
     <body>
         <%@include file="includes/Inspiration.jsp"%>
-
+        
+        <br/>
+        <br/>
+        <br/>
+        
         <label id="page_title">
             <h5><font color="white">Inspiration</font></h5>
         </label>

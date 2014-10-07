@@ -17,7 +17,11 @@
     <body>
 
         <%@include file="includes/MyPackingList.jsp"%>
-
+        
+        <br/>
+        <br/>
+        <br/>
+        
         <label id="page_title">
             <h5><font color="white">Generate your packing list</font></h5>
         </label>

@@ -13,25 +13,29 @@
     </head>
     <body>
         <%@include file="includes/Home.jsp"%>
+        
+        <br/>
+        <br/>
+        <br/>
 
         <label id="page_title">
             <h5><font color="white">My Packing Lists</font></h5>
         </label>
-
+        
         Lists of packing lists here...
         <div class="mainTable">
             <table bgcolor="white" border="">
-                <tr>
+                <tr bgcolor="white">
                     <th>S/N</th>
                     <th>Packing Lists</th>
                     <th></th>
                 </tr>
-                <tr>
+                <tr bgcolor="white">
                     <td>1</td>
                     <td><a href="GeneratedPackingList.jsp">Shanghai</a></td>
                     <td><a href="#">Delete</a></td>
                 </tr>
-                <tr>
+                <tr bgcolor="white">
                     <td>2</td>
                     <td><a href="GeneratedPackingList.jsp">Taiwan</a></td>
                     <td><a href="#">Delete</a></td>
