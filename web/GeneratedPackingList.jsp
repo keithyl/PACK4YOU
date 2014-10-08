@@ -36,8 +36,22 @@
            <button id ="addbutton">Add Row</button>
            <tr><td>Item</td><td>Quantity</td><td>Weight</td><td>Action</td></tr>
             
-            <tr><td>Shirt</td><td>8</td><td>1kg</td><td><button type="button"  class="removebutton" title="Remove this row">X</button></tr>
-              <tr><td>Pants</td><td>8</td><td>1kg</td><button type="button"  class="removebutton" title="Remove this row">X</button></tr>
+           	<tbody>
+				<tr>
+					<td>Shirt</td>
+					<td>8</td>
+					<td>0.9</td>
+                                        <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+				</tr>
+			</tbody>
+             <tbody>
+				<tr>
+					<td>Pants</td>
+					<td>8</td>
+					<td>1.9</td>
+                                        <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+				</tr>
+			</tbody>
          
               <tr><td><strong>TOTAL</strong></td><td>1290</td><td>1420</td></tr>
            
