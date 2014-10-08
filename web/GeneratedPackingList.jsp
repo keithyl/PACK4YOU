@@ -10,8 +10,9 @@
    <head>
         <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="js/mindmup-editabletable.js"></script>
+        
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      
         <title>PACK4YOU - Generated Packing List</title>
     </head>
 
@@ -27,26 +28,44 @@
         </label>
 
         <h1><font color="white">Shanghai</font></h1>
+        <div class="container">
+            <h3>Clothing</h3>
+               
         <div class="mainTable">
         <table id="mainTable" class="table table-striped">
-           
-            <tr><td>Item</td><td>Quantity</td><td>Weight</td>
+           <button id ="addbutton">Add Row</button>
+           <tr><td>Item</td><td>Quantity</td><td>Weight</td><td>Action</td></tr>
             
-              <tr><td tabindex="1" style="cursor: pointer;">Shirt</td><td tabindex="1" style="cursor: pointer;">8</td><td tabindex="1" style="cursor: pointer;">1kg</td></tr>
-              <tr><td tabindex="1" style="cursor: pointer;">Pants</td><td tabindex="1" style="cursor: pointer;">8</td><td tabindex="1" style="cursor: pointer;">1kg</td></tr>
-              <tr><td tabindex="1" style="cursor: pointer;">gloves</td><td tabindex="1" style="cursor: pointer;">2</td><td tabindex="1" style="cursor: pointer;">0.7kg</td></tr>
-              <tr><td tabindex="1" style="cursor: pointer;">socks</td><td tabindex="1" style="cursor: pointer;">8</td><td tabindex="1" style="cursor: pointer;">0.5kg</td></tr>
-              <tr><td tabindex="1" style="cursor: pointer;">jacket</td><td tabindex="1" style="cursor: pointer;">2</td><td tabindex="1" style="cursor: pointer;">2kg</td></tr>
+            <tr><td>Shirt</td><td>8</td><td>1kg</td><td><button type="button"  class="removebutton" title="Remove this row">X</button></tr>
+              <tr><td>Pants</td><td>8</td><td>1kg</td><button type="button"  class="removebutton" title="Remove this row">X</button></tr>
          
               <tr><td><strong>TOTAL</strong></td><td>1290</td><td>1420</td></tr>
-          </tfoot>
+           
         </table>
         </div>
+        </div>
         <script>
-            $('#table').editableTableWidget();
-            $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
-            $('#textAreaEditor').editableTableWidget({editor: $('<textarea>')});
-            window.prettyPrint && prettyPrint();
+         
+       $(document).on('click','button.removebutton', function() {
+            
+          $(this).closest('tr').remove();
+          return false;
+        });
+        
+  var i = 1;
+$("#addbutton").click(function() {
+  $("table tr:first").clone().find("input").each(function() {
+    $(this).val('').attr({
+      'id': function(_, id) {return id + i },
+      'name': function(_, name) { return name + i },
+      'value': ''               
+    });
+  }).end().appendTo("table");
+  i++;
+    
+  applyRemoveEvent();  
+});
         </script>
+        
     </body>
 </html>

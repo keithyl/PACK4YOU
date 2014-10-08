@@ -12,7 +12,7 @@
         <title>PACK4YOU - My Packing Lists</title>
     </head>
     <body>
-        <%@include file="includes/Home.jsp"%>
+        <%@include file="includes/MyPackingList.jsp"%>
         
         <br/>
         <br/>
