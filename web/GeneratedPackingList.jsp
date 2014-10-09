@@ -8,21 +8,32 @@
 <!DOCTYPE html>
 <html>
    <head>
+       <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+    
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-      
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/HomePage.css" rel="stylesheet" type="text/css"  media="screen" />
+<link href="css/navbar.css" rel="stylesheet" type="text/css"  media="screen" />
+<link href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" media="screen"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="js/mindmup-editabletable.js"></script>
+        <script src="js/numeric-input-example.js"></script>
+       
         <title>PACK4YOU - Generated Packing List</title>
     </head>
 
-    <body>
-        <%@include file="includes/MyPackingList.jsp"%>
+    
+    
         
         <br/>
         <br/>
         <br/>
-        
+    
+ <%@include file="includes/MyPackingList.jsp"%>
         <label id="page_title">
             <h5><font color="white">Generate your packing list</font></h5>
         </label>
@@ -34,31 +45,31 @@
         <div class="mainTable">
         <table id="mainTable" class="table table-striped">
           
-           <tr><td>Item</td><td>Quantity</td><td>Weight</td><td>Action</td></tr>
+            <thead><tr><th>Item</th><th>Quantity</th><th>Weight</th><th>Action</th></tr></thead>
             
-           
+            <tbody>
 				<tr>
-                                    <td><div contenteditable="true">Shirt</td>
-					<td><div contenteditable="true">8</td>
-					<td><div contenteditable="true">0.9</td>
+                                    <td>Shirt</td>
+					<td>8</td>
+					<td>0.9</td>
                                         <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
 				</tr>
 			
              
 				<tr>
-					<td><div contenteditable="true">Pants</td>
-					<td><div contenteditable="true">8</td>
-					<td><div contenteditable="true">1.9</td>
+					<td>Pants</td>
+					<td>8</td>
+					<td>1.9</td>
                                         <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
 				</tr>
 			
-         
-              <tr><td><strong>TOTAL</strong></td><td>1290</td><td>1420</td></tr>
+                                </tbody>
+                                <tfoot><tr><th><strong>TOTAL</strong></th><th></th><th></th><th></th></tr></thead>
            
         </table>
         </div>
         </div>
-        
+       
 
         <script>
          
@@ -82,8 +93,11 @@ function myFunction() {
     cell4.innerHTML = "<td><button type='button'  class='removebutton' title='Remove this row'>X</button></td>";
     
 }
+ $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
+  $('#textAreaEditor').editableTableWidget({editor: $('<textarea>')});
+  window.prettyPrint && prettyPrint();
 
         </script>
-        
-    </body>
+     
+    
 </html>

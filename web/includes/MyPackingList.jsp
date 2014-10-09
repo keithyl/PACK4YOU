@@ -1,10 +1,13 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="css/HomePage.css" rel="stylesheet" type="text/css"  media="screen" />
 <link href="css/navbar.css" rel="stylesheet" type="text/css"  media="screen" />
 <link href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" media="screen"/>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"/>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+
+</head>
 
 <header class="navbar navbar-custom navbar-fixed-top bs-docs-nav" role="banner">
     <div class="container">
@@ -36,3 +39,4 @@
         </div>
     </div>
 </header>
+</html>
