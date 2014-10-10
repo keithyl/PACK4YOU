@@ -80,18 +80,18 @@ public class ItemManager {
     }
     
     public ArrayList<Item> retrieve(String country) {
-        if(country.equals("Shanghai")) {
+        if(country.equalsIgnoreCase("Shanghai")) {
             return itemList1;
-        }else if(country.equals("Australia")) {
+        }else if(country.equalsIgnoreCase("Australia")) {
             return itemList2;
         }
         return null;
     }
     
     public String getSeason(String country) {
-        if(country.equals("Shanghai")) {
+        if(country.equalsIgnoreCase("Shanghai")) {
             return "winter";
-        }else if(country.equals("Australia")) {
+        }else if(country.equalsIgnoreCase("Australia")) {
             return "summer";
         }
         return null;

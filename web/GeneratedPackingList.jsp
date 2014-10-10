@@ -7,6 +7,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+<%@page import="models.*"%>
+<%@page import="java.util.*"%>
+<%
+    String destination = (String)request.getAttribute("Destination");
+%>
    <head>
        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -37,40 +42,45 @@
         <label id="page_title">
             <h5><font color="white">Generate your packing list</font></h5>
         </label>
-
-        <h1><font color="white">Shanghai</font></h1>
+           <h1><font color="white">Shanghai</font></h1>
         <div class="container">
-            <h3>Clothing<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
-               
-        <div class="mainTable">
+        <h3>Clothing<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
+          <div class="mainTable">
         <table id="mainTable" class="table table-striped">
+         <thead><tr><th>Item</th><th>Quantity</th><th>Weight</th><th>Action</th></tr></thead>
+        <% ItemManager im = new ItemManager();
+           ArrayList<Item> itemList = im.retrieve(destination);
+           for (Item i: itemList){
+               String c = i.getCategory();
+               
+        %>            
+     
+        
+      
           
-            <thead><tr><th>Item</th><th>Quantity</th><th>Weight</th><th>Action</th></tr></thead>
-            
-            <tbody>
-				<tr>
-                                    <td>Shirt</td>
-					<td>8</td>
-					<td>0.9</td>
-                                        <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
-				</tr>
-			
-             
-				<tr>
-					<td>Pants</td>
-					<td>8</td>
-					<td>1.9</td>
-                                        <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
-				</tr>
-			
-                                </tbody>
-                                <tfoot><tr><th><strong>TOTAL</strong></th><th></th><th></th><th></th></tr></thead>
            
+        <% if (c.equalsIgnoreCase("clothes")){
+        %>    
+            <tbody>
+            <tr>
+                <td><font color="white"><%=i.getName()%></font></td>
+                <td><font color="white"><%=i.getQuantity()%><font></td>
+                <td><font color="white"><%=i.getWeight()%><font></td>
+                <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+            </tr>
+
+           
+
+            </tbody>
+           
+   <%}
+           }%>
+            <tfoot><tr><th><strong>TOTAL</strong></th><th></th><th></th><th></th></tr></thead>
         </table>
         </div>
         </div>
-       
-
+    
+                    
         <script>
          
        $(document).on('click','button.removebutton', function() {

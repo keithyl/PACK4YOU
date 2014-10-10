@@ -6,6 +6,14 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    String errorMsg = (String) session.getAttribute("errorMsg");
+    if(errorMsg == null){
+        errorMsg= "";
+    }else {
+        session.removeAttribute("errorMsg");
+    }
+ %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -34,11 +42,12 @@
         </script>
 
         <div class="HomeForm">
-            <form action="GeneratedPackingList.jsp">
+            <form action="GeneratePackingListServlet" method="post">
                 <label id="first">
                     <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
                     <input type="text" name="Destination" placeholder="Destination"><br>
                 </label>
+                
                 <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
                 <input id="datepicker" type="text" placeholder="MM/DD/YY"/>
                 <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
@@ -48,8 +57,11 @@
                     <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)">  
                 </label>
                 <input type="submit" value="PACK4ME">
+                  <font color="black"><%=errorMsg%></font>
             </form>
         </div>
+        
     </body>
+   
 
 </html>

@@ -10,12 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.RequestDispatcher; 
 
 /**
  *
  * @author Keith Leng
  */
-public class LoginServlet extends HttpServlet {
+public class GeneratePackingListServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -30,25 +31,21 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        HttpSession session = request.getSession();
+        
         try {
-            //retrieve input information 
-            String userID = request.getParameter("username");
-            String password = request.getParameter("password");
+            //retrieve destination 
+            String destination = request.getParameter("Destination");
             
-            //create new LoginController
-            LoginController loginctrl = new LoginController();
-            
-            //validate the user input
-            boolean isValidUser = loginctrl.authenticate(userID, password);
-            HttpSession session = request.getSession();
-            if(!isValidUser){
-                session.setAttribute("errorMsg","Invalid username/password");
-                response.sendRedirect("LoginPage.jsp");
-            }else{
-                if(userID.equals("admin")){
-                    session.setAttribute("authenticatedUser", userID);
-                    response.sendRedirect("HomePage.jsp");
-                }
+            if(destination.equals("")){
+                session.setAttribute("errorMsg","Destination is empty!");
+                response.sendRedirect("Home.jsp");
+            }
+            else if (destination.equalsIgnoreCase("Shanghai")){               
+                request.setAttribute("Destination","Shanghai");
+                System.out.println("test");
+                RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
+                rd.forward(request, response);
             }
         }catch(Exception e){            
            e.getMessage();

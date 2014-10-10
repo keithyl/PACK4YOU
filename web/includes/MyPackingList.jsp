@@ -18,7 +18,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="./" class="navbar-brand">PACK4YOU</a>
+            <a href="Home.jsp" class="navbar-brand">PACK4YOU</a>
         </div>
 
         <div class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
