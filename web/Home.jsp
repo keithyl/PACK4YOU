@@ -11,18 +11,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PACK4YOU - Home</title>      
     </head>
-    
+
     <body>
         <%@include file="includes/Home.jsp"%>
-        
+
         <br/>
         <br/>
         <br/>
-        
+
         <label id="page_title">
             <h5><font color="white">Generate your packing list</font></h5>
         </label>
-        
+
         <script>
             $(function () {
                 $("#datepicker").datepicker();
@@ -33,7 +33,7 @@
             });
         </script>
 
-        <div class="form">
+        <div class="HomeForm">
             <form action="GeneratedPackingList.jsp">
                 <label id="first">
                     <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
@@ -47,11 +47,9 @@
                     <span class="glyphicon glyphicon-briefcase"  style="font-size: 20px"></span>
                     <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)">  
                 </label>
-                <label id="submit">
-                    <input type="submit" value="PACK4ME">
-                </label>
+                <input type="submit" value="PACK4ME">
             </form>
         </div>
     </body>
-    
+
 </html>

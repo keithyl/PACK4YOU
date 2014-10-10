@@ -16,19 +16,15 @@
     </head>
     <body>
 
-        <%@include file="includes/MyPackingList.jsp"%>
+        <%@include file="includes/Inspiration.jsp"%>
 
         <br/>
         <br/>
         <br/>
 
-        <label id="page_title">
-            <h5><font color="white">Generate your packing list</font></h5>
-        </label>
-
-        <h1><font color="white">Shanghai</font></h1>
-        <div class="mainTable">
-            <table id="mainTable" class="table table-striped">
+        <h1><font color="white">Shanghai by Bluey</font></h1>
+        <div class="PublicGeneratedTable">
+            <table>
                 <tr>
                     <td>Item</td>
                     <td>Quantity</td>
@@ -36,22 +32,28 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td tabindex="1" style="cursor: pointer;">Shirt</td>
-                    <td tabindex="1" style="cursor: pointer;">8</td>
-                    <td tabindex="1" style="cursor: pointer;">1kg</td>
-                    <td tabindex="1" style="cursor: pointer;"><a href="#">Add to my List</a></td>
+                    <td>Shirt</td>
+                    <td>8</td>
+                    <td>1kg</td>
+                    <td>
+                        <a href="#"><img src="images/addToMyList.png"></a>
+                    </td>
                 </tr>
                 <tr>
-                    <td tabindex="1" style="cursor: pointer;">Pants</td>
-                    <td tabindex="1" style="cursor: pointer;">8</td>
-                    <td tabindex="1" style="cursor: pointer;">1kg</td>
-                    <td tabindex="1" style="cursor: pointer;"><a href="#">Add to my List</a></td>
+                    <td>Pants</td>
+                    <td>8</td>
+                    <td>1kg</td>
+                    <td>
+                        <a href="#"><img src="images/addToMyList.png"></a>
+                    </td>
                 </tr>
                 <tr>
-                    <td tabindex="1" style="cursor: pointer;">gloves</td>
-                    <td tabindex="1" style="cursor: pointer;">2</td>
-                    <td tabindex="1" style="cursor: pointer;">0.7kg</td>
-                    <td tabindex="1" style="cursor: pointer;"><a href="#">Add to my List</a></td>
+                    <td>gloves</td>
+                    <td>2</td>
+                    <td>0.7kg</td>
+                    <td>
+                        <a href="#"><img src="images/addToMyList.png"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td><strong>TOTAL</strong></td>

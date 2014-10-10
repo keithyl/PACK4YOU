@@ -13,16 +13,35 @@
     </head>
     <body>
         <%@include file="includes/Inspiration.jsp"%>
-        
-        <br/>
-        <br/>
-        <br/>
-        
-        <label id="page_title">
-            <h5><font color="white">Inspiration</font></h5>
-        </label>
 
-        <%@include file="InspirationForm.jsp"%>
-
+        <br/>
+        <br/>
+        <br/>
+        <%
+            String err = (String) session.getAttribute("errorMsg");
+            if (err == null) {
+                err = "";
+            } else {
+                session.removeAttribute("errorMsg");
+            }
+        %>
+        <div class="InspirationForm">
+            <h1><div class="InspirationTitle">
+                INSPIRATION
+            </div></h1>
+            <p/>
+            <form action="ViewInspirations.jsp">
+                <label id="first">
+                    <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
+                    <input type="text" name="destination" placeholder="Destination" width="100"><br>
+                </label>
+                <br/>
+                <input type="submit" value="Inspire me!">
+            </form>
+            <br/>
+            <div class="ErrorMessage">
+                <%=err%>
+            </div>
+        </div>
     </body>
 </html>
