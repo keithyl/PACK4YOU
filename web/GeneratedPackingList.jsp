@@ -14,9 +14,9 @@
 %>
    <head>
        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
     
-        <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
@@ -29,7 +29,11 @@
         <script src="js/numeric-input-example.js"></script>
        
         <title>PACK4YOU - Generated Packing List</title>
-    </head>       
+    </head>
+
+    
+    
+        
         <br/>
         <br/>
         <br/>
@@ -50,7 +54,11 @@
                String c = i.getCategory();
                
         %>            
-              
+     
+        
+      
+          
+           
         <% if (c.equalsIgnoreCase("clothes")){
         %>    
             <tbody>
@@ -60,6 +68,8 @@
                 <td><font color="white"><%=i.getWeight()%><font></td>
                 <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
             </tr>
+
+           
 
             </tbody>
            
@@ -76,18 +86,16 @@
        $(document).on('click','button.removebutton', function() {
             
           $(this).closest('tr').remove();
-          numeric-input-example();
+          return false;
         });
         
 function myFunction() {
     var table = document.getElementById("mainTable");
-    var rowCount = table.rows.length;
-    var row = table.insertRow(rowCount-1);
+    var row = table.insertRow(3);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
-    numeric-input-example();
     
     cell1.innerHTML = "<td><div contenteditable>";
     cell2.innerHTML = "<td><div contenteditable>";
@@ -98,8 +106,6 @@ function myFunction() {
  $('#mainTable').editableTableWidget().numericInputExample().find('td:first').focus();
   $('#textAreaEditor').editableTableWidget({editor: $('<textarea>')});
   window.prettyPrint && prettyPrint();
-
-
 
         </script>
      
