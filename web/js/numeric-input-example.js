@@ -27,7 +27,7 @@ $.fn.numericInputExample = function () {
 			var row = $(this);
 			total += parseFloat(row.children().eq(column).text());
 		});
-		if (column === 1 && total > 5000) {
+		if (column === 2 && total > 1000) {
 			$('.alert').show();
 			return false; // changes can be rejected
 		} else {
@@ -37,12 +37,16 @@ $.fn.numericInputExample = function () {
 	}).on('validate', function (evt, value) {
 		var cell = $(this),
 			column = cell.index();
-		if (column === 0) {
+		
+        
+        if (column === 0) {
 			return !!value && value.trim().length > 0;
-		} else {
+		}  else {
 			return !isNaN(parseFloat(value)) && isFinite(value);
-		}
+		}   
 	});
-	initialTotal();
+	
+        initialTotal();
+        
 	return this;
 };
