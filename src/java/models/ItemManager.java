@@ -16,6 +16,8 @@ public class ItemManager {
     
     private ArrayList<Item> itemList1;
     private ArrayList<Item> itemList2;
+    private String startDate;
+    private String endDate;
     private String season;
     private String weather;
     private String country;
@@ -77,12 +79,15 @@ public class ItemManager {
         
         this.season = season;
         this.weather = weather;
+        startDate="08/23/2014";
+        endDate="12/31/2014";  
+        
     }
     
     public ArrayList<Item> retrieve(String country) {
         if(country.equalsIgnoreCase("Shanghai")) {
             return itemList1;
-        }else if(country.equalsIgnoreCase("Australia")) {
+        }else if(country.equalsIgnoreCase("Melbourne")) {
             return itemList2;
         }
         return null;
@@ -91,7 +96,7 @@ public class ItemManager {
     public String getSeason(String country) {
         if(country.equalsIgnoreCase("Shanghai")) {
             return "winter";
-        }else if(country.equalsIgnoreCase("Australia")) {
+        }else if(country.equalsIgnoreCase("Melbourne")) {
             return "summer";
         }
         return null;
@@ -100,7 +105,7 @@ public class ItemManager {
     public String getWeather(String country){ 
         if(country.equals("Shanghai")) {
             return "-5 to 3 degrees Celsius";
-        }else if(country.equals("Australia")) {
+        }else if(country.equals("Melbourne")) {
             return "25 to 32 degrees Celsius";
         }
         return null;
@@ -110,7 +115,7 @@ public class ItemManager {
         if(country.equals("Shanghai")) {
             itemList1.add(new Item(name, quantity, weight, category));
             
-        }else if(country.equals("Australia")) {
+        }else if(country.equals("Melbourne")) {
             itemList2.add(new Item(name, quantity, weight, category));
         }
     }
@@ -125,7 +130,7 @@ public class ItemManager {
                   iter.remove();  
                 }
             }
-        }else if(country.equals("Australia")) {
+        }else if(country.equals("Melbourne")) {
             Iterator iter = itemList2.iterator();
             while (iter.hasNext()) {
                 Item item = (Item)iter.next();
@@ -145,7 +150,7 @@ public class ItemManager {
                 }
             }
             return null;
-        }else if(country.equals("Australia")) {
+        }else if(country.equals("Melbourne")) {
             for(int i=0; i < itemList2.size(); i++){
                 Item item = itemList2.get(i);
                 if(item.getName().equals(name)) {
@@ -161,7 +166,7 @@ public class ItemManager {
         if(country.equals("Shanghai")) {
             Item item = retrieveItem(country, name);
             item.setWeight(weight);
-        }else if(country.equals("Australia")) {
+        }else if(country.equals("Melbourne")) {
             Item item = retrieveItem(country, name);
             item.setWeight(weight);
         }
@@ -171,7 +176,7 @@ public class ItemManager {
         if(country.equals("Shanghai")) {
             Item item = retrieveItem(country, name);
             item.setQuantity(quantity);
-        }else if(country.equals("Australia")) {
+        }else if(country.equals("Melbourne")) {
             Item item = retrieveItem(country, name);
             item.setQuantity(quantity);
         }
