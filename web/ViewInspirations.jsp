@@ -19,60 +19,85 @@
         <br/>
         <br/>
 
-        <label id="page_title">
-            <h5><font color="white"></font></h5>
-        </label>
-        
         <%
             String destination = (String) request.getParameter("destination");
             String errorMsg = "";
             if (destination == null) {
                 destination = "";
-                session.setAttribute("errorMsg","Please enter a destination");
+                session.setAttribute("errorMsg", "Please enter a destination");
             }
-            if (!destination.equalsIgnoreCase("shanghai")){
+            if (!destination.equalsIgnoreCase("shanghai")) {
                 destination = "";
-                session.setAttribute("errorMsg","Oooppsss.. My bad! The destination is currently unavailable.");
+                session.setAttribute("errorMsg", "Oooppsss.. My bad! The destination is currently unavailable.");
             }
-            
-            if(destination.equalsIgnoreCase("")){
+
+            if (destination.equalsIgnoreCase("")) {
         %>
-            <jsp:forward page="Inspiration.jsp"/>
-        <%    
-            }else{
+        <jsp:forward page="Inspiration.jsp"/>
+        <%
+        } else {
         %>    
 
-            <%@include file="InspirationForm.jsp"%>
+        <%@include file="InspirationForm.jsp"%>
+        <center>
+
             <font color="white">
             <br/>
             <h2>Search Results - Packing Lists</h2>
             <br/>
-            There are 2 results found.     
             </font>
-
-            <div class="">
-                <table id="" class="">
-                    <tr bgcolor="white">
-                        <td colspan="3" >Packing List 1 - SHANGHAIIIII!!!</td>
+            <div class="SearchResult">
+                There are 2 results found.     
+                <p/>
+                <p/>
+                <p/>
+                <p/>
+                <table class="ResultList">
+                    <tr>
+                        <td colspan="2" ></td>
                     </tr>
-                    <tr bgcolor="white">
-                        <td>856 Likes</td>
-                        <td><a href="ViewPublicPackingList.jsp">Show details</a></td>
-                        <td>By: Bluey</td>
+                    <tr>
+                        <td>Packing List 1 - SHANGHAIIIII!!!</td>
+                        <td>
+                            <a href="ViewPublicPackingList.jsp">
+                                <input class="BlueButton" type="submit" value="View List">
+                            </a>
+                        </td>
                     </tr>
-                    <tr bgcolor="white"><td colspan="3">--------------------------------------------------------</td></tr>
-                    <tr bgcolor="white">
-                        <td colspan="3" >Packing List 2 - Shanghai in Summer</td>
+                    <tr>
+                        <td><br/><img src="images/thumbUp.png" height="27"><br/>856 Likes</td>
+                        <td><br/><img src="images/user.gif" height="27"><br/>By: Bluey</td>
                     </tr>
-                    <tr bgcolor="white">
-                        <td>234 Likes</td>
-                        <td><a href="ViewPublicPackingList.jsp">Show details</a></td>
-                        <td>By: Pinky</td>
+                    <tr>
+                        <td colspan="2" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" ></td>
+                    </tr>
+                    <tr>
+                        <td>Packing List 2 - Shanghai in Summer</td>
+                        <td>
+                            <!--<a href="ViewPublicPackingList.jsp"><img src="images/viewList.png">-->
+                            <a href="ViewPublicPackingList.jsp">
+                                <input class="BlueButton" type="submit" value="View List">  
+                            <a/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br/><img src="images/thumbUp.png" height="27"><br/>234 Likes</td>
+                        <td><br/><img src="images/user.gif" height="27"><br/>By: Pinky</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" ></td>
                     </tr>
                 </table>
             </div> 
-        <%
-            }
-        %>
-    </body>
+        </center>
+    <%
+        }
+    %>
+</body>
 </html>

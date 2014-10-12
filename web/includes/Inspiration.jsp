@@ -1,5 +1,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="css/HomePage.css" rel="stylesheet" type="text/css"  media="screen" />
+<link href="css/InspirationCSS.css" rel="stylesheet" type="text/css"  media="screen" />
 <link href="css/navbar.css" rel="stylesheet" type="text/css"  media="screen" />
 <link href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" media="screen"/>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"/>

@@ -12,6 +12,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="js/mindmup-editabletable.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            function jumpToAnchor(target) {
+                window.location.hash = target;
+            }
+        </script>
+        
+        <!--http://jqueryui.com/dialog/#modal-form-->
+
         <title>PACK4YOU - Other's Packing List</title>
     </head>
     <body>
@@ -21,78 +29,250 @@
         <br/>
         <br/>
         <br/>
+    <center>
 
-        <h1><font color="white">Shanghai by Bluey</font></h1>
+        <br/>
+        <font color="white"><h2>SHANGHAIIIII!!! by Bluey</h2></font>
+        <br/>
+        <table width="75%" >
+            <tr>
+                <td width="35%" align="left">
+                    <input class="OrangeButton" type="button" value="Reviews" onclick="jumpToAnchor('reviews');
+                            jumpToAnchor('x')">
+                </td>
+                <td width="30%" align="center">
+                    <!-- LikeBtn.com BEGIN -->
+                    <span class="likebtn-wrapper" data-identifier="likePackingList" data-theme="drop" data-dislike_enabled="false" data-icon_dislike_show="false" data-popup_position="bottom"></span>
+                    <script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async="async"></script>
+                    <!-- LikeBtn.com END -->
+                </td>
+                <td width="35%" align="right">
+                    <input class="GreenButton" type="submit" value="Use Me!">
+                </td>
+            </tr>
+        </table>
+
+        <br/>
+        [COUNTRY; WEATHER; PERIOD?]
+        <br/>
+
         <div class="PublicGeneratedTable">
             <table>
                 <tr>
                     <td>Item</td>
                     <td>Quantity</td>
-                    <td>Weight</td>
+                    <td>Weight (in kg)</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Shirt</td>
                     <td>8</td>
-                    <td>1kg</td>
+                    <td>1</td>
                     <td>
-                        <a href="#"><img src="images/addToMyList.png"></a>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                        <!--<button id="acreate-user" class="BlueButton">+ to My List</button>
+                        <input  id="create-user" class="BlueButton" type="button" value="+ to My List" >-->
                     </td>
                 </tr>
                 <tr>
                     <td>Pants</td>
                     <td>8</td>
-                    <td>1kg</td>
+                    <td>4</td>
                     <td>
-                        <a href="#"><img src="images/addToMyList.png"></a>
+                        <input class="BlueButton" type="submit" value="+ to My List">
                     </td>
                 </tr>
                 <tr>
-                    <td>gloves</td>
+                    <td>Gloves</td>
                     <td>2</td>
-                    <td>0.7kg</td>
+                    <td>0.5</td>
                     <td>
-                        <a href="#"><img src="images/addToMyList.png"></a>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                        <!--<a href="#"><img src="images/addToMyList.png"></a>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>Boots</td>
+                    <td>2</td>
+                    <td>1.4</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Undergarments</td>
+                    <td>8</td>
+                    <td>0.8</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Slippers</td>
+                    <td>1</td>
+                    <td>0.2</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>DSLR Camera</td>
+                    <td>1</td>
+                    <td>1.6</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Medicine Box</td>
+                    <td>1</td>
+                    <td>0.4</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jacket</td>
+                    <td>3</td>
+                    <td>2.1</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Passport</td>
+                    <td>1</td>
+                    <td>0.1</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Chargers</td>
+                    <td>3</td>
+                    <td>0.6</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Toiletries</td>
+                    <td>1</td>
+                    <td>0.5</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shorts</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List">
                     </td>
                 </tr>
                 <tr>
                     <td><strong>TOTAL</strong></td>
-                    <td>1290</td>
-                    <td>1420</td>
+                    <td>44</td>
+                    <td>17.2</td>
                     <td></td>
                 </tr>
                 </tfoot>
             </table>
         </div>
-                
+
         <br/>
-        
-        <font color="white"><h6>Reviews:</h6></font>
-        <div class="">
-            <table id="" class="">
-                <tr bgcolor="white">
-                    <td>User: Matty</td>
-                    <td>A very long comments here...</td>
-                    <td> 123 likes || <a href="#">LIKE</a></td>
-                </tr>
-                <tr bgcolor="white">
-                    <td colspan="3">-------------------------------------------------------------------------------------</td>
-                </tr>
-                <tr bgcolor="white">
-                    <td>User: Kitty</td>
-                    <td>A very long comments here...</td>
-                    <td> 424 likes || <a href="#">LIKE</a></td>
-                </tr>
-                <tr bgcolor="white">
-                    <td colspan="3">-------------------------------------------------------------------------------------</td>
-                </tr>
-                <tr bgcolor="white">
-                    <td>User: Lily</td>
-                    <td>A very long comments here...</td>
-                    <td> 234 likes || <a href="#">LIKE</a></td>
-                </tr>
-            </table>
+
+        <a name="reviews"><font color="white"><h4>See what others have to say...</h4></font></a>
+        <div class="ReviewResult">
+            <form id="addReview" name="addReview" method="post" action="ViewPublicPackingList.jsp" >
+                <table class="ReviewList">
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/user.gif" height="35"><br/>Matty</td>
+                        <td>A very long comments here...</td>
+                        <td> <label for="like1">123 likes</label> || <a href="#">LIKE</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/user.gif" height="35"><br/>Kitty</td>
+                        <td>A very long comments here...</td>
+                        <td> <label for="like2">424 likes</label> || <a href="#">LIKE</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/user.gif" height="35"><br/>Lily</td>
+                        <td>A very long comments here...</td>
+                        <td> <label for="like3">424 likes</label> || <a href="#">LIKE</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <%
+                        String user = request.getParameter("user");
+                        String newReview = request.getParameter("newReview");
+                        boolean hasReview = true;
+                        if (user == null || user.equals("")) {
+                            hasReview = false;
+                        }
+                        if (newReview == null || newReview.equals("")) {
+                            hasReview = false;
+                        }
+                        if (hasReview) {
+                    %>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/user.gif" height="35"><br/><%=user%></td>
+                        <td><%=newReview%></td>
+                        <td> <label for="like4">0 like</label> || <a href="#">LIKE</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <%
+                        }
+                    %>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <img src="images/user.gif" height="35"><br/>Cheuky
+                            <input type="hidden" name ="user" value = "Cheuky"/>
+                        </td>
+                        <td><textarea type="text" name="newReview" placeholder="My review..." cols="40" rows="3" style="width:95%;wrap:off;"></textarea></td>
+                        <td>
+                            <input class="BlueButton" type="submit" value="Submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <a href="#"><left>back to top</left></a>
+            <br/>
         </div>
-    </body>
+    </center>
+</body>
 </body>
 </html>
