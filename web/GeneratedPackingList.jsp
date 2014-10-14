@@ -52,7 +52,6 @@
         <% 
            ArrayList<Item> itemList = im.retrieve(destination);
            
-           
            for (Item i: itemList){
                String c = i.getCategory();
              if (c.equalsIgnoreCase("clothes")){

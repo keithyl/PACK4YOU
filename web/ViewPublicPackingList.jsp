@@ -17,7 +17,7 @@
                 window.location.hash = target;
             }
         </script>
-        
+
         <!--http://jqueryui.com/dialog/#modal-form-->
 
         <title>PACK4YOU - Other's Packing List</title>
@@ -56,6 +56,8 @@
         [COUNTRY; WEATHER; PERIOD?]
         <br/>
 
+        <%String popupErr = "Sorry... we are not implementing this :)";%>
+        
         <div class="PublicGeneratedTable">
             <table>
                 <tr>
@@ -65,11 +67,25 @@
                     <td></td>
                 </tr>
                 <tr>
+                    <td>Passport</td>
+                    <td>1</td>
+                    <td>0.1</td>
+                    <td>
+                        <form id="addItemFromOtherPackList" name="addItemFromOtherPackList" method="get" action="" 
+                              onSubmit="if (!confirm('Are you sure you want to add item (Passport) to your list?')) {
+                                return false;
+                            }" >
+                            <input type="hidden" name="addItemToMyList" id="addItemToMyList" value="Passpost,1,0.1,essential"/>
+                            <input class="BlueButton" type="submit" name="submit" value="+ to My List">
+                        </form>
+                    </td>
+                </tr>
+                <tr>
                     <td>Shirt</td>
                     <td>8</td>
-                    <td>1</td>
+                    <td>2</td>
                     <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                         <!--<button id="acreate-user" class="BlueButton">+ to My List</button>
                         <input  id="create-user" class="BlueButton" type="button" value="+ to My List" >-->
                     </td>
@@ -79,24 +95,24 @@
                     <td>8</td>
                     <td>4</td>
                     <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                     </td>
                 </tr>
                 <tr>
                     <td>Gloves</td>
                     <td>2</td>
-                    <td>0.5</td>
+                    <td>0.4</td>
                     <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                         <!--<a href="#"><img src="images/addToMyList.png"></a>-->
                     </td>
                 </tr>
                 <tr>
                     <td>Boots</td>
                     <td>2</td>
-                    <td>1.4</td>
+                    <td>2</td>
                     <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                     </td>
                 </tr>
                 <tr>
@@ -104,7 +120,7 @@
                     <td>8</td>
                     <td>0.8</td>
                     <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                     </td>
                 </tr>
                 <tr>
@@ -112,63 +128,7 @@
                     <td>1</td>
                     <td>0.2</td>
                     <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
-                    </td>
-                </tr>
-                <tr>
-                    <td>DSLR Camera</td>
-                    <td>1</td>
-                    <td>1.6</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Medicine Box</td>
-                    <td>1</td>
-                    <td>0.4</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jacket</td>
-                    <td>3</td>
-                    <td>2.1</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Laptop</td>
-                    <td>1</td>
-                    <td>3</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Passport</td>
-                    <td>1</td>
-                    <td>0.1</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Chargers</td>
-                    <td>3</td>
-                    <td>0.6</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Toiletries</td>
-                    <td>1</td>
-                    <td>0.5</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                     </td>
                 </tr>
                 <tr>
@@ -176,13 +136,62 @@
                     <td>4</td>
                     <td>1</td>
                     <td>
-                        <input class="BlueButton" type="submit" value="+ to My List">
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jacket</td>
+                    <td>3</td>
+                    <td>2.1</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Toiletries</td>
+                    <td>1</td>
+                    <td>0.5</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Medicine Box</td>
+                    <td>1</td>
+                    <td>0.4</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                    </td>
+                </tr>
+                <tr>
+                    <td>DSLR Camera</td>
+                    <td>1</td>
+                    <td>2.2</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>Chargers</td>
+                    <td>3</td>
+                    <td>0.6</td>
+                    <td>
+                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                     </td>
                 </tr>
                 <tr>
                     <td><strong>TOTAL</strong></td>
                     <td>44</td>
-                    <td>17.2</td>
+                    <td>19.3</td>
                     <td></td>
                 </tr>
                 </tfoot>
@@ -228,8 +237,7 @@
                     <tr>
                         <td colspan="3" ></td>
                     </tr>
-                    <%
-                        String user = request.getParameter("user");
+                    <%                        String user = request.getParameter("user");
                         String newReview = request.getParameter("newReview");
                         boolean hasReview = true;
                         if (user == null || user.equals("")) {
