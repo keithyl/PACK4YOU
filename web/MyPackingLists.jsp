@@ -13,7 +13,7 @@
     </head>
     <body>
         <%@include file="includes/MyPackingList.jsp"%>
-        
+        <%@include file="includes/InitiateItemManager.jsp"%>
         <br/>
         <br/>
         <br/>

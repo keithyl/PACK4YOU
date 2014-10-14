@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <%
     String errorMsg = (String) session.getAttribute("errorMsg");
@@ -22,7 +23,7 @@
 
     <body>
         <%@include file="includes/Home.jsp"%>
-
+        <%@include file="includes/InitiateItemManager.jsp"%>
         <br/>
         <br/>
         <br/>

@@ -7,8 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<%@page import="models.*"%>
-<%@page import="java.util.*"%>
+
 <%
     String destination = (String)request.getAttribute("Destination");
 %>
@@ -39,6 +38,8 @@
         <br/>
     
  <%@include file="includes/MyPackingList.jsp"%>
+ <%@include file="includes/InitiateItemManager.jsp"%>
+ 
         <label id="page_title">
             <h5><font color="white">Generate your packing list</font></h5>
         </label>
@@ -49,17 +50,12 @@
         <table id="mainTable" class="table table-striped">
          <thead><tr><th>Item</th><th>Quantity</th><th>Weight</th><th>Action</th></tr></thead>
         <% 
-    
-            ItemManager im = new ItemManager();
            ArrayList<Item> itemList = im.retrieve(destination);
            
            
            for (Item i: itemList){
                String c = i.getCategory();
-               
-        %>            
-              
-        <% if (c.equalsIgnoreCase("clothes")){
+             if (c.equalsIgnoreCase("clothes")){
         %>    
             <tbody>
             <tr>
