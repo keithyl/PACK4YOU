@@ -78,9 +78,7 @@
                         <td>Packing List 2 - Shanghai in Summer</td>
                         <td>
                             <!--<a href="ViewPublicPackingList.jsp"><img src="images/viewList.png">-->
-                            <a href="ViewPublicPackingList.jsp">
-                                <input class="BlueButton" type="submit" value="View List">  
-                            <a/>
+                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');">  
                         </td>
                     </tr>
                     <tr>

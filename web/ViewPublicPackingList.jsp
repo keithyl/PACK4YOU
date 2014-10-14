@@ -32,7 +32,7 @@
     <center>
 
         <br/>
-        <font color="white"><h2>SHANGHAIIIII!!! by Bluey</h2></font>
+        <h2>Shanghai Time by Bluey</h2>
         <br/>
         <table width="75%" >
             <tr>
@@ -47,7 +47,10 @@
                     <!-- LikeBtn.com END -->
                 </td>
                 <td width="35%" align="right">
-                    <input class="GreenButton" type="submit" value="Use Me!">
+                    <form id="useMeForm" name="useMeForm" method="get" action="GeneratedPackingList_1.jsp">
+                        <input type="hidden" name="useMeList" id="useMeList" value="blueyShanghai"/>
+                        <input class="GreenButton" type="submit" name="submit" value="Use Me!">
+                    </form>
                 </td>
             </tr>
         </table>
@@ -57,7 +60,8 @@
         <br/>
 
         <%String popupErr = "Sorry... we are not implementing this :)";%>
-        
+
+        <h3>Essentials</h3>
         <div class="PublicGeneratedTable">
             <table>
                 <tr>
@@ -79,6 +83,18 @@
                             <input class="BlueButton" type="submit" name="submit" value="+ to My List">
                         </form>
                     </td>
+                </tr>
+            </table>
+        </div>
+
+        <h3>Clothing</h3>
+        <div class="PublicGeneratedTable">
+            <table>
+                <tr>
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Weight (in kg)</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Shirt</td>
@@ -147,6 +163,18 @@
                         <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                     </td>
                 </tr>
+            </table>
+        </div>
+
+        <h3>Hygiene</h3>
+        <div class="PublicGeneratedTable">
+            <table>
+                <tr>
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Weight (in kg)</td>
+                    <td></td>
+                </tr>
                 <tr>
                     <td>Toiletries</td>
                     <td>1</td>
@@ -155,6 +183,18 @@
                         <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                     </td>
                 </tr>
+            </table>
+        </div>
+
+        <h3>Medication</h3>
+        <div class="PublicGeneratedTable">
+            <table>
+                <tr>
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Weight (in kg)</td>
+                    <td></td>
+                </tr>
                 <tr>
                     <td>Medicine Box</td>
                     <td>1</td>
@@ -162,6 +202,18 @@
                     <td>
                         <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                     </td>
+                </tr>
+            </table>
+        </div>
+                    
+        <h3>Electronics</h3>
+        <div class="PublicGeneratedTable">
+            <table>
+                <tr>
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Weight (in kg)</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Laptop</td>
@@ -194,10 +246,22 @@
                     <td>19.3</td>
                     <td></td>
                 </tr>
-                </tfoot>
             </table>
         </div>
-
+                    
+        <h3>Total</h3>
+        <div class="PublicGeneratedTable">
+            <table>
+                <tr>
+                    <td>Quantity</td>
+                    <td>Weight (in kg)</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>19.3</td>
+                </tr>
+            </table>
+        </div>
         <br/>
 
         <a name="reviews"><font color="white"><h4>See what others have to say...</h4></font></a>
@@ -237,7 +301,8 @@
                     <tr>
                         <td colspan="3" ></td>
                     </tr>
-                    <%                        String user = request.getParameter("user");
+                    <%                        
+                        String user = request.getParameter("user");
                         String newReview = request.getParameter("newReview");
                         boolean hasReview = true;
                         if (user == null || user.equals("")) {

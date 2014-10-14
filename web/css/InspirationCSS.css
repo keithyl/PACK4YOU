@@ -11,8 +11,20 @@ body {
     background-color: #4775FF;
     font:Arial ;
     font-size:16px;
- 
 }   
+
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
 .InspirationForm {
     /*background: url(../images/meta_bg_wht.png) 0 0 repeat;
     background-image: url(../images/meta_bg_wht.png);
@@ -225,6 +237,18 @@ body {
 }
 .PublicGeneratedTable tr:first-child td:last-child{
     border-width:0px 0px 1px 1px;
+}
+.PublicGeneratedTable td:first-child{
+    width: 40%;
+}
+.PublicGeneratedTable td:nth-child(2){
+    width: 20%;
+}
+.PublicGeneratedTable td:nth-child(3){
+    width: 20%;
+}
+.PublicGeneratedTable td:nth-child(4){
+    width: 20%;
 }
 
 .BlueButton {

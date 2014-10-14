@@ -6,6 +6,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 
 /**
@@ -13,7 +14,10 @@ import java.util.Iterator;
  * @author Alvin
  */
 public class ItemManager {
-
+    
+    //when saving a packing list from generated packing list, add to this hashmap
+    private HashMap<String,ArrayList<Item>> myPackingLists; 
+    
     private ArrayList<Item> itemList1;
     private ArrayList<Item> itemList2;
     private ArrayList<Item> blueyShanghai;
@@ -79,7 +83,7 @@ public class ItemManager {
         itemList2.add(l11);
         itemList2.add(l12);
 
-        Item b10 = new Item("Passport", 1, 0.1, "essential");
+        Item b10 = new Item("Passport", 1, 0.1, "essentials");
         Item b1 = new Item("Shirt", 8, 0.25, "clothes");
         Item b2 = new Item("Pants", 8, 0.5, "clothes");
         Item b3 = new Item("Gloves", 2, 0.2, "clothes");
@@ -121,6 +125,8 @@ public class ItemManager {
             return itemList1;
         } else if (country.equalsIgnoreCase("Melbourne")) {
             return itemList2;
+        }else if (country.equalsIgnoreCase("blueyShanghai")) {
+            return blueyShanghai;
         }
         return null;
     }
