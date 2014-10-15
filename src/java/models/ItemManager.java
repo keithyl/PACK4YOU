@@ -21,6 +21,8 @@ public class ItemManager {
     private ArrayList<Item> itemList1;
     private ArrayList<Item> itemList2;
     private ArrayList<Item> blueyShanghai;
+    private ArrayList<Item> cheukyShanghai;
+    private ArrayList<Item> cheukyShanghai2;
     private String startDate;
     private String endDate;
     private String season;
@@ -31,6 +33,9 @@ public class ItemManager {
         itemList1 = new ArrayList<>();
         itemList2 = new ArrayList<>();
         blueyShanghai = new ArrayList<>();
+        cheukyShanghai = new ArrayList<>();
+        cheukyShanghai2 = new ArrayList<>();
+        
         Item i1 = new Item("shirts", 8, 0.3, "clothes");
         Item i2 = new Item("shorts", 4, 0.3, "clothes");
         Item i3 = new Item("jeans", 4, 0.4, "clothes");
@@ -43,6 +48,8 @@ public class ItemManager {
         Item i10 = new Item("winter jacket", 2, 1.9, "clothes");
         Item i11 = new Item("scarf", 2, 0.3, "clothes");
         Item i12 = new Item("mufflers", 1, 0.6, "clothes");
+        Item i13 = new Item("cheukyBear", 1, 10, "essentials");
+        Item i14 = new Item("cheukyBear", 1, 5, "essentials");
 
         Item l1 = new Item("shirts", 8, 0.3, "clothes");
         Item l2 = new Item("shorts", 4, 0.3, "clothes");
@@ -69,6 +76,35 @@ public class ItemManager {
         itemList1.add(i10);
         itemList1.add(i11);
         itemList1.add(i12);
+        
+        cheukyShanghai.add(i1);
+        cheukyShanghai.add(i2);
+        cheukyShanghai.add(i3);
+        cheukyShanghai.add(i4);
+        cheukyShanghai.add(i5);
+        cheukyShanghai.add(i6);
+        cheukyShanghai.add(i7);
+        cheukyShanghai.add(i8);
+        cheukyShanghai.add(i9);
+        cheukyShanghai.add(i10);
+        cheukyShanghai.add(i11);
+        cheukyShanghai.add(i12);
+        cheukyShanghai.add(i13);
+        
+        cheukyShanghai2.add(i1);
+        cheukyShanghai2.add(i2);
+        cheukyShanghai2.add(i3);
+        cheukyShanghai2.add(i4);
+        cheukyShanghai2.add(i5);
+        cheukyShanghai2.add(i6);
+        cheukyShanghai2.add(i7);
+        cheukyShanghai2.add(i8);
+        cheukyShanghai2.add(i9);
+        cheukyShanghai2.add(i10);
+        cheukyShanghai2.add(i11);
+        cheukyShanghai2.add(i12);
+        cheukyShanghai2.add(i13);
+        
 
         itemList2.add(l1);
         itemList2.add(l2);
