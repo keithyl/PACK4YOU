@@ -66,7 +66,7 @@
                     </tr>
                     <tr>
                         <td><br/><img src="images/thumbUp.png" height="27"><br/>856 Likes</td>
-                        <td><br/><img src="images/user.gif" height="27"><br/>By: Bluey</td>
+                        <td><br/><img src="images/user.gif" height="27"><br/>By: Pinky</td>
                     </tr>
                     <tr>
                         <td colspan="2" ></td>
@@ -83,7 +83,7 @@
                     </tr>
                     <tr>
                         <td><br/><img src="images/thumbUp.png" height="27"><br/>234 Likes</td>
-                        <td><br/><img src="images/user.gif" height="27"><br/>By: Pinky</td>
+                        <td><br/><img src="images/user.gif" height="27"><br/>By: Bluey</td>
                     </tr>
                     <tr>
                         <td colspan="2" ></td>
