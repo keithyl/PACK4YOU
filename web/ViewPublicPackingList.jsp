@@ -32,7 +32,7 @@
     <center>
 
         <br/>
-        <h2>Shanghai Time by Bluey</h2>
+        <h2>Shanghai Time by Pinky</h2>
         <br/>
         <table width="75%" >
             <tr>
@@ -48,7 +48,7 @@
                 </td>
                 <td width="35%" align="right">
                     <form id="useMeForm" name="useMeForm" method="get" action="GeneratedPackingList_1.jsp">
-                        <input type="hidden" name="useMeList" id="useMeList" value="blueyShanghai"/>
+                        <input type="hidden" name="useMeList" id="useMeList" value="pinkyShanghai"/>
                         <input class="GreenButton" type="submit" name="submit" value="Use Me!">
                     </form>
                 </td>
@@ -97,7 +97,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td>Shirt</td>
+                    <td>Shirts</td>
                     <td>8</td>
                     <td>2</td>
                     <td>
@@ -107,7 +107,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Pants</td>
+                    <td>Jeans</td>
                     <td>8</td>
                     <td>4</td>
                     <td>
@@ -115,16 +115,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Gloves</td>
-                    <td>2</td>
-                    <td>0.4</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                        <!--<a href="#"><img src="images/addToMyList.png"></a>-->
-                    </td>
-                </tr>
-                <tr>
-                    <td>Boots</td>
+                    <td>Shoes</td>
                     <td>2</td>
                     <td>2</td>
                     <td>
@@ -156,9 +147,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Jacket</td>
-                    <td>3</td>
-                    <td>2.1</td>
+                    <td>Caps</td>
+                    <td>2</td>
+                    <td>0.6</td>
                     <td>
                         <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
                     </td>

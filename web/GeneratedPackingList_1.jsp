@@ -54,15 +54,45 @@
         <h5><font color="white">Generate your packing list</font></h5>
     </label>
     <h1><%=packingListName%></h1>
-    <!--
-    Need this?
-    <div class="container">
+    <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
+        <left><input class="BlueButton" type="submit" value="Save"></left>
+        <!--
+        Need this?
+        <div class="container">
 
-    </div> 
-    -->
-    <h3>Essentials</h3> <input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
-    <div class="PublicGeneratedTable">
-        <div class="essentialsTable">
+        </div> 
+        -->
+        <h3>Essentials</h3> <input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
+        <div class="PublicGeneratedTable">
+            <div class="essentialsTable">
+                <table> 
+                    <tr>
+                        <td>Item</td>
+                        <td>Quantity</td>
+                        <td>Weight (in kg)</td>
+                        <td></td>
+                    </tr>
+                    <%
+            for (Item i: itemList){
+                String c = i.getCategory();
+                if (c.equalsIgnoreCase("essentials")){
+                    %>
+                    <tr>
+                        <td><%=i.getName()%></td>
+                        <td><%=i.getQuantity()%></td>
+                        <td><%=i.getTotalWeight()%></td>
+                        <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    </tr>
+                    <%
+                }
+            }
+                    %>
+                </table>
+            </div>
+        </div>
+
+        <h3>Clothing</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
+        <div class="PublicGeneratedTable">
             <table>
                 <tr>
                     <td>Item</td>
@@ -71,147 +101,130 @@
                     <td></td>
                 </tr>
                 <%
-        for (Item i: itemList){
-            String c = i.getCategory();
-            if (c.equalsIgnoreCase("essentials")){
-                %>
-                <tr>
-                    <td><%=i.getName()%></td>
-                    <td><%=i.getQuantity()%></td>
-                    <td><%=i.getTotalWeight()%></td>
-                    <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
-                </tr>
-                <%
+            for (Item i: itemList){
+                int clCount = 0;
+                String c = i.getCategory();
+                if (c.equalsIgnoreCase("clothes")){
+                    ++clCount;
+                    %>
+                    <tr>
+                        <td>
+                            <%=i.getName()%>
+                        </td>
+                        <td>
+                            <%=i.getQuantity()%>
+                        </td>
+                        <td>
+                            <%=i.getTotalWeight()%>
+                            <input type="hidden" name ="clItem<%=clCount%>" value = "<%=i.getName()%>,<%=i.getQuantity()%>,<%=i.getTotalWeight()%>,<%=i.getCategory()%>"/>
+                        </td>
+                        <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    </tr>
+                    <%
+                }
             }
-        }
-                %>
+                    %>
             </table>
         </div>
-    </div>
 
-    <h3>Clothing</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
-    <div class="PublicGeneratedTable">
-        <table>
-            <tr>
-                <td>Item</td>
-                <td>Quantity</td>
-                <td>Weight (in kg)</td>
-                <td></td>
-            </tr>
-            <%
-        for (Item i: itemList){
-            String c = i.getCategory();
-            if (c.equalsIgnoreCase("clothes")){
-                %>
+        <h3>Hygiene</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
+        <div class="PublicGeneratedTable">
+            <table>
                 <tr>
-                    <td><%=i.getName()%></td>
-                    <td><%=i.getQuantity()%></td>
-                    <td><%=i.getTotalWeight()%></td>
-                    <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Weight (in kg)</td>
+                    <td></td>
                 </tr>
                 <%
-            }
-        }
-                %>
-        </table>
-    </div>
+            for (Item i: itemList){
+                String c = i.getCategory();
 
-    <h3>Hygiene</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
-    <div class="PublicGeneratedTable">
-        <table>
-            <tr>
-                <td>Item</td>
-                <td>Quantity</td>
-                <td>Weight (in kg)</td>
-                <td></td>
-            </tr>
-            <%
-        for (Item i: itemList){
-            String c = i.getCategory();
-            if (c.equalsIgnoreCase("hygiene")){
-                %>
+                if (c.equalsIgnoreCase("hygiene")){
+                    %>
+                    <tr>
+                        <td><%=i.getName()%></td>
+                        <td><%=i.getQuantity()%></td>
+                        <td><%=i.getTotalWeight()%></td>
+                        <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    </tr>
+                    <%
+                }
+            }
+                    %>
+            </table>
+        </div>
+
+        <h3>Medication</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
+        <div class="PublicGeneratedTable">
+            <table>
                 <tr>
-                    <td><%=i.getName()%></td>
-                    <td><%=i.getQuantity()%></td>
-                    <td><%=i.getTotalWeight()%></td>
-                    <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Weight (in kg)</td>
+                    <td></td>
                 </tr>
                 <%
+            for (Item i: itemList){
+                String c = i.getCategory();
+                if (c.equalsIgnoreCase("medication")){
+                    %>
+                    <tr>
+                        <td><%=i.getName()%></td>
+                        <td><%=i.getQuantity()%></td>
+                        <td><%=i.getTotalWeight()%></td>
+                        <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    </tr>
+                    <%
+                }
             }
-        }
-                %>
-        </table>
-    </div>
+                    %>
+            </table>
+        </div>
 
-    <h3>Medication</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
-    <div class="PublicGeneratedTable">
-        <table>
-            <tr>
-                <td>Item</td>
-                <td>Quantity</td>
-                <td>Weight (in kg)</td>
-                <td></td>
-            </tr>
-            <%
-        for (Item i: itemList){
-            String c = i.getCategory();
-            if (c.equalsIgnoreCase("medication")){
-                %>
+        <h3>Electronics</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
+        <div class="PublicGeneratedTable">
+            <table>
                 <tr>
-                    <td><%=i.getName()%></td>
-                    <td><%=i.getQuantity()%></td>
-                    <td><%=i.getTotalWeight()%></td>
-                    <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Weight (in kg)</td>
+                    <td></td>
                 </tr>
                 <%
+            for (Item i: itemList){
+                String c = i.getCategory();
+                if (c.equalsIgnoreCase("electronics")){
+                    %>
+                    <tr>
+                        <td><%=i.getName()%></td>
+                        <td><%=i.getQuantity()%></td>
+                        <td><%=i.getTotalWeight()%></td>
+                        <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    </tr>
+                    <%
+                }
             }
-        }
-                %>
-        </table>
-    </div>
+                    %>
+            </table>
+        </div>
 
-    <h3>Electronics</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
-    <div class="PublicGeneratedTable">
-        <table>
-            <tr>
-                <td>Item</td>
-                <td>Quantity</td>
-                <td>Weight (in kg)</td>
-                <td></td>
-            </tr>
-            <%
-        for (Item i: itemList){
-            String c = i.getCategory();
-            if (c.equalsIgnoreCase("electronics")){
-                %>
+        <h3>Total</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
+        <div class="PublicGeneratedTable">
+            <table>
                 <tr>
-                    <td><%=i.getName()%></td>
-                    <td><%=i.getQuantity()%></td>
-                    <td><%=i.getTotalWeight()%></td>
-                    <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    <td>Quantity</td>
+                    <td>Weight (in kg)</td>
                 </tr>
-                <%
-            }
-        }
-                %>
-        </table>
-    </div>
-
-    <h3>Total</h3><input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/>
-    <div class="PublicGeneratedTable">
-        <table>
-            <tr>
-                <td>Quantity</td>
-                <td>Weight (in kg)</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-    </div>
-    <br/>
-
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <left><input class="BlueButton" type="submit" value="Save"></left>
+    </form>
     <script>
         $(document).on('click', 'button.removebutton', function () {
 

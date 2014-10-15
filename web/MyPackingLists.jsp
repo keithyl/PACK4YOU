@@ -22,7 +22,22 @@
             <h5><font color="white">My Packing Lists</font></h5>
         </label>
         
+        <% 
+            HashMap<String,ArrayList<Item>> myPackingLists = im.retrievePackingList();
+        %>
+        
         Lists of packing lists here...
+        <% 
+            if (myPackingLists == null || myPackingLists.size()== 0){
+                out.println("You have no existing list. Go generate one <a href='Home.jsp'>here</a>! :) ");
+            }else{
+                Iterator it = myPackingLists.keySet().iterator();
+                while (it.hasNext()) {
+                    String packingListName = (String)it.next();
+                    
+                }
+        %>
+        
         <div class="mainTable">
             <table bgcolor="white" border="">
                 <tr bgcolor="white">
@@ -30,17 +45,25 @@
                     <th>Packing Lists</th>
                     <th></th>
                 </tr>
+        <% 
+                int counter = 0;
+                while (it.hasNext()) {
+                    ++counter;
+                    String packingListName = (String)it.next();
+        %>
                 <tr bgcolor="white">
-                    <td>1</td>
-                    <td><a href="GeneratedPackingList.jsp">Shanghai</a></td>
+                    <td><%=counter%></td>
+                    <td><a href=""><%=packingListName%></a></td>
                     <td><a href="#">Delete</a></td>
                 </tr>
-                <tr bgcolor="white">
-                    <td>2</td>
-                    <td><a href="GeneratedPackingList.jsp">Taiwan</a></td>
-                    <td><a href="#">Delete</a></td>
-                </tr>
+        <%
+                }
+        %>
+                
             </table>
-        </div>    
+        </div> 
+        <% 
+            }
+        %>
     </body>
 </html>

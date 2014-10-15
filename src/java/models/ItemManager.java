@@ -20,7 +20,7 @@ public class ItemManager {
     
     private ArrayList<Item> itemList1;
     private ArrayList<Item> itemList2;
-    private ArrayList<Item> blueyShanghai;
+    private ArrayList<Item> pinkyShanghai;
     private String startDate;
     private String endDate;
     private String season;
@@ -28,34 +28,37 @@ public class ItemManager {
     private String country;
 
     public ItemManager() {
+        myPackingLists = new HashMap<String,ArrayList<Item>> ();
+        
         itemList1 = new ArrayList<>();
         itemList2 = new ArrayList<>();
-        blueyShanghai = new ArrayList<>();
-        Item i1 = new Item("shirts", 8, 0.3, "clothes");
-        Item i2 = new Item("shorts", 4, 0.3, "clothes");
-        Item i3 = new Item("jeans", 4, 0.4, "clothes");
-        Item i4 = new Item("shoes", 2, 0.8, "clothes");
-        Item i5 = new Item("undergarments", 10, 0.2, "clothes");
-        Item i6 = new Item("chargers", 2, 0.2, "electronics");
-        Item i7 = new Item("slippers", 1, 0.2, "clothes");
-        Item i8 = new Item("panadol box", 1, 0.1, "medication");
-        Item i9 = new Item("toiletries box", 1, 0.7, "hygiene");
+        pinkyShanghai = new ArrayList<>();
+        
+        
+        Item i1 = new Item("Shirts", 8, 0.3, "clothes");
+        Item i2 = new Item("Shorts", 4, 0.3, "clothes");
+        Item i3 = new Item("Jeans", 4, 0.4, "clothes");
+        Item i4 = new Item("Shoes", 2, 0.8, "clothes");
+        Item i5 = new Item("Undergarments", 10, 0.2, "clothes");
+        Item i6 = new Item("Chargers", 2, 0.2, "electronics");
+        Item i7 = new Item("Slippers", 1, 0.2, "clothes");
+        Item i8 = new Item("Panadol box", 1, 0.1, "medication");
+        Item i9 = new Item("Toiletries box", 1, 0.7, "hygiene");
         Item i10 = new Item("winter jacket", 2, 1.9, "clothes");
-        Item i11 = new Item("scarf", 2, 0.3, "clothes");
-        Item i12 = new Item("mufflers", 1, 0.6, "clothes");
+        Item i11 = new Item("Scarf", 2, 0.3, "clothes");
+        Item i12 = new Item("Mufflers", 1, 0.6, "clothes");
 
-        Item l1 = new Item("shirts", 8, 0.3, "clothes");
-        Item l2 = new Item("shorts", 4, 0.3, "clothes");
-        Item l3 = new Item("jeans", 4, 0.4, "clothes");
-        Item l4 = new Item("shoes", 2, 0.8, "clothes");
-        Item l5 = new Item("undergarments", 10, 0.2, "clothes");
-        Item l6 = new Item("chargers", 2, 0.2, "electronics");
-        Item l7 = new Item("slippers", 1, 0.2, "clothes");
-        Item l8 = new Item("panadol box", 1, 0.1, "medication");
-        Item l9 = new Item("toiletries box", 1, 0.7, "hygiene");
-        Item l10 = new Item("shades", 1, 0.2, "eyewear");
-        Item l11 = new Item("singlet", 3, 0.3, "clothes");
-        Item l12 = new Item("laptop", 1, 1.6, "electronics");
+        Item l1 = new Item("Shirts", 8, 0.3, "clothes");
+        Item l2 = new Item("Shorts", 4, 0.3, "clothes");
+        Item l3 = new Item("Jeans", 4, 0.4, "clothes");
+        Item l4 = new Item("Shoes", 2, 0.8, "clothes");
+        Item l5 = new Item("Undergarments", 10, 0.2, "clothes");
+        Item l6 = new Item("Chargers", 2, 0.2, "electronics");
+        Item l7 = new Item("Slippers", 1, 0.2, "clothes");
+        Item l8 = new Item("Panadol Box", 1, 0.1, "medication");
+        Item l9 = new Item("Toiletries Box", 1, 0.7, "hygiene");
+        Item l10 = new Item("Shades", 1, 0.2, "eyewear");
+        Item l12 = new Item("Laptop", 1, 1.6, "electronics");
 
         itemList1.add(i1);
         itemList1.add(i2);
@@ -80,38 +83,35 @@ public class ItemManager {
         itemList2.add(l8);
         itemList2.add(l9);
         itemList2.add(l10);
-        itemList2.add(l11);
         itemList2.add(l12);
 
         Item b10 = new Item("Passport", 1, 0.1, "essentials");
-        Item b1 = new Item("Shirt", 8, 0.25, "clothes");
-        Item b2 = new Item("Pants", 8, 0.5, "clothes");
-        Item b3 = new Item("Gloves", 2, 0.2, "clothes");
-        Item b4 = new Item("Boots", 2, 1, "clothes");
+        Item b1 = new Item("Shirts", 8, 0.25, "clothes");
+        Item b2 = new Item("Jeans", 8, 0.5, "clothes");
+        Item b4 = new Item("Shoes", 2, 1, "clothes");
         Item b5 = new Item("Undergarments", 8, 0.8, "clothes");
         Item b6 = new Item("Slippers", 1, 0.2, "clothes");
         Item b13 = new Item("Shorts", 4, 1, "clothes");
-        Item b8 = new Item("Jacket", 3, 0.7, "clothes");
+        Item b8 = new Item("Caps", 2, 0.3, "clothes");
         Item b12 = new Item("Toiletries", 1, 0.5, "hygiene");
         Item b14 = new Item("Medicine Box", 1, 0.4, "medication");
         Item b9 = new Item("Laptop", 1, 3, "electronics");
         Item b7 = new Item("DSLR Camera", 1, 2.2, "electronics");
         Item b11 = new Item("Chargers", 3, 0.2, "electronics");
 
-        blueyShanghai.add(b10);
-        blueyShanghai.add(b1);
-        blueyShanghai.add(b2);
-        blueyShanghai.add(b3);
-        blueyShanghai.add(b4);
-        blueyShanghai.add(b5);
-        blueyShanghai.add(b6);
-        blueyShanghai.add(b13);
-        blueyShanghai.add(b8); 
-        blueyShanghai.add(b12);
-        blueyShanghai.add(b14);
-        blueyShanghai.add(b9);
-        blueyShanghai.add(b7);
-        blueyShanghai.add(b11);
+        pinkyShanghai.add(b10);
+        pinkyShanghai.add(b1);
+        pinkyShanghai.add(b2);
+        pinkyShanghai.add(b4);
+        pinkyShanghai.add(b5);
+        pinkyShanghai.add(b6);
+        pinkyShanghai.add(b13);
+        pinkyShanghai.add(b8); 
+        pinkyShanghai.add(b12);
+        pinkyShanghai.add(b14);
+        pinkyShanghai.add(b9);
+        pinkyShanghai.add(b7);
+        pinkyShanghai.add(b11);
        
         this.season = season;
         this.weather = weather;
@@ -125,8 +125,8 @@ public class ItemManager {
             return itemList1;
         } else if (country.equalsIgnoreCase("Melbourne")) {
             return itemList2;
-        }else if (country.equalsIgnoreCase("blueyShanghai")) {
-            return blueyShanghai;
+        }else if (country.equalsIgnoreCase("pinkyShanghai")) {
+            return pinkyShanghai;
         }
         return null;
     }
@@ -219,4 +219,7 @@ public class ItemManager {
         }
     }
 
+    public HashMap<String,ArrayList<Item>> retrievePackingList(){
+        return myPackingLists;
+    }
 }
