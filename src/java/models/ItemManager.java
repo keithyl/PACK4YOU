@@ -18,17 +18,18 @@ public class ItemManager {
     //when saving a packing list from generated packing list, add to this hashmap
     private HashMap<String,ArrayList<Item>> myPackingLists; 
     
-    private ArrayList<Item> itemList1;
-    private ArrayList<Item> itemList2;
-    private ArrayList<Item> blueyShanghai;
-    private ArrayList<Item> cheukyShanghai;
-    private ArrayList<Item> cheukyShanghai2;
+    private ArrayList<Item> itemList1; //original packing list for Shanghai. Generated for cheuky
+    private ArrayList<Item> itemList2; //original packing list for Melbourne. Also generated
+    private ArrayList<Item> blueyShanghai; //Inspiration packing list example. Jenny's one. 
+    private ArrayList<Item> cheukyShanghai; //This one is when cheukyBear is added and it is 10kg. For overweight purposes
+    private ArrayList<Item> cheukyShanghai2; //This one is when cheukyBear is added and it is 5kg. To show within weight limit
     private String startDate;
     private String endDate;
     private String season;
     private String weather;
     private String country;
 
+    // when cheukyBear is added, it is under category essentials
     public ItemManager() {
         itemList1 = new ArrayList<>();
         itemList2 = new ArrayList<>();
@@ -61,7 +62,7 @@ public class ItemManager {
         Item l8 = new Item("panadol box", 1, 0.1, "medication");
         Item l9 = new Item("toiletries box", 1, 0.7, "hygiene");
         Item l10 = new Item("shades", 1, 0.2, "eyewear");
-        Item l11 = new Item("singlet", 3, 0.3, "clothes");
+        Item l11 = new Item("sun-tan lotion", 2, 0.2, "essentials");
         Item l12 = new Item("laptop", 1, 1.6, "electronics");
 
         itemList1.add(i1);
@@ -103,7 +104,7 @@ public class ItemManager {
         cheukyShanghai2.add(i10);
         cheukyShanghai2.add(i11);
         cheukyShanghai2.add(i12);
-        cheukyShanghai2.add(i13);
+        cheukyShanghai2.add(i14);
         
 
         itemList2.add(l1);
