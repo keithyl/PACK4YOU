@@ -18,23 +18,16 @@ public class ItemManager {
     //when saving a packing list from generated packing list, add to this hashmap
     private HashMap<String,ArrayList<Item>> myPackingLists; 
     
-<<<<<<< HEAD
+
     private ArrayList<Item> itemList1; //original packing list for Shanghai. Generated for cheuky
-    private ArrayList<Item> itemList2; //original packing list for Melbourne. Also generated
-    private ArrayList<Item> blueyShanghai; //Inspiration packing list example. Jenny's one. 
+    private ArrayList<Item> itemList2; //original packing list for Melbourne. Also generated //Inspiration packing list example. Jenny's one. 
     private ArrayList<Item> cheukyShanghai; //This one is when cheukyBear is added and it is 10kg. For overweight purposes
     private ArrayList<Item> cheukyShanghai2; //This one is when cheukyBear is added and it is 5kg. To show within weight limit
-=======
-    private ArrayList<Item> itemList1;
-    private ArrayList<Item> itemList2;
-<<<<<<< HEAD
-    private ArrayList<Item> pinkyShanghai;
-=======
-    private ArrayList<Item> blueyShanghai;
-    private ArrayList<Item> cheukyShanghai;
-    private ArrayList<Item> cheukyShanghai2;
->>>>>>> origin/master
->>>>>>> origin/master
+
+
+    private ArrayList<Item> pinkyShanghai; //Inspiration packing list for Jenny
+
+    
     private String startDate;
     private String endDate;
     private String season;
@@ -45,10 +38,9 @@ public class ItemManager {
     public ItemManager() {
         myPackingLists = new HashMap<String,ArrayList<Item>> ();
         
-        itemList1 = new ArrayList<>();
-        itemList2 = new ArrayList<>();
-<<<<<<< HEAD
-        pinkyShanghai = new ArrayList<>();
+        itemList1 = new ArrayList<>(); //List for Shanghai. generated
+        itemList2 = new ArrayList<>(); //List for melbourne. generated
+        pinkyShanghai = new ArrayList<>(); //Jenny's list
         
         
         Item i1 = new Item("Shirts", 8, 0.3, "clothes");
@@ -74,40 +66,16 @@ public class ItemManager {
         Item l8 = new Item("Panadol Box", 1, 0.1, "medication");
         Item l9 = new Item("Toiletries Box", 1, 0.7, "hygiene");
         Item l10 = new Item("Shades", 1, 0.2, "eyewear");
+        Item l11 = new Item("sun-tan lotion", 2, 0.2, "essentials");
         Item l12 = new Item("Laptop", 1, 1.6, "electronics");
-=======
-        blueyShanghai = new ArrayList<>();
+
+
         cheukyShanghai = new ArrayList<>();
         cheukyShanghai2 = new ArrayList<>();
         
-        Item i1 = new Item("shirts", 8, 0.3, "clothes");
-        Item i2 = new Item("shorts", 4, 0.3, "clothes");
-        Item i3 = new Item("jeans", 4, 0.4, "clothes");
-        Item i4 = new Item("shoes", 2, 0.8, "clothes");
-        Item i5 = new Item("undergarments", 10, 0.2, "clothes");
-        Item i6 = new Item("chargers", 2, 0.2, "electronics");
-        Item i7 = new Item("slippers", 1, 0.2, "clothes");
-        Item i8 = new Item("panadol box", 1, 0.1, "medication");
-        Item i9 = new Item("toiletries box", 1, 0.7, "hygiene");
-        Item i10 = new Item("winter jacket", 2, 1.9, "clothes");
-        Item i11 = new Item("scarf", 2, 0.3, "clothes");
-        Item i12 = new Item("mufflers", 1, 0.6, "clothes");
+
         Item i13 = new Item("cheukyBear", 1, 10, "essentials");
         Item i14 = new Item("cheukyBear", 1, 5, "essentials");
-
-        Item l1 = new Item("shirts", 8, 0.3, "clothes");
-        Item l2 = new Item("shorts", 4, 0.3, "clothes");
-        Item l3 = new Item("jeans", 4, 0.4, "clothes");
-        Item l4 = new Item("shoes", 2, 0.8, "clothes");
-        Item l5 = new Item("undergarments", 10, 0.2, "clothes");
-        Item l6 = new Item("chargers", 2, 0.2, "electronics");
-        Item l7 = new Item("slippers", 1, 0.2, "clothes");
-        Item l8 = new Item("panadol box", 1, 0.1, "medication");
-        Item l9 = new Item("toiletries box", 1, 0.7, "hygiene");
-        Item l10 = new Item("shades", 1, 0.2, "eyewear");
-        Item l11 = new Item("sun-tan lotion", 2, 0.2, "essentials");
-        Item l12 = new Item("laptop", 1, 1.6, "electronics");
->>>>>>> origin/master
 
         itemList1.add(i1);
         itemList1.add(i2);
@@ -150,7 +118,6 @@ public class ItemManager {
         cheukyShanghai2.add(i12);
         cheukyShanghai2.add(i14);
         
-
         itemList2.add(l1);
         itemList2.add(l2);
         itemList2.add(l3);
