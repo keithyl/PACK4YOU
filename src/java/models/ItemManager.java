@@ -20,7 +20,13 @@ public class ItemManager {
     
     private ArrayList<Item> itemList1;
     private ArrayList<Item> itemList2;
+<<<<<<< HEAD
     private ArrayList<Item> pinkyShanghai;
+=======
+    private ArrayList<Item> blueyShanghai;
+    private ArrayList<Item> cheukyShanghai;
+    private ArrayList<Item> cheukyShanghai2;
+>>>>>>> origin/master
     private String startDate;
     private String endDate;
     private String season;
@@ -32,6 +38,7 @@ public class ItemManager {
         
         itemList1 = new ArrayList<>();
         itemList2 = new ArrayList<>();
+<<<<<<< HEAD
         pinkyShanghai = new ArrayList<>();
         
         
@@ -59,6 +66,39 @@ public class ItemManager {
         Item l9 = new Item("Toiletries Box", 1, 0.7, "hygiene");
         Item l10 = new Item("Shades", 1, 0.2, "eyewear");
         Item l12 = new Item("Laptop", 1, 1.6, "electronics");
+=======
+        blueyShanghai = new ArrayList<>();
+        cheukyShanghai = new ArrayList<>();
+        cheukyShanghai2 = new ArrayList<>();
+        
+        Item i1 = new Item("shirts", 8, 0.3, "clothes");
+        Item i2 = new Item("shorts", 4, 0.3, "clothes");
+        Item i3 = new Item("jeans", 4, 0.4, "clothes");
+        Item i4 = new Item("shoes", 2, 0.8, "clothes");
+        Item i5 = new Item("undergarments", 10, 0.2, "clothes");
+        Item i6 = new Item("chargers", 2, 0.2, "electronics");
+        Item i7 = new Item("slippers", 1, 0.2, "clothes");
+        Item i8 = new Item("panadol box", 1, 0.1, "medication");
+        Item i9 = new Item("toiletries box", 1, 0.7, "hygiene");
+        Item i10 = new Item("winter jacket", 2, 1.9, "clothes");
+        Item i11 = new Item("scarf", 2, 0.3, "clothes");
+        Item i12 = new Item("mufflers", 1, 0.6, "clothes");
+        Item i13 = new Item("cheukyBear", 1, 10, "essentials");
+        Item i14 = new Item("cheukyBear", 1, 5, "essentials");
+
+        Item l1 = new Item("shirts", 8, 0.3, "clothes");
+        Item l2 = new Item("shorts", 4, 0.3, "clothes");
+        Item l3 = new Item("jeans", 4, 0.4, "clothes");
+        Item l4 = new Item("shoes", 2, 0.8, "clothes");
+        Item l5 = new Item("undergarments", 10, 0.2, "clothes");
+        Item l6 = new Item("chargers", 2, 0.2, "electronics");
+        Item l7 = new Item("slippers", 1, 0.2, "clothes");
+        Item l8 = new Item("panadol box", 1, 0.1, "medication");
+        Item l9 = new Item("toiletries box", 1, 0.7, "hygiene");
+        Item l10 = new Item("shades", 1, 0.2, "eyewear");
+        Item l11 = new Item("singlet", 3, 0.3, "clothes");
+        Item l12 = new Item("laptop", 1, 1.6, "electronics");
+>>>>>>> origin/master
 
         itemList1.add(i1);
         itemList1.add(i2);
@@ -72,6 +112,35 @@ public class ItemManager {
         itemList1.add(i10);
         itemList1.add(i11);
         itemList1.add(i12);
+        
+        cheukyShanghai.add(i1);
+        cheukyShanghai.add(i2);
+        cheukyShanghai.add(i3);
+        cheukyShanghai.add(i4);
+        cheukyShanghai.add(i5);
+        cheukyShanghai.add(i6);
+        cheukyShanghai.add(i7);
+        cheukyShanghai.add(i8);
+        cheukyShanghai.add(i9);
+        cheukyShanghai.add(i10);
+        cheukyShanghai.add(i11);
+        cheukyShanghai.add(i12);
+        cheukyShanghai.add(i13);
+        
+        cheukyShanghai2.add(i1);
+        cheukyShanghai2.add(i2);
+        cheukyShanghai2.add(i3);
+        cheukyShanghai2.add(i4);
+        cheukyShanghai2.add(i5);
+        cheukyShanghai2.add(i6);
+        cheukyShanghai2.add(i7);
+        cheukyShanghai2.add(i8);
+        cheukyShanghai2.add(i9);
+        cheukyShanghai2.add(i10);
+        cheukyShanghai2.add(i11);
+        cheukyShanghai2.add(i12);
+        cheukyShanghai2.add(i13);
+        
 
         itemList2.add(l1);
         itemList2.add(l2);
