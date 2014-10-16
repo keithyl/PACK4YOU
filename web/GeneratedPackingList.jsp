@@ -44,18 +44,27 @@
         
         String useMeList = (String)request.getParameter("useMeList");
         String packingListName = "";
+        String packingListAttribute = "";
         
         ArrayList<Item> itemList = null;
         if (destination != null && !destination.equalsIgnoreCase("")){
             itemList = im.retrieve(destination);
             packingListName = destination;
+            packingListAttribute = destination;
         }else{
             itemList = im.retrieve(useMeList);
             packingListName = "Shanghai Time";
+            packingListAttribute = "pinkyShanghai";
         }
     %>
-        <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
+      
     <center>
+        <h1><%=packingListName%></h1>
+        <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
+        <input type="hidden" name ="packingListName" value = "<%=packingListName%>"/>
+        <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/>
+        <left><input class="OrangeButton" type="submit" value="Save"></left>
+    </form> 
         <h2>Generate Packing List</h2><input type="hidden" name="packingList" value="packingList">
         <h3>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
         <div class="PublicGeneratedTable">
