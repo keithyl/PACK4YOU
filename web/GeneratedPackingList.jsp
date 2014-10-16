@@ -8,8 +8,6 @@
 <!DOCTYPE html>
 <html>
 
-
-
    <head>
        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="css/HomePage.css" rel="stylesheet" type="text/css"  media="screen" />

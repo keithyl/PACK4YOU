@@ -25,19 +25,19 @@
         <% 
              String destination = (String) request.getAttribute("Destination");
              String packingList = (String) request.getAttribute("packingList");
+             //String packingList = (String) request.getAttribute("packingList");
             HashMap<String,ArrayList<Item>> myPackingLists = im.retrievePackingList();
         %>
         
         Lists of packing lists here...
         <% 
             if (myPackingLists == null || myPackingLists.size()== 0){
-                out.println("You have no existing list. Go generate one <a href='Home.jsp'>here</a>! :) ");
-            }else{
+                out.println("<br/>You have no existing list. Go generate one <a href='Home.jsp'>here</a>! :) ");
+            //}else if(){
+            
+            } else{
                 Iterator it = myPackingLists.keySet().iterator();
-                while (it.hasNext()) {
-                    String packingListName = (String)it.next();
-                    
-                }
+                
         %>
         
         <div class="mainTable">

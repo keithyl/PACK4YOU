@@ -42,8 +42,8 @@
                 </td>
                 <td width="30%" align="center">
                     <!-- LikeBtn.com BEGIN -->
-                    <span class="likebtn-wrapper" data-identifier="likePackingList" data-theme="drop" data-dislike_enabled="false" data-icon_dislike_show="false" data-popup_position="bottom"></span>
-                    <script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async="async"></script>
+                    <!--<span class="likebtn-wrapper" data-identifier="likePackingList" data-theme="drop" data-dislike_enabled="false" data-icon_dislike_show="false" data-popup_position="bottom"></span>
+                    <script type="text/javascript" src="//w.likebtn.com/js/w/widget.js" async="async"></script> -->
                     <!-- LikeBtn.com END -->
                 </td>
                 <td width="35%" align="right">
@@ -56,11 +56,11 @@
         </table>
 
         <br/>
-        [COUNTRY; WEATHER; PERIOD?]
+        <!--[COUNTRY; WEATHER; PERIOD?]-->
         <br/>
 
         <%String popupErr = "Sorry... we are not implementing this :)";%>
-
+        <center>
         <h3>Essentials</h3>
         <div class="PublicGeneratedTable">
             <table>

@@ -37,7 +37,7 @@ public class ItemManager {
     // when cheukyBear is added, it is under category essentials
     public ItemManager() {
         myPackingLists = new HashMap<String,ArrayList<Item>> ();
-        
+        //myPackingLists.put("nil", new ArrayList<Item>());
         itemList1 = new ArrayList<>(); //List for Shanghai. generated
         itemList2 = new ArrayList<>(); //List for melbourne. generated
         pinkyShanghai = new ArrayList<>(); //Jenny's list

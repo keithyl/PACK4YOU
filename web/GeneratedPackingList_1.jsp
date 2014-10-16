@@ -39,23 +39,27 @@
         String destination = (String) request.getAttribute("Destination");
         String useMeList = (String)request.getParameter("useMeList");
         String packingListName = "";
+        String packingListAttribute = "";
         
         ArrayList<Item> itemList = null;
         if (destination != null && !destination.equalsIgnoreCase("")){
             itemList = im.retrieve(destination);
             packingListName = destination;
+            packingListAttribute = destination;
         }else{
             itemList = im.retrieve(useMeList);
             packingListName = "Shanghai Time";
+            packingListAttribute = "pinkyShanghai";
         }
+        
     %>
-
-    <label id="page_title">
-        <h5><font color="white">Generate your packing list</font></h5>
-    </label>
+    <center>
     <h1><%=packingListName%></h1>
     <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
-        <left><input class="BlueButton" type="submit" value="Save"></left>
+        <input type="hidden" name ="packingListName" value = "<%=packingListName%>"/>
+        <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/>
+        <left><input class="OrangeButton" type="submit" value="Save"></left>
+    </form>    
         <!--
         Need this?
         <div class="container">
@@ -223,8 +227,12 @@
             </table>
         </div>
         <br/>
-        <left><input class="BlueButton" type="submit" value="Save"></left>
-    </form>
+        <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
+        <input type="hidden" name ="packingListName" value = "<%=packingListName%>"/>
+        <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/>
+        <left><input class="OrangeButton" type="submit" value="Save"></left>
+    </form> 
+    </center>
     <script>
         $(document).on('click', 'button.removebutton', function () {
 
