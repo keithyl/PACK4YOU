@@ -46,6 +46,10 @@ public class GeneratePackingListServlet extends HttpServlet {
                 System.out.println("test");
                 RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
                 rd.forward(request, response);
+            } else if (destination.equalsIgnoreCase("Melbourne")){               
+                request.setAttribute("Destination","Melbourne");
+                RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
+                rd.forward(request, response);
             }
         }catch(Exception e){            
            e.getMessage();

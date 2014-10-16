@@ -17,7 +17,7 @@
 <link href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" media="screen"/>
          <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="js/mindmup-editabletable.js"></script>
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
          <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -43,6 +43,7 @@
     
     <%
         String destination = (String) request.getAttribute("Destination");
+        
         String useMeList = (String)request.getParameter("useMeList");
         String packingListName = "";
         
@@ -55,13 +56,13 @@
             packingListName = "Shanghai Time";
         }
     %>
-    
+        <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
     <center>
-        <h2>Generate Packing List</h2>
-        <h3>Clothing<a href="addList.jsp"><img src="images/add.png" height="25" width="25"/></a></h3>
+        <h2>Generate Packing List</h2><input type="hidden" name="packingList" value="packingList">
+        <h3>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
         <div class="PublicGeneratedTable">
-          <div class="mainTable">
-        <table>
+          <table id="mainTable">
+     
             <tr>
                     <td>Item</td>
                     <td>Quantity</td>
@@ -75,9 +76,10 @@
              if (c.equalsIgnoreCase("clothes")){
         %>    
             <tr>
-                <td><%=i.getName()%></td>
-                <td><%=i.getQuantity()%></td>
-                <td><%=i.getTotalWeight()%></td>
+                <input type = "hidden" name = "dest" value="<% destination = (String) request.getAttribute("Destination");%>">
+                <td><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
+                <td><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
+                <td><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
                 <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
             </tr>
 
@@ -90,14 +92,12 @@
                     <td></td>
                 </tr>
         </table>
-             </div>
         </div>
-    
-                
+        
+                     
         <h3>Electronics<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
-
+        
         <div class="PublicGeneratedTable">
-          
         <table>
             <tr>
                     <td>Item</td>
@@ -128,10 +128,9 @@
         </table>
         </div>
         
-                <h3>Hygiene<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
+        <h3>Hygiene<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
 
         <div class="PublicGeneratedTable">
-          
         <table>
             <tr>
                     <td>Item</td>
@@ -161,45 +160,10 @@
                 </tr>
         </table>
         </div>
-        
-        <h3>Essentials<input type="image" src="images/add.png" height="25" width="25"/></h3>
-        
+               
         <div class="PublicGeneratedTable">
-          
-        <table>
-            <tr>
-                    <td>Item</td>
-                    <td>Quantity</td>
-                    <td>Weight (in kg)</td>
-                    <td></td>
-            </tr>
-        <% 
-           for (Item i: itemList){
-               String c = i.getCategory();
-             if (c.equalsIgnoreCase("essentials")){
-        %>    
-            <tr>
-                <td><%=i.getName()%></td>
-                <td><%=i.getQuantity()%></td>
-                <td><%=i.getTotalWeight()%></td>
-                <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
-            </tr>
-
-    <%}
-           }%>
-             <tr>
-                    <td><strong>TOTAL</strong></td>
-                    <td><strong>2</td>
-                    <td><strong>0.40</td>
-                    <td></td>
-                </tr>
-        </table>
-        </div>
-             
-        
         <h3>Medication<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
 
-        <div class="PublicGeneratedTable">
           
         <table>
             <tr>
@@ -229,44 +193,11 @@
                     <td></td>
                 </tr>
         </table>
-        </div>     
-             
-         <h3>Eyewear<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
-
-        <div class="PublicGeneratedTable">
-          
-        <table>
-            <tr>
-                    <td>Item</td>
-                    <td>Quantity</td>
-                    <td>Weight (in kg)</td>
-                    <td></td>
-            </tr>
-        <% 
-           for (Item i: itemList){
-               String c = i.getCategory();
-             if (c.equalsIgnoreCase("eyewear")){
-        %>    
-            <tr>
-                <td><%=i.getName()%></td>
-                <td><%=i.getQuantity()%></td>
-                <td><%=i.getTotalWeight()%></td>
-                <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
-            </tr>
-
-    <%}
-           }%>
-             <tr>
-                    <td><strong>TOTAL</strong></td>
-                    <td><strong>2</td>
-                    <td><strong>0.40</td>
-                    <td></td>
-                </tr>
-        </table>
-        </div>     
-             
-             
-             
+        </div>
+        <left><input class="BlueButton" type="submit" value="Save" ></left>  
+               
+        </form>
+         
         <script>
          
        $(document).on('click','button.removebutton', function() {
@@ -276,7 +207,18 @@
         });
         
 function myFunction() {
+   var table = document.getElementById("mainTable");
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount - 1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
 
+            cell1.innerHTML = "<td><div contenteditable>";
+            cell2.innerHTML = "<td><div contenteditable>";
+            cell3.innerHTML = "<td><div contenteditable>";
+            cell4.innerHTML = "<td><button type='button'  class='removebutton' title='Remove this row'>X</button></td>";
    
 }
 

@@ -128,6 +128,7 @@ public class ItemManager {
         itemList2.add(l8);
         itemList2.add(l9);
         itemList2.add(l10);
+        itemList2.add(l11);
         itemList2.add(l12);
 
         Item b10 = new Item("Passport", 1, 0.1, "essentials");
@@ -167,7 +168,7 @@ public class ItemManager {
 
     public ArrayList<Item> retrieve(String country) {
         if (country.equalsIgnoreCase("Shanghai")) {
-            return itemList1;
+            return cheukyShanghai2;
         } else if (country.equalsIgnoreCase("Melbourne")) {
             return itemList2;
         }else if (country.equalsIgnoreCase("pinkyShanghai")) {
@@ -243,7 +244,7 @@ public class ItemManager {
         }
         return null;
     }
-
+     
     public void updateWeight(String country, String name, double weight) {
         if (country.equals("Shanghai")) {
             Item item = retrieveItem(country, name);
@@ -263,8 +264,16 @@ public class ItemManager {
             item.setQuantity(quantity);
         }
     }
-
+    
+    public void AddPackList(String string, ArrayList<Item> list){
+        myPackingLists.put(string, list);
+    }
+    
     public HashMap<String,ArrayList<Item>> retrievePackingList(){
+        
         return myPackingLists;
     }
+    
+   
+     
 }

@@ -23,6 +23,8 @@
         </label>
         
         <% 
+             String destination = (String) request.getAttribute("Destination");
+             String packingList = (String) request.getAttribute("packingList");
             HashMap<String,ArrayList<Item>> myPackingLists = im.retrievePackingList();
         %>
         
