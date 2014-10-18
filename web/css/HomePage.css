@@ -8,9 +8,10 @@ and open the template in the editor.
     Author     : keithleng
 */
 body {
-    background-color: #4775FF;
-    font:Arial ;
- 
+   background-image: url("../images/blurredlights.jpg");
+    font:Arial;
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 h1{
     color: white;
@@ -23,7 +24,7 @@ h2{
 .HomeForm {
     background: url(../images/meta_bg_wht.png) 0 0 repeat;
     background-image: url(../images/meta_bg_wht.png);
-    width: 75%;
+    width: 85%;
     padding: 18px 18px 12px 16px;
     border: 1px solid #fff;
     border-radius: 4px;
