@@ -74,8 +74,8 @@ public class ItemManager {
         cheukyShanghai2 = new ArrayList<>();
         
 
-        Item i13 = new Item("cheukyBear", 1, 10, "essentials");
-        Item i14 = new Item("cheukyBear", 1, 5, "essentials");
+        Item i13 = new Item("socks", 1, 10, "clothing");
+        Item i14 = new Item("socks", 3, 0.3, "clothing");
 
         itemList1.add(i1);
         itemList1.add(i2);

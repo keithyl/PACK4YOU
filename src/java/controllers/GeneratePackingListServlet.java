@@ -45,12 +45,12 @@ public class GeneratePackingListServlet extends HttpServlet {
                 request.setAttribute("Destination","Shanghai");
                 System.out.println("test");
                 //RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
-                RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList_1.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
                 rd.forward(request, response);
             } else if (destination.equalsIgnoreCase("Melbourne")){               
                 request.setAttribute("Destination","Melbourne");
-                //RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
-                RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList_1.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
+                //RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList_1.jsp");
                 rd.forward(request, response);
             }
         }catch(Exception e){            

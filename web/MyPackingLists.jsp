@@ -55,7 +55,7 @@
         %>
                 <tr bgcolor="white">
                     <td><%=counter%></td>
-                    <td><a href="GeneratedPackingList_1.jsp"><%=packingListName%></a></td>
+                    <td><a href="savedList.jsp"><%=packingListName%></a></td>
                     <td><a href="#">Delete</a></td>
                 </tr>
         <%
