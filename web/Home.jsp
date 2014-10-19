@@ -28,9 +28,9 @@
         <br/>
         <br/>
 
-        <label id="page_title">
-            <h5><font color="white">Generate your packing list</font></h5>
-        </label>
+ 
+        <h2 class="h2"><center>Generate your packing list</center></h2>
+       
 
         <script>
             $(function () {

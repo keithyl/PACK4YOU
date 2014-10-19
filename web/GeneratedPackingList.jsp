@@ -55,9 +55,10 @@
     <h2><center><%=packingListName%></center></h2>
     <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
         <input type="hidden" name ="packingListName" value = "<%=packingListName%>"/>
-        <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/> 
+        <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/>
+        <h2><center><input class="BlueButton" type="submit" value="Save"> Generated Packing List</center></h2><input type="hidden" name="packingList" value="packingList">
     </form> 
-         <h2><center><input class="BlueButton" type="submit" value="Save" > Generated Packing List</center></h2><input type="hidden" name="packingList" value="packingList">
+        
         
         <h3>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
         <div class="col-xs-6">
@@ -215,7 +216,7 @@
         });
         
 function myFunction() {
-   var table = document.getElementById("mainTable");
+   var table = document.getElementById("CSSTableGenerator");
             var rowCount = table.rows.length;
             var row = table.insertRow(rowCount - 1);
             var cell1 = row.insertCell(0);
