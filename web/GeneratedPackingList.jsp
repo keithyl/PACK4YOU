@@ -58,7 +58,8 @@
         <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/> 
     </form> 
          <h2><center><input class="BlueButton" type="submit" value="Save" > Generated Packing List</center></h2><input type="hidden" name="packingList" value="packingList">
-        <h2>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h2>
+        
+        <h3>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
         <div class="col-xs-6">
           <div class="table-responsive">
               <table class="CSSTableGenerator">
@@ -68,6 +69,7 @@
                   <td class="col-md-1">Item</td>
                   <td class="col-md-2">Quantity</td>
                   <td class="col-md-3">Weight(kg)</td>
+                  <td class="col-sm-1">Action</td>
           </tr>
            
         <% 
@@ -81,7 +83,7 @@
                 <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
                 <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
                 <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
-                <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                <td class="lastrow"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
             </tr>
 
             <%}
@@ -96,7 +98,7 @@
         </div>
         </div>
                
-         <h2>Electronics <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h2>
+        
         <div class="col-xs-6">
        <div class="table-responsive">
          <table class="CSSTableGenerator">
@@ -105,6 +107,7 @@
                   <td class="col-md-1">Item</td>
                   <td class="col-md-2">Quantity</td>
                   <td class="col-md-3">Weight(kg)</td>
+                  <td class="col-sm-1">Action</td>
           </tr>
         
         <% 
@@ -116,21 +119,91 @@
                 <td class="col-md-1"><%=i.getName()%></td>
                 <td class="col-md-2"><%=i.getQuantity()%></td>
                 <td class="col-md-3"><%=i.getTotalWeight()%></td>
-                <td><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                <td class="lastrow"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
             </tr>
 
     <%}
            }%>
              <tr>
-                    <td class="col-md-1"><strong>TOTAL</strong></td>
-                    <td class="col-md-2">2</td>
-                    <td class="col-md-3">0.40</td>
+                    <td><strong>TOTAL</strong></td>
+                    <td>2</td>
+                    <td>0.40</td>
                     
                 </tr>
         </table>
         </div>
         </div>
-               
+        
+        <h3>Hygiene<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
+        <div class="col-xs-6">
+        <div class="CSSTableGenerator">
+        <table>
+            <tr>
+                     <td class="col-md-1">Item</td>
+                     <td class="col-md-2">Quantity</td>
+                     <td class="col-md-3">Weight(kg)</td>
+                     <td class="col-sm-1">Action</td>
+            </tr>
+        <% 
+           for (Item i: itemList){
+               String c = i.getCategory();
+             if (c.equalsIgnoreCase("hygiene")){
+        %>    
+            <tr>
+                <td class="col-md-1"><%=i.getName()%></td>
+                <td class="col-md-2"><%=i.getQuantity()%></td>
+                <td class="col-md-3"><%=i.getTotalWeight()%></td>
+                <td class="col-sm-1"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+            </tr>
+
+    <%}
+           }%>
+             <tr>
+                    <td><strong>TOTAL</strong></td>
+                    <td>1</td>
+                    <td>0.70</td>
+                    <td></td>
+                    
+                </tr>
+        </table>
+        </div>
+        </div>
+        
+        <div class="col-xs-6">
+        <div class="table-responsive">
+        <h2>Medication<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h2>
+
+          
+        <table class="CSSTableGenerator">
+            <tr>
+                    <td class="col-md-1">Item</td>
+                    <td class="col-md-2">Quantity</td>
+                    <td class="col-md-3">Weight (in kg)</td>
+                    <td class="col-sm-1">Action</td>
+            </tr>
+        <% 
+           for (Item i: itemList){
+               String c = i.getCategory();
+             if (c.equalsIgnoreCase("medication")){
+        %>    
+            <tr>
+                <td class="col-md-1"><%=i.getName()%></td>
+                <td class="col-md-2"><%=i.getQuantity()%></td>
+                <td class="col-md-3"><%=i.getTotalWeight()%></td>
+                <td class="col-sm-1"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+            </tr>
+
+    <%}
+           }%>
+            <tr>
+                    <td><strong>TOTAL</strong></td>
+                    <td><strong>1</td>
+                    <td><strong>0.10</td>
+                    <td></td>
+            </tr>
+        </table>
+        </div>
+        </div>    
         </form>
          
         <script>
