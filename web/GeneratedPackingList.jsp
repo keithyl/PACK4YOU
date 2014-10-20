@@ -24,6 +24,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
         <script src="js/mindmup-editabletable.js"></script>
         <script src="js/numeric-input-example.js"></script>
+        <script src="js/jquery-calx-1.1.9.js"></script>
         <title>PACK4YOU - Generated Packing List</title>
     </head>       
         <br/>
@@ -63,17 +64,55 @@
       
     <br>
     
-    <h2><center><%=packingListName%></center></h2>
+    <h1><center><%=packingListName%></center></h1>
     <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
         <input type="hidden" name ="packingListName" value = "<%=packingListName%>"/>
         <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/>
-        <h2><center><input class="BlueButton" type="submit" value="Save"> Generated Packing List</center></h2><input type="hidden" name="packingList" value="packingList">
+        <h2><center><input class="BlueButton" align="right" type="submit" value="Save"> Generated Packing List</center></h2><input type="hidden" name="packingList" value="packingList">
+         
+        
     </form> 
+    
+          <div class="col-xs-6">
+          <h3>Essentials<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3> 
+           <div class="table-responsive">
+             <table class="CSSTableGenerator">
+               
+                    <tr>
+                       <td class="col-md-1">Item</td>
+                       <td class="col-md-2">Quantity</td>
+                        <td class="col-md-3">Weight(kg)</td>
+                        <td class="col-sm-1">Action</td>
+                    </tr>
+                    <%
+            for (Item i: itemList){
+                String c = i.getCategory();
+                if (c.equalsIgnoreCase("essentials")){
+                    %>
+                    <tr>
+                        <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
+                <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
+                <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
+                <td class="lastrow"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                    </tr>
+                    <%
+                }
+            }
+            
+                    %>
+                     <tr>
+                    <td class="col-md-1">TOTAL</strong></td>
+                    <td class="col-md-2"><strong>34</strong></td>
+                    <td class="col-md-3"><strong>14.0</strong></td>
+                    <td></td>
+                </tr>
+                </table>
+            </div>
+        </div>
         
-        
-        <h3>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
         
         <div class="col-xs-6">
+            <h3>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
           <div class="table-responsive">
               <table class="CSSTableGenerator">
            
@@ -113,6 +152,7 @@
                
         
         <div class="col-xs-6">
+            <h3>Electronics <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
        <div class="table-responsive">
          <table class="CSSTableGenerator">
                
@@ -141,14 +181,14 @@
                     <td><strong>TOTAL</strong></td>
                     <td>2</td>
                     <td>0.40</td>
-                    
+                    <td></td>                   
                 </tr>
         </table>
         </div>
         </div>
-        
-        <h3>Hygiene<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
+       
         <div class="col-xs-6">
+        <h3>Hygiene<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
         <div class="CSSTableGenerator">
         <table>
             <tr>
@@ -183,11 +223,12 @@
         </div>
         
         <div class="col-xs-6">
+        <h3>Medication<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
         <div class="table-responsive">
-        <h2>Medication<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h2>
+        <div class="CSSTableGenerator">
 
           
-        <table class="CSSTableGenerator">
+        <table class="Medication">
             <tr>
                     <td class="col-md-1">Item</td>
                     <td class="col-md-2">Quantity</td>
@@ -216,10 +257,15 @@
             </tr>
         </table>
         </div>
-        </div>    
+        </div>
+        </div>
         </form>
-         
+        
+         <script type="text/javascript">
+    $('#itemlist').calx();
+</script>
         <script>
+      
          
        $(document).on('click','button.removebutton', function() {
             
