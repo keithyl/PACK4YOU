@@ -275,6 +275,12 @@ public class ItemManager {
         return myPackingLists;
     }
     
-   
+    public void updatePackingList(String country, ArrayList<Item> newPackingList) {
+        if (country.equals("Shanghai")) {
+            itemList1 = newPackingList;
+        } else if (country.equals("Melbourne")) {
+            itemList2 = newPackingList;
+        }
+    }
      
 }

@@ -47,7 +47,7 @@
                     <!-- LikeBtn.com END -->
                 </td>
                 <td width="35%" align="right">
-                    <form id="useMeForm" name="useMeForm" method="get" action="GeneratedPackingList1.jsp">
+                    <form id="useMeForm" name="useMeForm" method="get" action="GeneratedPackingList.jsp">
                         <input type="hidden" name="useMeList" id="useMeList" value="pinkyShanghai"/>
                         <input class="GreenButton" type="submit" name="submit" value="Use Me!">
                     </form>
@@ -88,10 +88,11 @@
                                 <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
                                 <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
                                 <td class="lastrow">
-                                    <form id="addItemFromOtherPackList" name="addItemFromOtherPackList" method="get" action="" 
+                                    <form id="addItemFromOtherPackList" name="addItemFromOtherPackList" method="post" action="GeneratedPackingList1.jsp" 
                                             onSubmit="if (!confirm('Are you sure you want to add item (Passport) to your list?')) {
                                             return false;}" >
-                                        <input type="hidden" name="addItemToMyList" id="addItemToMyList" value="Passpost,1,0.1,essential"/>
+                                        <input type="hidden" name="Destination" id="Destination" value="Shanghai"/>
+                                        <input type="hidden" name="addItemToMyList" id="addItemToMyList" value="Passport"/>
                                         <input class="BlueButton" type="submit" name="submit" value="+ to My List">
                                     </form>    
                                 </td>

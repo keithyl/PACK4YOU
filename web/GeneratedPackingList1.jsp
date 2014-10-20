@@ -38,6 +38,7 @@
     <%
         String destination = (String) request.getAttribute("Destination");
         String openPackListDestination = (String) request.getParameter("Destination");
+        String addItemToMyList = (String) request.getParameter("addItemToMyList");
         String useMeList = (String) request.getParameter("useMeList");
         String packingListName = "";
         String packingListAttribute = "";
@@ -62,6 +63,13 @@
                 packingListName = openPackListDestination;
                 packingListAttribute = openPackListDestination;
             }
+        }
+        if(addItemToMyList != null && !addItemToMyList.equalsIgnoreCase("")){
+            itemList.add(new Item("Passport", 1, 0.1, "essentials"));
+            //im.updatePackingList("Shanghai", itemList);
+            HashMap<String, ArrayList<Item>> myPackingLists = im.retrievePackingList();
+            myPackingLists.put(packingListName, itemList);
+            session.setAttribute("itemMgr", im);
         }
     %>
     <center>
@@ -101,6 +109,7 @@
                     <%
                 }
             }
+            
                     %>
                 </table>
             </div>

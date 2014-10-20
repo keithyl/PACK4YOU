@@ -53,6 +53,7 @@ public class SavePackingList extends HttpServlet {
                     for (String plName : myPackingLists.keySet()) {
                         if (plName.equalsIgnoreCase(packingListAttribute)) {
                             response.sendRedirect("MyPackingLists.jsp");
+                            return;
                         }
                     }
                 }

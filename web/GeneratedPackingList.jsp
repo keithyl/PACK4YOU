@@ -33,20 +33,31 @@
     
     <%
         String destination = (String) request.getAttribute("Destination");
-        
-        String useMeList = (String)request.getParameter("useMeList");
+        String openPackListDestination = (String) request.getParameter("Destination");
+        String useMeList = (String) request.getParameter("useMeList");
         String packingListName = "";
         String packingListAttribute = "";
-        
+
         ArrayList<Item> itemList = null;
-        if (destination != null && !destination.equalsIgnoreCase("")){
+        out.println(destination);
+        out.println(useMeList);
+        if (destination != null && !destination.equalsIgnoreCase("")) {
             itemList = im.retrieve(destination);
             packingListName = destination;
             packingListAttribute = destination;
-        }else{
+        } else if (useMeList != null && !useMeList.equalsIgnoreCase("")) {
             itemList = im.retrieve(useMeList);
             packingListName = "Shanghai Time";
             packingListAttribute = "pinkyShanghai";
+        } else {
+            itemList = im.retrieve(openPackListDestination);
+            if (openPackListDestination.equalsIgnoreCase("Shanghai Time")) {
+                packingListName = "Shanghai Time";
+                packingListAttribute = "pinkyShanghai";
+            } else {
+                packingListName = openPackListDestination;
+                packingListAttribute = openPackListDestination;
+            }
         }
     %>
       
