@@ -57,7 +57,7 @@
                         <td colspan="2" ></td>
                     </tr>
                     <tr>
-                        <td>Packing List 1 - SHANGHAIIIII!!!</td>
+                        <td>Packing List 1 - Shanghai Time</td>
                         <td>
                             <a href="ViewPublicPackingList.jsp">
                                 <input class="BlueButton" type="submit" value="View List">

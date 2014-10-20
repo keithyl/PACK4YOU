@@ -26,6 +26,7 @@
              String destination = (String) request.getAttribute("Destination");
              String packingList = (String) request.getAttribute("packingList");
              //String packingList = (String) request.getAttribute("packingList");
+
             HashMap<String,ArrayList<Item>> myPackingLists = im.retrievePackingList();
         %>
         
@@ -55,7 +56,9 @@
         %>
                 <tr bgcolor="white">
                     <td><%=counter%></td>
-                    <td><a href="savedList.jsp"><%=packingListName%></a></td>
+                    <!--<td><a href="GeneratedPackingList1.jsp?Destination=<%=packingListName%>"><%=packingListName%></a></td>
+                    -->
+                    <td><a href="GeneratedPackingList1.jsp?Destination=<%=packingListName.trim()%>"><%=packingListName%></a></td>
                     <td><a href="#">Delete</a></td>
                 </tr>
         <%

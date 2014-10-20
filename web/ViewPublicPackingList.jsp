@@ -47,7 +47,7 @@
                     <!-- LikeBtn.com END -->
                 </td>
                 <td width="35%" align="right">
-                    <form id="useMeForm" name="useMeForm" method="get" action="GeneratedPackingList_1.jsp">
+                    <form id="useMeForm" name="useMeForm" method="get" action="GeneratedPackingList1.jsp">
                         <input type="hidden" name="useMeList" id="useMeList" value="pinkyShanghai"/>
                         <input class="GreenButton" type="submit" name="submit" value="Use Me!">
                     </form>
@@ -239,21 +239,6 @@
                 </tr>
             </table>
         </div>
-                    
-        <h3>Total</h3>
-        <div class="PublicGeneratedTable">
-            <table>
-                <tr>
-                    <td>Quantity</td>
-                    <td>Weight (in kg)</td>
-                </tr>
-                <tr>
-                    <td>44</td>
-                    <td>19.3</td>
-                </tr>
-            </table>
-        </div>
-        <br/>
 
         <a name="reviews"><font color="white"><h4>See what others have to say...</h4></font></a>
         <div class="ReviewResult">

@@ -134,11 +134,11 @@ public class ItemManager {
         Item b10 = new Item("Passport", 1, 0.1, "essentials");
         Item b1 = new Item("Shirts", 8, 0.25, "clothes");
         Item b2 = new Item("Jeans", 8, 0.5, "clothes");
-        Item b4 = new Item("Shoes", 2, 1, "clothes");
+        Item b4 = new Item("Shoes", 2, 0.6, "clothes");
         Item b5 = new Item("Undergarments", 8, 0.8, "clothes");
         Item b6 = new Item("Slippers", 1, 0.2, "clothes");
-        Item b13 = new Item("Shorts", 4, 1, "clothes");
-        Item b8 = new Item("Caps", 2, 0.3, "clothes");
+        Item b13 = new Item("Jackets", 2, 1, "clothes");
+        Item b8 = new Item("Boots", 2, 1, "clothes");
         Item b12 = new Item("Toiletries", 1, 0.5, "hygiene");
         Item b14 = new Item("Medicine Box", 1, 0.4, "medication");
         Item b9 = new Item("Laptop", 1, 3, "electronics");
@@ -171,10 +171,11 @@ public class ItemManager {
             return cheukyShanghai2;
         } else if (country.equalsIgnoreCase("Melbourne")) {
             return itemList2;
-        }else if (country.equalsIgnoreCase("pinkyShanghai")) {
+        //}else if (country.equalsIgnoreCase("pinkyShanghai")) {
+        }else {
             return pinkyShanghai;
         }
-        return null;
+        //return null;
     }
 
     public String getSeason(String country) {
