@@ -61,6 +61,7 @@
         
         
         <h3>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
+        
         <div class="col-xs-6">
           <div class="table-responsive">
               <table class="CSSTableGenerator">

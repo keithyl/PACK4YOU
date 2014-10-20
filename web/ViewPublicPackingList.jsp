@@ -15,7 +15,7 @@
         <script type="text/javascript">
             function jumpToAnchor(target) {
                 window.location.hash = target;
-            }
+            }          
         </script>
 
         <!--http://jqueryui.com/dialog/#modal-form-->
@@ -59,188 +59,226 @@
         <!--[COUNTRY; WEATHER; PERIOD?]-->
         <br/>
 
-        <%String popupErr = "Sorry... we are not implementing this :)";%>
+        <%
+            String popupErr = "Sorry... we are not implementing this :)";
+            ArrayList<Item> itemList = im.retrieve("pinkyShanghai");
+        %>
         <center>
-        <h3>Essentials</h3>
-        <div class="PublicGeneratedTable">
-            <table>
-                <tr>
-                    <td>Item</td>
-                    <td>Quantity</td>
-                    <td>Weight (in kg)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Passport</td>
-                    <td>1</td>
-                    <td>0.1</td>
-                    <td>
-                        <form id="addItemFromOtherPackList" name="addItemFromOtherPackList" method="get" action="" 
-                              onSubmit="if (!confirm('Are you sure you want to add item (Passport) to your list?')) {
-                                return false;
-                            }" >
-                            <input type="hidden" name="addItemToMyList" id="addItemToMyList" value="Passpost,1,0.1,essential"/>
-                            <input class="BlueButton" type="submit" name="submit" value="+ to My List">
-                        </form>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <h3>Clothing</h3>
-        <div class="PublicGeneratedTable">
-            <table>
-                <tr>
-                    <td>Item</td>
-                    <td>Quantity</td>
-                    <td>Weight (in kg)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Shirts</td>
-                    <td>8</td>
-                    <td>2</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                        <!--<button id="acreate-user" class="BlueButton">+ to My List</button>
-                        <input  id="create-user" class="BlueButton" type="button" value="+ to My List" >-->
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jeans</td>
-                    <td>8</td>
-                    <td>4</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Shoes</td>
-                    <td>2</td>
-                    <td>2</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Undergarments</td>
-                    <td>8</td>
-                    <td>0.8</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Slippers</td>
-                    <td>1</td>
-                    <td>0.2</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Shorts</td>
-                    <td>4</td>
-                    <td>1</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-                <tr>
-                    <td>Caps</td>
-                    <td>2</td>
-                    <td>0.6</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <h3>Hygiene</h3>
-        <div class="PublicGeneratedTable">
-            <table>
-                <tr>
-                    <td>Item</td>
-                    <td>Quantity</td>
-                    <td>Weight (in kg)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Toiletries</td>
-                    <td>1</td>
-                    <td>0.5</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <h3>Medication</h3>
-        <div class="PublicGeneratedTable">
-            <table>
-                <tr>
-                    <td>Item</td>
-                    <td>Quantity</td>
-                    <td>Weight (in kg)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Medicine Box</td>
-                    <td>1</td>
-                    <td>0.4</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-            </table>
-        </div>
+        <div class="container">
+                <div id="widnow" class="col-xs-6 col-centered">
+                    <div id="title_bar">
+                        <div id="category">Essentials</div>
+                        <div id="button2">-</div>
+                    </div>
+                    <div id="box2" class="table-responsive">
+                        <table class="CSSTableGenerator">
+                            <tr>
+                                <td class="col-md-1">Item</td>
+                                <td class="col-md-2">Quantity</td>
+                                <td class="col-md-3">Weight(kg)</td>
+                                <td class="col-sm-1">Action</td>
+                            </tr>
+                                <% 
+                                   for (Item i: itemList){
+                                        String c = i.getCategory();
+                                        if (c.equalsIgnoreCase("Essentials")){
+                                %>    
+                            <tr>
+                                <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
+                                <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
+                                <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
+                                <td class="lastrow">
+                                    <form id="addItemFromOtherPackList" name="addItemFromOtherPackList" method="get" action="" 
+                                            onSubmit="if (!confirm('Are you sure you want to add item (Passport) to your list?')) {
+                                            return false;}" >
+                                        <input type="hidden" name="addItemToMyList" id="addItemToMyList" value="Passpost,1,0.1,essential"/>
+                                        <input class="BlueButton" type="submit" name="submit" value="+ to My List">
+                                    </form>    
+                                </td>
+                            </tr>
+                                <%
+                                        }
+                                    }
+                                %>
+                            <tr>
+                                <td class="col-md-1">TOTAL</strong></td>
+                                <td class="col-md-2"><strong>34</strong></td>
+                                <td class="col-md-3"><strong>14.0</strong></td>
+                                <td></td>
+                            </tr>
+                        </table>    
+                    </div>
+                </div>
+                <div id="widnow" class="col-xs-6 col-centered">
+                    <div id="title_bar">
+                        <div id="category">Clothing</div>
+                        <div id="button">-</div>
+                    </div>
                     
-        <h3>Electronics</h3>
-        <div class="PublicGeneratedTable">
-            <table>
-                <tr>
-                    <td>Item</td>
-                    <td>Quantity</td>
-                    <td>Weight (in kg)</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Laptop</td>
-                    <td>1</td>
-                    <td>3</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-                <tr>
-                    <td>DSLR Camera</td>
-                    <td>1</td>
-                    <td>2.2</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-                <tr>
-                <tr>
-                    <td>Chargers</td>
-                    <td>3</td>
-                    <td>0.6</td>
-                    <td>
-                        <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
-                    </td>
-                </tr>
-                <tr>
-                    <td><strong>TOTAL</strong></td>
-                    <td>44</td>
-                    <td>19.3</td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
+                    <div id="box" class="table-responsive">
+                        <table class="CSSTableGenerator">
+                            <tr>
+                                <td class="col-md-1">Item</td>
+                                <td class="col-md-2">Quantity</td>
+                                <td class="col-md-3">Weight(kg)</td>
+                                <td class="col-sm-1">Action</td>
+                            </tr>
+                            <% 
 
+                               for (Item i: itemList){
+                                    String c = i.getCategory();
+                                    if (c.equalsIgnoreCase("clothes")){
+                            %>    
+                            <tr>
+                                <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
+                                <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
+                                <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
+                                <td class="lastrow">
+                                    <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                                </td>
+                            </tr>
+                            <%
+                                    }
+                                }
+                            %>
+                            <tr>
+                                <td class="col-md-1">TOTAL</strong></td>
+                                <td class="col-md-2"><strong>34</strong></td>
+                                <td class="col-md-3"><strong>14.0</strong></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>            
+                <div id="widnow" class="col-xs-6 col-centered">
+                    <div id="title_bar">
+                        <div id="category">Hygiene</div>
+                        <div id="button3">-</div>
+                    </div>
+                    <div id="box3" class="table-responsive">
+                        <table class="CSSTableGenerator">
+                            <tr>
+                                <td class="col-md-1">Item</td>
+                                <td class="col-md-2">Quantity</td>
+                                <td class="col-md-3">Weight(kg)</td>
+                                <td class="col-sm-1">Action</td>
+                            </tr>
+                            <% 
+
+                               for (Item i: itemList){
+                                    String c = i.getCategory();
+                                    if (c.equalsIgnoreCase("Hygiene")){
+                            %>    
+                            <tr>
+                                <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
+                                <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
+                                <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
+                                <td class="lastrow">
+                                    <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                                </td>
+                            </tr>
+                            <%
+                                    }
+                                }
+                            %>
+                            <tr>
+                                <td class="col-md-1">TOTAL</strong></td>
+                                <td class="col-md-2"><strong>34</strong></td>
+                                <td class="col-md-3"><strong>14.0</strong></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+ 
+                <div id="widnow" class="col-xs-6 col-centered">
+                    <div id="title_bar">
+                        <div id="category">Medication</div>
+                        <div id="button4">-</div>
+                    </div>
+                    <div id="box4" class="table-responsive">
+                        <table class="CSSTableGenerator">
+                            <tr>
+                                <td class="col-md-1">Item</td>
+                                <td class="col-md-2">Quantity</td>
+                                <td class="col-md-3">Weight(kg)</td>
+                                <td class="col-sm-1">Action</td>
+                            </tr>
+                            <% 
+
+                               for (Item i: itemList){
+                                    String c = i.getCategory();
+                                    if (c.equalsIgnoreCase("Medication")){
+                            %>    
+                            <tr>
+                                <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
+                                <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
+                                <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
+                                <td class="lastrow">
+                                    <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                                </td>
+                            </tr>
+                            <%
+                                    }
+                                }
+                            %>
+                            <tr>
+                                <td class="col-md-1">TOTAL</strong></td>
+                                <td class="col-md-2"><strong>34</strong></td>
+                                <td class="col-md-3"><strong>14.0</strong></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                 
+                <div id="widnow" class="col-xs-6 col-centered">
+                    <div id="title_bar">
+                        <div id="category">Electronics</div>
+                        <div id="button5">-</div>
+                    </div>
+                    <div id="box5" class="table-responsive">
+                        <table class="CSSTableGenerator">
+                            <tr>
+                                <td class="col-md-1">Item</td>
+                                <td class="col-md-2">Quantity</td>
+                                <td class="col-md-3">Weight(kg)</td>
+                                <td class="col-sm-1">Action</td>
+                            </tr>
+                            <% 
+
+                               for (Item i: itemList){
+                                    String c = i.getCategory();
+                                    if (c.equalsIgnoreCase("Electronics")){
+                            %>    
+                            <tr>
+                                <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
+                                <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
+                                <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
+                                <td class="lastrow">
+                                    <input class="BlueButton" type="submit" value="+ to My List" onclick="alert('<%=popupErr%>');">
+                                </td>
+                            </tr>
+                            <%
+                                    }
+                                }
+                            %>
+                            <tr>
+                                <td class="col-md-1">TOTAL</strong></td>
+                                <td class="col-md-2"><strong>34</strong></td>
+                                <td class="col-md-3"><strong>14.0</strong></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br/>               
+        </div>    
+            
+        
+        <br/>            
         <a name="reviews"><font color="white"><h4>See what others have to say...</h4></font></a>
+        
         <div class="ReviewResult">
             <form id="addReview" name="addReview" method="post" action="ViewPublicPackingList.jsp" >
                 <table class="ReviewList">
@@ -321,7 +359,57 @@
             <a href="#"><left>back to top</left></a>
             <br/>
         </div>
+                    
     </center>
+                    
+    <script type="text/javascript">
+        $("#button").click(function(){
+            if($(this).html() === "-"){
+                $(this).html("+");
+            }
+            else{
+                $(this).html("-");
+            }
+            $("#box").slideToggle();
+        });
+        $("#button2").click(function(){
+            if($(this).html() === "-"){
+                $(this).html("+");
+            }
+            else{
+                $(this).html("-");
+            }
+            $("#box2").slideToggle();
+        });
+        $("#button3").click(function(){
+            if($(this).html() === "-"){
+                $(this).html("+");
+            }
+            else{
+                $(this).html("-");
+            }
+            $("#box3").slideToggle();
+        });
+        $("#button4").click(function(){
+            if($(this).html() === "-"){
+                $(this).html("+");
+            }
+            else{
+                $(this).html("-");
+            }
+            $("#box4").slideToggle();
+        });
+        $("#button5").click(function(){
+            if($(this).html() === "-"){
+                $(this).html("+");
+            }
+            else{
+                $(this).html("-");
+            }
+            $("#box5").slideToggle();
+        });
+
+    </script>
 </body>
-</body>
+
 </html>
