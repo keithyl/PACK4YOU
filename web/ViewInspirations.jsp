@@ -52,7 +52,6 @@
                 <p/>
                 <table class="FilterListingTable">
                     <tr>
-                        <td>[Filter here]<input class="GreenButtonButton" type="submit" value="Filter" onclick="alert('Sorry... we are not implementing this :)');"></td>
                         <td>
                             Page:   [1,
                             <a href="" onclick="alert('Sorry... we are not implementing this :)');">2</a>,
@@ -79,8 +78,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><br/><img src="images/thumbUp.png" height="30"><br/>856 Likes</td>
-                        <td><br/><img src="images/hashtag.png" height="30"><br/>56 #exchange | 56 #student</td>
+                        <td><br/><img src="images/thumbUp.png" height="30"><br/><%=im.likesNo()%> Likes</td>
+                        <td><br/><br/>#exchange | #student</td>
                         <td><br/><img src="images/user.gif" height="30"><br/>By: Pinky</td>
                     </tr>
                     <tr>
@@ -98,7 +97,7 @@
                     </tr>
                     <tr>
                         <td><br/><img src="images/thumbUp.png" height="30"><br/>699 Likes</td>
-                        <td><br/><img src="images/hashtag.png" height="30"><br/>45 #seesighting</td>
+                        <td><br/>#seesighting</td>
                         <td><br/><img src="images/user.gif" height="30"><br/>By: Bluey</td>
                     </tr>
                     <tr>
@@ -115,7 +114,7 @@
                     </tr>
                     <tr>
                         <td><br/><img src="images/thumbUp.png" height="30"><br/>672 Likes</td>
-                        <td><br/><img src="images/hashtag.png" height="30"><br/>33 #Shopping</td>
+                        <td><br/><br/>#Shopping</td>
                         <td><br/><img src="images/user.gif" height="30"><br/>By: maggieTheGal</td>
                     </tr>
                     <tr>
@@ -133,7 +132,7 @@
                     </tr>
                     <tr>
                         <td><br/><img src="images/thumbUp.png" height="30"><br/>533 Likes</td>
-                        <td><br/><img src="images/hashtag.png" height="30"><br/>43 #culinarytrip</td>
+                        <td><br/><br/>#culinarytrip</td>
                         <td><br/><img src="images/user.gif" height="30"><br/>By: Hazel90</td>
                     </tr>
                     <tr>
@@ -151,7 +150,7 @@
                     </tr>
                     <tr>
                         <td><br/><img src="images/thumbUp.png" height="30"><br/>234 Likes</td>
-                        <td><br/><img src="images/hashtag.png" height="30"><br/>42 #summerexchange</td>
+                        <td><br/><br/>#summerexchange</td>
                         <td><br/><img src="images/user.gif" height="30"><br/>By: Marie</td>
                     </tr>
                     <tr>

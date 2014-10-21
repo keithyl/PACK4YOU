@@ -30,9 +30,31 @@
         <br/>
         <br/>
     <center>
-
+        <%
+            String likeImgUrl = "";
+            String likeUrlExist = request.getParameter("isLike");
+            if (likeUrlExist != null && !likeUrlExist.equals("")){
+                if (likeUrlExist.contains("Black")){
+                    im.addLike();
+                }else{
+                    im.disLike();
+                }
+                session.setAttribute("itemMgr", im);
+            }
+            
+            if(im.likesNo()==856){
+                likeImgUrl = "images/thumbUpBlack.png";
+            }else{
+                likeImgUrl = "images/thumbUp.png";
+            }
+        %>
         <br/>
-        <h2>Shanghai Time by Pinky</h2>
+        <h2>Shanghai Time by Pinky</h2> 
+            <form id="likeForm" name="likeForm" method="post" action="ViewPublicPackingList.jsp">
+                <input type="hidden" name ="isLike" value = "<%=likeImgUrl%>"/>
+                <img src="<%=likeImgUrl%>" id="likeImg" onclick="diffImage(this)" value="" height="30"/>
+            </form>>
+
         <br/>
         <table width="75%" >
             <tr>
@@ -409,6 +431,16 @@
             }
             $("#box5").slideToggle();
         });
+
+        function diffImage(img) 
+        {
+            if(img.src.match("images/thumbUpBlack.png")){
+                img.src = "images/thumbUp.png";
+            }else {
+               img.src = "images/thumbUpBlack.png";
+           }
+           document.forms['likeForm'].submit() ;
+        }
 
     </script>
 </body>

@@ -33,6 +33,8 @@ public class ItemManager {
     private String season;
     private String weather;
     private String country;
+    private int publicLike;
+    private boolean isLikePL;
 
     // when cheukyBear is added, it is under category essentials
     public ItemManager() {
@@ -42,6 +44,7 @@ public class ItemManager {
         itemList2 = new ArrayList<>(); //List for melbourne. generated
         pinkyShanghai = new ArrayList<>(); //Jenny's list
         
+        publicLike = 856;
         
         Item i1 = new Item("Shirts", 8, 0.3, "clothes");
         Item i2 = new Item("Shorts", 4, 0.3, "clothes");
@@ -166,6 +169,23 @@ public class ItemManager {
 
     }
 
+    public int likesNo(){
+        return publicLike;
+    }
+    public boolean isLike(){
+        return isLikePL;
+    }
+    
+    public int disLike(){
+        publicLike-=1;
+        return publicLike;
+    }
+    
+    public int addLike(){
+        publicLike+=1;
+        return publicLike;
+    }
+        
     public ArrayList<Item> retrieve(String country) {
         if (country.equalsIgnoreCase("Shanghai")) {
             return cheukyShanghai2;
