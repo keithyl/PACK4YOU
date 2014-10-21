@@ -49,12 +49,12 @@
             }
         %>
         <br/>
-        <h2>Shanghai Time by Pinky</h2> 
+        <h2>Shanghai Time by Pinky</h2>  
             <form id="likeForm" name="likeForm" method="post" action="ViewPublicPackingList.jsp">
                 <input type="hidden" name ="isLike" value = "<%=likeImgUrl%>"/>
                 <img src="<%=likeImgUrl%>" id="likeImg" onclick="diffImage(this)" value="" height="30"/>
-            </form>>
-
+            </form>
+               
         <br/>
         <table width="75%" >
             <tr>
@@ -110,7 +110,7 @@
                                 <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
                                 <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
                                 <td class="lastrow">
-                                    <form id="addItemFromOtherPackList" name="addItemFromOtherPackList" method="post" action="GeneratedPackingList1.jsp" 
+                                    <form id="addItemFromOtherPackList" name="addItemFromOtherPackList" method="post" action="GeneratedPackingList.jsp" 
                                             onSubmit="if (!confirm('Are you sure you want to add item (Passport) to your list?')) {
                                             return false;}" >
                                         <input type="hidden" name="Destination" id="Destination" value="Shanghai"/>
@@ -356,7 +356,7 @@
                     <tr>
                         <td><img src="images/user.gif" height="35"><br/><%=user%></td>
                         <td><%=newReview%></td>
-                        <td>[DateTimeOfComment]</td>
+                        <td>24 Oct 2014 23:01</td>
                     </tr>
                     <tr>
                         <td colspan="3" ></td>

@@ -58,7 +58,7 @@
                     <td><%=counter%></td>
                     <!--<td><a href="GeneratedPackingList1.jsp?Destination=<%=packingListName%>"><%=packingListName%></a></td>
                     -->
-                    <td><a href="GeneratedPackingList1.jsp?Destination=<%=packingListName.trim()%>"><%=packingListName%></a></td>
+                    <td><a href="GeneratedPackingList.jsp?Destination=<%=packingListName.trim()%>"><%=packingListName%></a></td>
                     <td><a href="#">Delete</a></td>
                 </tr>
         <%

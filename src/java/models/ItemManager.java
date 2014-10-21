@@ -58,6 +58,7 @@ public class ItemManager {
         Item i10 = new Item("winter jacket", 2, 1.9, "clothes");
         Item i11 = new Item("Scarf", 2, 0.3, "clothes");
         Item i12 = new Item("Mufflers", 1, 0.6, "clothes");
+        Item i15 = new Item("Boarding Pass", 1, 0.1, "essentials");
 
         Item l1 = new Item("Shirts", 8, 0.3, "clothes");
         Item l2 = new Item("Shorts", 4, 0.3, "clothes");
@@ -69,9 +70,9 @@ public class ItemManager {
         Item l8 = new Item("Panadol Box", 1, 0.1, "medication");
         Item l9 = new Item("Toiletries Box", 1, 0.7, "hygiene");
         Item l10 = new Item("Shades", 1, 0.2, "eyewear");
-        Item l11 = new Item("sun-tan lotion", 2, 0.2, "essentials");
+        Item l11 = new Item("Sun-tan Lotion", 2, 0.2, "essentials");
         Item l12 = new Item("Laptop", 1, 1.6, "electronics");
-
+        Item l13 = new Item("Boarding Pass", 1, 0.1, "essentials");
 
         cheukyShanghai = new ArrayList<>();
         cheukyShanghai2 = new ArrayList<>();
@@ -92,6 +93,7 @@ public class ItemManager {
         itemList1.add(i10);
         itemList1.add(i11);
         itemList1.add(i12);
+        cheukyShanghai2.add(i15);
         
         cheukyShanghai.add(i1);
         cheukyShanghai.add(i2);
@@ -133,6 +135,7 @@ public class ItemManager {
         itemList2.add(l10);
         itemList2.add(l11);
         itemList2.add(l12);
+        itemList1.add(l13);
 
         Item b10 = new Item("Passport", 1, 0.1, "essentials");
         Item b1 = new Item("Shirts", 8, 0.25, "clothes");
