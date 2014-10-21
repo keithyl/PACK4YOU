@@ -31,7 +31,7 @@
         
         <% 
             if (myPackingLists == null || myPackingLists.size()== 0){
-                out.println("<br/>You have no existing list. Go generate one <a href='Home.jsp'>here</a>! :) ");
+                out.println("<br/><h2>You have no existing list. Go generate one <a href='Home.jsp'>here</a>! :)</h2> ");
             //}else if(){
             
             } else{
