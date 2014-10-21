@@ -288,8 +288,8 @@
                     </tr>
                     <tr>
                         <td><img src="images/user.gif" height="35"><br/>Matty</td>
-                        <td>A very long comments here...</td>
-                        <td> <label for="like1">123 likes</label> || <a href="#">LIKE</a></td>
+                        <td>Good for a long trip too... #sightseeing</td>
+                        <td>22 Oct 2014 21:49</td>
                     </tr>
                     <tr>
                         <td colspan="3" ></td>
@@ -299,8 +299,8 @@
                     </tr>
                     <tr>
                         <td><img src="images/user.gif" height="35"><br/>Kitty</td>
-                        <td>A very long comments here...</td>
-                        <td> <label for="like2">424 likes</label> || <a href="#">LIKE</a></td>
+                        <td>Great for first time #exchange #student</td>
+                        <td>15 Oct 2014 20:34</td>
                     </tr>
                     <tr>
                         <td colspan="3" ></td>
@@ -310,8 +310,8 @@
                     </tr>
                     <tr>
                         <td><img src="images/user.gif" height="35"><br/>Lily</td>
-                        <td>A very long comments here...</td>
-                        <td> <label for="like3">424 likes</label> || <a href="#">LIKE</a></td>
+                        <td>This reminds me about the #passport that I missed!</td>
+                        <td>11 Oct 2014 15:23</td>
                     </tr>
                     <tr>
                         <td colspan="3" ></td>
@@ -334,7 +334,7 @@
                     <tr>
                         <td><img src="images/user.gif" height="35"><br/><%=user%></td>
                         <td><%=newReview%></td>
-                        <td> <label for="like4">0 like</label> || <a href="#">LIKE</a></td>
+                        <td>[DateTimeOfComment]</td>
                     </tr>
                     <tr>
                         <td colspan="3" ></td>

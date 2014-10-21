@@ -47,17 +47,31 @@
             <br/>
             </font>
             <div class="SearchResult">
-                There are 2 results found.     
+                <font color="blue" size="4"><strong><left>There are 106 results found.</left></strong></font>     
                 <p/>
                 <p/>
+                <table class="FilterListingTable">
+                    <tr>
+                        <td>[Filter here]<input class="GreenButtonButton" type="submit" value="Filter" onclick="alert('Sorry... we are not implementing this :)');"></td>
+                        <td>
+                            Page:   [1,
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');">2</a>,
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');">3</a>,
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');">4</a>...
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');">22</a>]
+                        </td>
+                    </tr>
+                </table>
                 <p/>
                 <p/>
+                
                 <table class="ResultList">
                     <tr>
+                        <td><font color="blue" size="4"><strong><left>Results displayed: 1 - 5</left></strong></font></td>
                         <td colspan="2" ></td>
                     </tr>
                     <tr>
-                        <td>Packing List 1 - Shanghai Time</td>
+                        <td colspan="2" >Packing List 1 - Shanghai Time</td>
                         <td>
                             <a href="ViewPublicPackingList.jsp">
                                 <input class="BlueButton" type="submit" value="View List">
@@ -65,31 +79,86 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><br/><img src="images/thumbUp.png" height="27"><br/>856 Likes</td>
-                        <td><br/><img src="images/user.gif" height="27"><br/>By: Pinky</td>
+                        <td><br/><img src="images/thumbUp.png" height="30"><br/>856 Likes</td>
+                        <td><br/><img src="images/hashtag.png" height="30"><br/>56 #exchange | 56 #student</td>
+                        <td><br/><img src="images/user.gif" height="30"><br/>By: Pinky</td>
                     </tr>
                     <tr>
-                        <td colspan="2" ></td>
+                        <td colspan="3" ></td>
                     </tr>
                     <tr>
-                        <td colspan="2" ></td>
+                        <td colspan="3" ></td>
                     </tr>
                     <tr>
-                        <td>Packing List 2 - Shanghai in Summer</td>
+                        <td colspan="2" >Packing List 2 - Shanghai in Summer</td>
                         <td>
                             <!--<a href="ViewPublicPackingList.jsp"><img src="images/viewList.png">-->
                             <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');">  
                         </td>
                     </tr>
                     <tr>
-                        <td><br/><img src="images/thumbUp.png" height="27"><br/>234 Likes</td>
-                        <td><br/><img src="images/user.gif" height="27"><br/>By: Bluey</td>
+                        <td><br/><img src="images/thumbUp.png" height="30"><br/>699 Likes</td>
+                        <td><br/><img src="images/hashtag.png" height="30"><br/>45 #seesighting</td>
+                        <td><br/><img src="images/user.gif" height="30"><br/>By: Bluey</td>
                     </tr>
                     <tr>
-                        <td colspan="2" ></td>
+                        <td colspan="3" ></td>
                     </tr>
                     <tr>
-                        <td colspan="2" ></td>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" >Packing List 3 - Shopping Trip to Shanghai</td>
+                        <td>
+                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');">  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br/><img src="images/thumbUp.png" height="30"><br/>672 Likes</td>
+                        <td><br/><img src="images/hashtag.png" height="30"><br/>33 #Shopping</td>
+                        <td><br/><img src="images/user.gif" height="30"><br/>By: maggieTheGal</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" >Packing List 4 - December Holiday</td>
+                        <td>
+                            <!--<a href="ViewPublicPackingList.jsp"><img src="images/viewList.png">-->
+                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');">  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br/><img src="images/thumbUp.png" height="30"><br/>533 Likes</td>
+                        <td><br/><img src="images/hashtag.png" height="30"><br/>43 #culinarytrip</td>
+                        <td><br/><img src="images/user.gif" height="30"><br/>By: Hazel90</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" >Packing List 5 - Summer Exchange in Shanghai</td>
+                        <td>
+                            <!--<a href="ViewPublicPackingList.jsp"><img src="images/viewList.png">-->
+                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');">  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br/><img src="images/thumbUp.png" height="30"><br/>234 Likes</td>
+                        <td><br/><img src="images/hashtag.png" height="30"><br/>42 #summerexchange</td>
+                        <td><br/><img src="images/user.gif" height="30"><br/>By: Marie</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" ></td>
                     </tr>
                 </table>
             </div> 
