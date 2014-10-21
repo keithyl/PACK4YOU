@@ -35,6 +35,7 @@
     <%
         String destination = (String) request.getAttribute("Destination");
         String openPackListDestination = (String) request.getParameter("Destination");
+        String addItemToMyList = (String) request.getParameter("addItemToMyList");
         String useMeList = (String) request.getParameter("useMeList");
         String packingListName = "";
         String packingListAttribute = "";
@@ -60,6 +61,13 @@
                 packingListAttribute = openPackListDestination;
             }
         }
+        if(addItemToMyList != null && !addItemToMyList.equalsIgnoreCase("")){
+            itemList.add(new Item("Passport", 1, 0.1, "essentials"));
+            //im.updatePackingList("Shanghai", itemList);
+            HashMap<String, ArrayList<Item>> myPackingLists = im.retrievePackingList();
+            myPackingLists.put(packingListName, itemList);
+            session.setAttribute("itemMgr", im);
+        }
     %>
       
     <br>
@@ -76,6 +84,7 @@
           <div class="col-xs-6">
           <h3>Essentials<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3> 
            <div class="table-responsive">
+              
              <table class="CSSTableGenerator">
                
                     <tr>
@@ -114,7 +123,8 @@
         <div class="col-xs-6">
             <h3>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
           <div class="table-responsive">
-              <table class="CSSTableGenerator">
+              <div class="CSSTableGenerator">
+              <table id="CSSTableGenerator">
            
      
           <tr>
@@ -147,7 +157,7 @@
                     <td></td>
                 </tr>
         </table>
-        </div>
+        </div></div>
         </div>
                
         
