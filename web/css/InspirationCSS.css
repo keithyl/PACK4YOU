@@ -71,6 +71,9 @@ h3{
     text-align: center;
     font-size:16px;
 }
+#pageList{
+    alignment-adjust: right;
+}
 
 .ResultList{
     width: 80%;
@@ -108,15 +111,15 @@ h3{
 }
 
 .FilterListingTable{
-    width: 80%;
-
+    width: 99%;
     position: relative;
     font-size:16px;
     font-family: Arial, sans-serif;
+    font-weight: bold; 
 }.ReviewList tr:nth-child(1) td:nth-child(1){
     text-align: left;
 }.ReviewList tr:nth-child(1) td:nth-child(2){
-    //text-align: right;
+    text-align: right;
 }
 
 .ReviewResult{
@@ -143,7 +146,7 @@ h3{
     font-family: Arial, sans-serif;
 }.ReviewList tr:nth-child(3n){
     border-bottom: 2px dotted black;
-    height: 15px;
+    height: 10px;
 }.ReviewList tr:nth-child(3n+1){
     height: 15px;
 }.ReviewList tr:nth-child(3n+2){
@@ -429,6 +432,11 @@ h3{
     text-overflow:ellipsis;
     -ms-text-overflow:ellipsis;
     float: left;
+}
+
+#minMaxButton{
+    alignment-adjust:right;
+    
 }
 
 #box{

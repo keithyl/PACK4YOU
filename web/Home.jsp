@@ -46,19 +46,19 @@
             <form action="GeneratePackingListServlet" method="post">
                 <label id="first">
                     <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
-                    <input type="text" name="Destination" placeholder="Destination"><br>
+                    <input type="text" name="Destination" placeholder="Destination" required><br>
                 </label>
                 
                 <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
-                <input id="datepicker" type="text" placeholder="MM/DD/YY"/>
+                <input id="datepicker" type="text" placeholder="MM/DD/YY" required/>
                 <span class="glyphicon glyphicon-calendar"  style="font-size: 20px"></span>
-                <input id="datepicker2" type="text" placeholder="MM/DD/YY"/>
+                <input id="datepicker2" type="text" placeholder="MM/DD/YY" required/>
                 <label id="second">
                     <span class="glyphicon glyphicon-briefcase"  style="font-size: 20px"></span>
                     <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)">  
                 </label>
                 <input type="submit" value="PACK4ME">
-                  <font color="black"><%=errorMsg%></font>
+                  <font color="red"><%=errorMsg%></font>
             </form>
         </div>
         

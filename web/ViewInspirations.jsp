@@ -47,17 +47,18 @@
             <br/>
             </font>
             <div class="SearchResult">
-                <font color="blue" size="4"><strong><left>There are 106 results found.</left></strong></font>     
+                <div id="pageList"><font color="blue" size="4"><strong><left>There are 106 results found.</left></strong></font><div>     
                 <p/>
                 <p/>
                 <table class="FilterListingTable">
                     <tr>
-                        <td>
-                            Page:   [1,
-                            <a href="" onclick="alert('Sorry... we are not implementing this :)');">2</a>,
-                            <a href="" onclick="alert('Sorry... we are not implementing this :)');">3</a>,
-                            <a href="" onclick="alert('Sorry... we are not implementing this :)');">4</a>...
-                            <a href="" onclick="alert('Sorry... we are not implementing this :)');">22</a>]
+                        <td width="70%"></td>
+                        <td >
+                            &nbsp;1&nbsp;
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');return false;">2</a>&nbsp; 
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');return false;">3</a>&nbsp;
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');return false;">4</a>&nbsp;...&nbsp;
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');return false;">22</a>&nbsp;
                         </td>
                     </tr>
                 </table>
@@ -92,7 +93,7 @@
                         <td colspan="2" >Packing List 2 - Shanghai in Summer</td>
                         <td>
                             <!--<a href="ViewPublicPackingList.jsp"><img src="images/viewList.png">-->
-                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');">  
+                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)')return false;;">  
                         </td>
                     </tr>
                     <tr>
@@ -109,7 +110,7 @@
                     <tr>
                         <td colspan="2" >Packing List 3 - Shopping Trip to Shanghai</td>
                         <td>
-                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');">  
+                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');return false;">  
                         </td>
                     </tr>
                     <tr>
@@ -127,7 +128,7 @@
                         <td colspan="2" >Packing List 4 - December Holiday</td>
                         <td>
                             <!--<a href="ViewPublicPackingList.jsp"><img src="images/viewList.png">-->
-                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');">  
+                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');return false;">  
                         </td>
                     </tr>
                     <tr>
@@ -145,7 +146,7 @@
                         <td colspan="2" >Packing List 5 - Summer Exchange in Shanghai</td>
                         <td>
                             <!--<a href="ViewPublicPackingList.jsp"><img src="images/viewList.png">-->
-                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');">  
+                            <input class="BlueButton" type="submit" value="View List" onclick="alert('Sorry... we are not implementing this :)');return false;">  
                         </td>
                     </tr>
                     <tr>
@@ -160,6 +161,18 @@
                         <td colspan="3" ></td>
                     </tr>
                 </table>
+                <table class="FilterListingTable">
+                    <tr>
+                        <td width="70%"></td>
+                        <td >
+                            &nbsp;1&nbsp;
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');return false;">2</a>&nbsp; 
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');return false;">3</a>&nbsp;
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');return false;">4</a>&nbsp;...&nbsp;
+                            <a href="" onclick="alert('Sorry... we are not implementing this :)');return false;">22</a>&nbsp;
+                        </td>
+                    </tr>
+                </table>        
             </div> 
         </center>
     <%

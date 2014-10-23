@@ -37,11 +37,7 @@ public class GeneratePackingListServlet extends HttpServlet {
             //retrieve destination 
             String destination = request.getParameter("Destination");
             
-            if(destination.equals("")){
-                session.setAttribute("errorMsg","Destination is empty!");
-                response.sendRedirect("Home.jsp");
-            }
-            else if (destination.equalsIgnoreCase("Shanghai")){               
+            if(destination.equalsIgnoreCase("Shanghai")){               
                 request.setAttribute("Destination","Shanghai");
                 System.out.println("test");
                 //RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
@@ -52,6 +48,9 @@ public class GeneratePackingListServlet extends HttpServlet {
                 RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
                 //RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList_1.jsp");
                 rd.forward(request, response);
+            }else{
+                session.setAttribute("errorMsg","Sorry... we do not support this destination :)");
+                response.sendRedirect("Home.jsp");
             }
         }catch(Exception e){            
            e.getMessage();

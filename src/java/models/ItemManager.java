@@ -145,7 +145,7 @@ public class ItemManager {
         Item b1 = new Item("Shirts", 8, 0.25, "clothes");
         Item b2 = new Item("Jeans", 8, 0.5, "clothes");
         Item b4 = new Item("Shoes", 2, 0.6, "clothes");
-        Item b5 = new Item("Undergarments", 8, 0.8, "clothes");
+        Item b5 = new Item("Undergarments", 8, 0.2, "clothes");
         Item b6 = new Item("Slippers", 1, 0.2, "clothes");
         Item b13 = new Item("Jackets", 2, 1, "clothes");
         Item b8 = new Item("Boots", 2, 1, "clothes");
