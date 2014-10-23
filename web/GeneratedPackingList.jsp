@@ -80,7 +80,7 @@
          
         
     </form> 
-    
+   <input type="button" value="19kg" onclick="return change(this);" />
           <div class="col-xs-6">
           <h3>Essentials<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3> 
            <div class="table-responsive">
@@ -270,13 +270,17 @@
         </div>
         </div>
         </form>
-        
-         <script type="text/javascript">
-    $('#itemlist').calx();
-</script>
+     
         <script>
-      
-         
+  
+function change( el )
+{
+    if ( el.value === "19kg" )
+        el.value = "24kg";
+    else
+        el.value = "19kg";
+}
+
        $(document).on('click','button.removebutton', function() {
             
           $(this).closest('tr').remove();
