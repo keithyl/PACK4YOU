@@ -25,15 +25,15 @@
 
 
             <ul class="nav navbar-nav">
-                <li><a href="Home.jsp">Home</a></li>
-                <li class="active"><a href="MyPackingLists.jsp">My Packing Lists</a></li>
-                <li><a href="Inspiration.jsp">Inspiration</a></li>
+                <li><a href="Home.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li class="active"><a href="MyPackingLists.jsp"><span class="glyphicon glyphicon-list-alt"></span> My Packing Lists</a></li>
+                <li><a href="Inspiration.jsp"><img src="images/lightbulb.png"> Inspiration</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Username: Cheuky</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Username: Cheuky</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
             </ul>
 
         </div>
