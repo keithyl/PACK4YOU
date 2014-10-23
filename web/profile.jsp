@@ -29,11 +29,12 @@
  
         <h2 class="h2"><center>Cheuky : Profile</center></h2>
 
-        <div class="Profile">
+        <div class="Profile" style="text-align: center;">
             <br>
             <table align="center">
-                <tr> <td><img src="images/cheuky.png" alt="" width="150" height="150"/></td><td>Name: Cheuky<br>Age:21<br>Gender: Female</td></tr>
-                <tr> <td colspan="2">Essential items: <br><list><ul>Cheuky Bear</ul><ul>Yellow Blanket</ul><ul>Hair spray</ul></td></tr>
+                <tr> <td><img src="images/cheuky.png" alt="" width="150" height="150" border="2"/></td><td><b>Name: Cheuky</b><br>Age:21<br>Gender: Female</td></tr>
+                <tr><td>  </td><td>  </td></tr>
+                <tr> <td colspan="2"><ol><lh><b>Essential items:</b></lh><li>Cheuky Bear</li><li>Yellow Blanket</li><li>Hair spray</li></ol></td></tr>
             </table>
         </div>
     </body>
