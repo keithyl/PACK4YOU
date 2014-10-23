@@ -281,11 +281,11 @@
   
 function change( el )
 {
-    if ( el.value === "19kg" )
-        el.value = "24kg";
+    if ( el.value === "Current total weight is 19kg" )
+        el.value = "Current total weight is 24kg";
     
     else
-        el.value = "19kg";
+        el.value = "Current total weight is 19kg";
 }
 
        $(document).on('click','button.removebutton', function() {
