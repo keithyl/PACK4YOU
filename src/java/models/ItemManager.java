@@ -46,19 +46,21 @@ public class ItemManager {
         
         publicLike = 856;
         
-        Item i1 = new Item("Shirts", 8, 0.3, "clothes");
+        Item i1 = new Item("Shirts", 8, 0.5, "clothes");
         Item i2 = new Item("Shorts", 4, 0.3, "clothes");
-        Item i3 = new Item("Jeans", 4, 0.4, "clothes");
+        Item i3 = new Item("Jeans", 4, 0.6, "clothes");
         Item i4 = new Item("Shoes", 2, 0.8, "clothes");
         Item i5 = new Item("Undergarments", 10, 0.2, "clothes");
         Item i6 = new Item("Chargers", 2, 0.2, "electronics");
-        Item i7 = new Item("Slippers", 1, 0.2, "clothes");
+        Item i7 = new Item("Slippers", 1, 0.3, "clothes");
         Item i8 = new Item("Panadol box", 1, 0.1, "medication");
         Item i9 = new Item("Toiletries box", 1, 0.7, "hygiene");
         Item i10 = new Item("winter jacket", 2, 1.9, "clothes");
         Item i11 = new Item("Scarf", 2, 0.3, "clothes");
         Item i12 = new Item("Mufflers", 1, 0.6, "clothes");
         Item i15 = new Item("Boarding Pass", 1, 0.1, "essentials");
+        Item i16 = new Item("Laptop", 1, 3.0, "electronics");
+        Item i17 = new Item("Toothbrush set", 1, 0.9, "hygiene");
 
         Item l1 = new Item("Shirts", 8, 0.3, "clothes");
         Item l2 = new Item("Shorts", 4, 0.3, "clothes");
@@ -94,6 +96,8 @@ public class ItemManager {
         itemList1.add(i11);
         itemList1.add(i12);
         cheukyShanghai2.add(i15);
+        cheukyShanghai2.add(i16);
+        cheukyShanghai2.add(i17);
         
         cheukyShanghai.add(i1);
         cheukyShanghai.add(i2);
