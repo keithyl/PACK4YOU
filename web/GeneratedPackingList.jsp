@@ -17,7 +17,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
-    
+     <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
+        <link rel="stylesheet" type="text/css" href="css/publicPackingList.css" />
         <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -77,10 +78,15 @@
         <input type="hidden" name ="packingListName" value = "<%=packingListName%>"/>
         <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/>
         <h2><center><input class="BlueButton" align="right" type="submit" value="Save"> Generated Packing List</center></h2><input type="hidden" name="packingList" value="packingList">
-         
-        
+              
     </form> 
-   <input type="button" value="19kg" onclick="return change(this);" />
+   
+                       
+  
+   <br/>
+
+      <input type="button" value="Press me to calculate weight!" onclick="return change(this);" />                 
+   <br>
           <div class="col-xs-6">
           <h3>Essentials<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3> 
            <div class="table-responsive">
@@ -277,6 +283,7 @@ function change( el )
 {
     if ( el.value === "19kg" )
         el.value = "24kg";
+    
     else
         el.value = "19kg";
 }

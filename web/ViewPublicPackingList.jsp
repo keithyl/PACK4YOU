@@ -11,6 +11,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
+        <link rel="stylesheet" type="text/css" href="css/publicPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="js/mindmup-editabletable.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -124,7 +125,7 @@
         <div class="container">
                 <div id="widnow" class="col-xs-6 col-centered">
                     <div id="title_bar">
-                        <div id="category">Essentials</div>
+                        <div id="category">Essentials&nbsp;&nbsp;</div>
                         <div id="minMaxButton"><img src="images/minimise.png" id="minTabImg" onclick="showTable1(this)" value="" height="35"/></div>
                     </div>
                     <div id="box1" class="table-responsive">
@@ -169,7 +170,7 @@
                 </div>
                 <div id="widnow" class="col-xs-6 col-centered">
                     <div id="title_bar">
-                        <div id="category">Clothing</div>
+                        <div id="category">Clothing&nbsp;&nbsp;&nbsp;&nbsp;</div>
                         <div id="minMaxButton"><img src="images/minimise.png" id="minTabImg" onclick="showTable2(this)" value="" height="35"/></div>
                     </div>
                     
@@ -210,7 +211,7 @@
                 </div>            
                 <div id="widnow" class="col-xs-6 col-centered">
                     <div id="title_bar">
-                        <div id="category">Hygiene</div>
+                        <div id="category">Hygiene&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                         <div id="minMaxButton"><img src="images/minimise.png" id="minTabImg" onclick="showTable3(this)" value="" height="35"/></div>
                     </div>
                     <div id="box3" class="table-responsive">
