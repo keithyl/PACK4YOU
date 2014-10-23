@@ -31,7 +31,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Username: Cheuky</a></li>
+                <li><a href="#"><a href="profile.jsp"><span class="glyphicon glyphicon-user"></span> Username: Cheuky</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
             </ul>

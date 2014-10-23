@@ -28,17 +28,6 @@
 
  
         <h2 class="h2"><center>Cheuky : Profile</center></h2>
-       
-
-        <script>
-            $(function () {
-                $("#datepicker").datepicker();
-            });
-
-            $(function () {
-                $("#datepicker2").datepicker();
-            });
-        </script>
 
         <div class="Profile">
             <br>
