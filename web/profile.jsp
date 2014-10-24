@@ -19,8 +19,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>PACK4YOU - Profile</title>      
     </head>
+<<<<<<< HEAD
         <%@include file="includes/Inspiration.jsp"%>
         <%@include file="includes/MyPackingList.jsp"%>
+=======
+    <body>
+        <%@include file="includes/profile.jsp"%>
+>>>>>>> origin/master
         <%@include file="includes/InitiateItemManager.jsp"%>
         <%@include file="includes/Home.jsp"%>
     
