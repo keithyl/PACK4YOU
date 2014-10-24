@@ -20,7 +20,7 @@
         <title>PACK4YOU - Profile</title>      
     </head>
     <body>
-        <%@include file="includes/Home.jsp"%>
+        <%@include file="includes/Profile.jsp"%>
         <%@include file="includes/InitiateItemManager.jsp"%>
         <br/>
         <br/>
@@ -34,7 +34,22 @@
             <table align="center">
                 <tr> <td><img src="images/cheuky.png" alt="" width="150" height="150" border="2"/></td><td><b>Name: Cheuky</b><br>Age:21<br>Gender: Female</td></tr>
                 <tr><td>  </td><td>  </td></tr>
-                <tr> <td colspan="2"><ol><lh><b>Essential items:</b></lh><li>Cheuky Bear</li><li>Yellow Blanket</li><li>Hair spray</li></ol></td></tr>
+                <tr> <td colspan="2">
+                        <ol>
+                            <lh><b>Essential items:</b></lh>
+                            <%
+                            ArrayList<Item> essentialList = im.retrieveEssentialList();
+                            if (essentialList.isEmpty()){
+                            out.print("<li>No items currently.</li>");
+                            }else{
+                                for(Item itm : essentialList){
+                                    out.print("<li>"+itm.getName()+"</li>");
+                                }
+                            }
+                            %>
+                        </ol>
+                    </td>
+                </tr>
             </table>
         </div>
     </body>
