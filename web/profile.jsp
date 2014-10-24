@@ -25,8 +25,12 @@
 =======
     <body>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <%@include file="includes/profile.jsp"%>
 >>>>>>> origin/master
+=======
+        <%@include file="includes/Home.jsp"%>
+>>>>>>> parent of 64c97dd... made profile tab active when profile page is selected
 =======
         <%@include file="includes/Home.jsp"%>
 >>>>>>> parent of 64c97dd... made profile tab active when profile page is selected
