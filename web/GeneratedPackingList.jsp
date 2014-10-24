@@ -42,16 +42,14 @@
         String packingListAttribute = "";
 
         ArrayList<Item> itemList = null;
-        ArrayList<Item> essentialList = null;
-
+        out.println(destination);
+        out.println(useMeList);
         if (destination != null && !destination.equalsIgnoreCase("")) {
             itemList = im.retrieve(destination);
-            essentialList = im.retrieveEssentialList();
             packingListName = destination;
             packingListAttribute = destination;
         } else if (useMeList != null && !useMeList.equalsIgnoreCase("")) {
             itemList = im.retrieve(useMeList);
-            essentialList = im.retrieveEssentialList();
             packingListName = "Shanghai Time";
             packingListAttribute = "pinkyShanghai";
         } else {
@@ -59,11 +57,9 @@
             if (openPackListDestination.equalsIgnoreCase("Shanghai Time")) {
                 packingListName = "Shanghai Time";
                 packingListAttribute = "pinkyShanghai";
-                essentialList = im.retrieveEssentialList();
             } else {
                 packingListName = openPackListDestination;
                 packingListAttribute = openPackListDestination;
-                essentialList = im.retrieveEssentialList();
             }
         }
         if(addItemToMyList != null && !addItemToMyList.equalsIgnoreCase("")){
@@ -103,19 +99,7 @@
                         <td class="col-md-3">Weight(kg)</td>
                         <td class="col-sm-1">Action</td>
                     </tr>
-            <%
-            for (Item i: essentialList){
-                String c = i.getCategory();
-
-                    %>
-                    <tr>
-                        <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
-                <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
-                <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
-                <td class="lastrow"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
-                    </tr>
                     <%
-            }
             for (Item i: itemList){
                 String c = i.getCategory();
                 if (c.equalsIgnoreCase("essentials")){
