@@ -20,7 +20,7 @@
         <title>PACK4YOU - Profile</title>      
     </head>
     <body>
-        <%@include file="includes/Home.jsp"%>
+        <%@include file="includes/profile.jsp"%>
         <%@include file="includes/InitiateItemManager.jsp"%>
         <br/>
         <br/>
