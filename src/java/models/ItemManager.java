@@ -48,7 +48,7 @@ public class ItemManager {
         
         publicLike = 856;
         
-        Item i1 = new Item("Shirts", 8, 0.5, "clothes");
+        Item i1 = new Item("Shirts", 8, 0.2, "clothes");
         Item i2 = new Item("Shorts", 4, 0.3, "clothes");
         Item i3 = new Item("Jeans", 4, 0.6, "clothes");
         Item i4 = new Item("Shoes", 2, 0.8, "clothes");
@@ -61,7 +61,7 @@ public class ItemManager {
         Item i11 = new Item("Scarf", 2, 0.3, "clothes");
         Item i12 = new Item("Mufflers", 1, 0.6, "clothes");
         Item i15 = new Item("Boarding Pass", 1, 0.1, "essentials");
-        Item i16 = new Item("Laptop", 1, 3.0, "electronics");
+        Item i16 = new Item("Laptop", 1, 1.5, "electronics");
         Item i17 = new Item("Toothbrush set", 1, 0.9, "hygiene");
 
         Item l1 = new Item("Shirts", 8, 0.3, "clothes");

@@ -12,23 +12,22 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="css/HomePage.css" rel="stylesheet" type="text/css"  media="screen" />
         <link href="css/navbar.css" rel="stylesheet" type="text/css"  media="screen" />
+        <link href="css/InspirationCSS.css" rel="stylesheet" type="text/css"  media="screen" />
         <link href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" media="screen"/>
-        <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
-     <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
+        
+        <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <link rel="stylesheet" type="text/css" href="css/publicPackingList.css" />
-        <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+       
         <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
         <script src="js/mindmup-editabletable.js"></script>
         <script src="js/numeric-input-example.js"></script>
-        <script src="js/jquery-calx-1.1.9.js"></script>
         <title>PACK4YOU - Generated Packing List</title>
     </head>       
         <br/>
+        
     <%@include file="includes/Inspiration.jsp"%>
     <%@include file="includes/MyPackingList.jsp"%>
     <%@include file="includes/InitiateItemManager.jsp"%>
@@ -88,8 +87,30 @@
                        
   
    <br/>
-
-      <input type="button" value="Press me to calculate weight!" onclick="return change(this);" />                 
+       <div id="title_bar">
+            <center>
+            <table width="75%" >
+                <tr>
+                                           
+                    <td width="35%" align="center">
+                      
+                        <img src="images/coldTemp.png" id="weather"  value="" height="50"/> 3°C to 11°C 
+                         
+                    </td>
+                
+                    <td width="25%" align="center">
+                        
+                         <input type="button" value="Calculate weight!" onclick="modify()"/>
+                        
+                    <p><td id='weightChange'>19kg</b></p> 
+                        
+                    </td>
+                   
+                    
+                </tr>
+            </table>
+            </center>               
+        </div>
    <br>
           <div class="col-xs-6">
           <h3>Essentials<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3> 
@@ -110,9 +131,9 @@
                     %>
                     <tr>
                         <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
-                <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
-                <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
-                <td class="lastrow"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                        <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
+                        <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
+                        <td class="lastrow"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
                     </tr>
                     <%
             }
@@ -122,9 +143,9 @@
                     %>
                     <tr>
                         <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
-                <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
-                <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
-                <td class="lastrow"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
+                        <td class="col-md-2"><%=i.getQuantity()%></td><input type = "hidden" name = "clothesqty1" value = "<%=i.getQuantity()%>">
+                        <td class="col-md-3"><%=i.getTotalWeight()%></td><input type = "hidden" name = "clothestotalweight1" value = "<%=i.getTotalWeight()%>">
+                        <td class="lastrow"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
                     </tr>
                     <%
                 }
@@ -133,8 +154,8 @@
                     %>
                      <tr>
                     <td class="col-md-1">TOTAL</strong></td>
-                    <td class="col-md-2"><strong>34</strong></td>
-                    <td class="col-md-3"><strong>14.0</strong></td>
+                    <td class="col-md-2"><strong></strong></td>
+                    <td class="col-md-3"><strong></strong></td>
                     <td></td>
                 </tr>
                 </table>
@@ -150,10 +171,10 @@
            
      
           <tr>
-                  <td class="col-md-1">Item</td>
-                  <td class="col-md-2">Quantity</td>
-                  <td class="col-md-3">Weight(kg)</td>
-                  <td class="col-sm-1">Action</td>
+                <td class="col-md-1">Item</td>
+                <td class="col-md-2">Quantity</td>
+                <td class="col-md-3">Weight(kg)</td>
+                <td class="col-sm-1">Action</td>
           </tr>
            
         <% 
@@ -292,9 +313,13 @@
         </div>
         </div>
         </form>
-     
+
         <script>
-  
+            function modify(){
+            var kilo = document.getElementById('weightChange').innerHTML = '24kg';
+            var result = kilo.fontcolor("green");
+            
+        }
 function change( el )
 {
     if ( el.value === "Current total weight is 19kg" )
