@@ -1,0 +1,35 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 26, 2014, 10:05:07 PM
+    Author     : keithleng
+*/
+.btn-custom {
+  background-color: #005599;
+  border-color: #005599;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+  background-color: #004780;
+  border-color: #003966;
+}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+  background-color: #005599;
+  border-color: #005599;
+}

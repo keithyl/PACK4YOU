@@ -39,7 +39,7 @@ public class GeneratePackingListServlet extends HttpServlet {
             
             if(destination.equalsIgnoreCase("Shanghai")){               
                 request.setAttribute("Destination","Shanghai");
-                System.out.println("test");
+               
                 //RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
                 RequestDispatcher rd = request.getRequestDispatcher("GeneratedPackingList.jsp");
                 rd.forward(request, response);

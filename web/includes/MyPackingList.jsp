@@ -26,7 +26,7 @@
 
             <ul class="nav navbar-nav">
                 <li><a href="Home.jsp"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                <li><a href="MyPackingLists.jsp"><span class="glyphicon glyphicon-list-alt"></span> My Packing Lists</a></li>
+                <li class="active"><a href="MyPackingLists.jsp"><span class="glyphicon glyphicon-list-alt"></span> My Packing Lists</a></li>
                 <li><a href="Inspiration.jsp"><img src="images/lightbulb.png"> Inspiration</a></li>
             </ul>
 

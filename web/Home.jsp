@@ -18,6 +18,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
         <title>PACK4YOU - Home</title>      
     </head>
 
@@ -57,7 +58,7 @@
                     <span class="glyphicon glyphicon-briefcase"  style="font-size: 20px"></span>
                     <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)">  
                 </label>
-                <input type="submit" value="PACK4ME">
+                <input class="btn-custom" type="submit" value="PACK4ME">
                   <font color="red"><%=errorMsg%></font>
             </form>
         </div>

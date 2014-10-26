@@ -84,8 +84,6 @@
               
     </form> 
    
-                       
-  
    <br/>
        <div id="title_bar">
             <center>
@@ -125,6 +123,8 @@
                         <td class="col-sm-1">Action</td>
                     </tr>
             <%
+            int quantity = 0;
+            double weight = 0;
             for (Item i: essentialList){
                 String c = i.getCategory();
 
@@ -139,7 +139,10 @@
             }
             for (Item i: itemList){
                 String c = i.getCategory();
+                 
                 if (c.equalsIgnoreCase("essentials")){
+                    quantity = quantity+=i.getQuantity();
+                    weight = weight+=i.getTotalWeight();
                     %>
                     <tr>
                         <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
@@ -148,14 +151,16 @@
                         <td class="lastrow"><button type="button"  class="removebutton" title="Remove this row">X</button></td>
                     </tr>
                     <%
+                   
+                   
                 }
             }
             
                     %>
                      <tr>
                     <td class="col-md-1">TOTAL</strong></td>
-                    <td class="col-md-2"><strong></strong></td>
-                    <td class="col-md-3"><strong></strong></td>
+                    <td class="col-md-2"><%=quantity%><strong></strong></td>
+                    <td class="col-md-3"><%=weight%><strong></strong></td>
                     <td></td>
                 </tr>
                 </table>
@@ -182,6 +187,8 @@
            for (Item i: itemList){
                String c = i.getCategory();
              if (c.equalsIgnoreCase("clothes")){
+                  quantity = quantity+=i.getQuantity();
+                    weight = weight+=i.getTotalWeight();
         %>    
             <tr>
                 <input type = "hidden" name = "dest" value="<% destination = (String) request.getAttribute("Destination");%>">
@@ -195,8 +202,8 @@
            }%>
              <tr>
                     <td class="col-md-1">TOTAL</strong></td>
-                    <td class="col-md-2"><strong>34</strong></td>
-                    <td class="col-md-3"><strong>14.0</strong></td>
+                    <td class="col-md-2"><strong></strong></td>
+                    <td class="col-md-3"><strong></strong></td>
                     <td></td>
                 </tr>
         </table>
@@ -232,8 +239,8 @@
            }%>
              <tr>
                     <td><strong>TOTAL</strong></td>
-                    <td>2</td>
-                    <td>0.40</td>
+                    <td></td>
+                    <td></td>
                     <td></td>                   
                 </tr>
         </table>
@@ -266,8 +273,8 @@
            }%>
              <tr>
                     <td><strong>TOTAL</strong></td>
-                    <td>1</td>
-                    <td>0.70</td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     
                 </tr>
@@ -304,8 +311,8 @@
            }%>
             <tr>
                     <td><strong>TOTAL</strong></td>
-                    <td><strong>1</td>
-                    <td><strong>0.10</td>
+                    <td><strong></td>
+                    <td><strong></td>
                     <td></td>
             </tr>
         </table>
