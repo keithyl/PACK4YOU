@@ -214,7 +214,7 @@
         <div class="col-xs-6">
             <h3>Electronics <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
        <div class="table-responsive">
-         <table class="CSSTableGenerator">
+         <table class="CSSTableGenerator" id="electronics">
                
           <tr>
                   <td class="col-md-1">Item</td>
@@ -343,7 +343,7 @@ function change( el )
         });
         
 function myFunction() {
-   var table = document.getElementById("CSSTableGenerator");
+   var table = document.getElementById("electronics");
             var rowCount = table.rows.length;
             var row = table.insertRow(rowCount - 1);
             var cell1 = row.insertCell(0);

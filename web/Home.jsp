@@ -58,7 +58,7 @@
                     <span class="glyphicon glyphicon-briefcase"  style="font-size: 20px"></span>
                     <input type="text"  name="BaggageAllowance" placeholder="BaggageAllowance(kg)">  
                 </label>
-                <input class="btn-custom" type="submit" value="PACK4ME">
+                <input class="myButton" type="submit" value="PACK4ME">
                   <font color="red"><%=errorMsg%></font>
             </form>
         </div>
