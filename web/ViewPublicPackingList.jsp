@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <link rel="stylesheet" type="text/css" href="css/publicPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="js/mindmup-editabletable.js"></script>
+        <script src="jsp/mindmup-editabletable.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript">
             function jumpToAnchor(target) {

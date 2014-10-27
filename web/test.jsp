@@ -13,8 +13,8 @@
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
     
 		
-    <script src="js/mindmup-editabletable.js"></script>
-    <script src="js/numeric-input-example.js"></script>
+    <script src="jsp/mindmup-editabletable.js"></script>
+    <script src="jsp/numeric-input-example.js"></script>
   </head>
   <body>
 

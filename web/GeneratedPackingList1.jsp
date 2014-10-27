@@ -21,8 +21,8 @@
         <link href="css/navbar.css" rel="stylesheet" type="text/css"  media="screen" />
         <link href="css/ui-lightness/jquery-ui-1.9.1.custom.min.css" rel="stylesheet" type="text/css" media="screen"/>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script src="js/mindmup-editabletable.js"></script>
-        <script src="js/numeric-input-example.js"></script>
+        <script src="jsp/mindmup-editabletable.js"></script>
+        <script src="jsp/numeric-input-example.js"></script>
 
         <link href="css/InspirationCSS.css" rel="stylesheet" type="text/css"  media="screen" />
 

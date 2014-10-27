@@ -22,8 +22,8 @@
         <link rel="stylesheet" type="text/css" href="css/GeneratedPackingList.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script src="js/mindmup-editabletable.js"></script>
-        <script src="js/numeric-input-example.js"></script>
+        <script src="jsp/mindmup-editabletable.js"></script>
+        <script src="jsp/numeric-input-example.js"></script>
         <title>PACK4YOU - Generated Packing List</title>
     </head>       
         <br/>
