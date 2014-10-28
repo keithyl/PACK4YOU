@@ -25,13 +25,19 @@ h1{
 .HomeForm {
     background: url(../images/meta_bg_wht.png) 0 0 repeat;
     background-image: url(../images/meta_bg_wht.png);
-    width: 85%;
+    width: 80%;
     padding: 18px 18px 12px 16px;
     border: 1px solid #fff;
     border-radius: 4px;
     margin: 0 auto;
     opacity: 0.8;
     position: relative; top: 200px;
+}
+
+.h1{
+    position: relative;
+    top:175px;
+    color: white;
 }
 
 .first{

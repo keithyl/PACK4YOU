@@ -30,7 +30,7 @@
         <br/>
 
  
-        <h2 class="h2"><center>Generate your packing list</center></h2>
+        
        
 
         <script>
@@ -42,8 +42,9 @@
                 $("#datepicker2").datepicker();
             });
         </script>
-
+        <h1 class="h1"><center>Generate your packing list</center></h1>
         <div class="HomeForm">
+            
             <form action="GeneratePackingListServlet" method="post">
                 <label id="first">
                     <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
