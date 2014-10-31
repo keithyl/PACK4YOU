@@ -4,6 +4,6 @@
             <span class="glyphicon glyphicon-plane"  style="font-size: 20px"></span>
             <input type="text" name="destination" placeholder="Destination"><br>
         </label>
-        <input type="submit" value="Inspire me!">
+        <input class="BlueButton" type="submit" value="Inspire me!">
     </form>
 </div>

@@ -75,14 +75,9 @@
     %>
       
     <br>
-    
-    <h1><center><%=packingListName%></center></h1>
-    <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
-        <input type="hidden" name ="packingListName" value = "<%=packingListName%>"/>
-        <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/>
-        <h2><center><input class="BlueButton" align="right" type="submit" value="Save"> Generated Packing List</center></h2><input type="hidden" name="packingList" value="packingList">
-              
-    </form> 
+    <br>
+    <h1><center>Generated Packing List - <%=packingListName%></center></h1>
+     
    
    <br/>
        <div id="title_bar">
@@ -90,20 +85,27 @@
             <table width="75%" >
                 <tr>
                                            
-                    <td width="35%" align="center">
+                    <td width="25%" align="center">
                       
                         <img src="images/coldTemp.png" id="weather"  value="" height="50"/> 3°C to 11°C 
                          
                     </td>
                 
+                    <td width="50%" align="center">
+                        
+                        <img src="images/WeightLimit.png" id="weightLimit"  value="" height="50"/><input type="button" class="BlueButton" value="Recalculate!" onclick="modify()"/>  
+                        <div id='weightChange'><font color="Green">Total: 19 kg</font></div>
+                                            
+                    </td>
                     <td width="25%" align="center">
-                        
-                         <input type="button" value="Calculate weight!" onclick="modify()"/>
-                        
-                    <p><td id='weightChange'>19kg</b></p> 
+                    <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
+                        <input type="hidden" name ="packingListName" value = "<%=packingListName%>"/>
+                        <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/>
+                        <h2><center><input class="BlueButton" align="right" type="submit" value="Save"></center></h2><input type="hidden" name="packingList" value="packingList">
+                        <p/>
+                    </form>
                         
                     </td>
-                   
                     
                 </tr>
             </table>
@@ -323,9 +325,7 @@
 
         <script>
             function modify(){
-            var kilo = document.getElementById('weightChange').innerHTML = '24kg';
-            var result = kilo.fontcolor("green");
-            
+            document.getElementById('weightChange').innerHTML = "<font color='red'>Total baggage: 24kg</font>";
         }
 function change( el )
 {

@@ -27,7 +27,7 @@
         %>
         <div class="InspirationForm">
             <h1><div class="InspirationTitle">
-                INSPIRATION
+                Inspiration
             </div></h1>
             <p/>
             <form action="ViewInspirations.jsp">
@@ -36,7 +36,7 @@
                     <input type="text" name="destination" placeholder="Destination" required width="100"><br>
                 </label>
                 <br/>
-                <input type="submit" value="Inspire me!">
+                <input class="BlueButton" type="submit" value="Inspire me!">
             </form>
             <br/>
             <div class="ErrorMessage">

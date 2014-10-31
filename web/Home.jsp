@@ -42,7 +42,7 @@
                 $("#datepicker2").datepicker();
             });
         </script>
-        <h1 class="h1"><center>Generate your packing list</center></h1>
+        <h1 class="h1"><center>Generate a packing list</center></h1>
         <div class="HomeForm">
             
             <form action="GeneratePackingListServlet" method="post">
