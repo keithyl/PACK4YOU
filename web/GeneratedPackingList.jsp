@@ -118,7 +118,7 @@
         </div>
    <br>
           <div class="col-xs-6">
-          <h3>Essentials<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3> 
+          <h3>Essentials &nbsp</h3> 
            <div class="table-responsive">
               
              <table class="CSSTableGenerator">
@@ -165,7 +165,7 @@
             
                     %>
                      <tr>
-                    <td class="col-md-1">TOTAL</strong></td>
+                    <td class="col-md-1"><strong>TOTAL   <img type="image" src="images/add.png" height="35" width="35" /></strong></td>
                     <td class="col-md-2"><%=quantity%><strong></strong></td>
                     <td class="col-md-3"><%=weight%><strong></strong></td>
                     <td></td>
@@ -176,10 +176,10 @@
         
         
         <div class="col-xs-6">
-            <h3>Clothing <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
+            <h3>Clothing &nbsp</a></h3>
           <div class="table-responsive">
               <div class="CSSTableGenerator">
-              <table id="CSSTableGenerator">
+              <table class="CSSTableGenerator" id="clothing">
            
      
           <tr>
@@ -208,7 +208,7 @@
             <%}
            }%>
              <tr>
-                    <td class="col-md-1">TOTAL</strong></td>
+                    <td class="col-md-1"><strong>TOTAL  <img type="image" src="images/add.png" height="35" width="35" onclick="myFunction()"/></strong></td>
                     <td class="col-md-2"><strong></strong></td>
                     <td class="col-md-3"><strong></strong></td>
                     <td></td>
@@ -219,9 +219,9 @@
                
         
         <div class="col-xs-6">
-            <h3>Electronics <img src="images/add.png" height="25" width="25" onclick="myFunction()"></a></h3>
+            <h3>Electronics </a></h3>
        <div class="table-responsive">
-         <table class="CSSTableGenerator" id="electronics">
+         <table class="CSSTableGenerator">
                
           <tr>
                   <td class="col-md-1">Item</td>
@@ -245,7 +245,7 @@
     <%}
            }%>
              <tr>
-                    <td><strong>TOTAL</strong></td>
+                    <td><strong>TOTAL  <img type="image" src="images/add.png" height="35" width="35" /></strong></td>
                     <td></td>
                     <td></td>
                     <td></td>                   
@@ -255,7 +255,7 @@
         </div>
        
         <div class="col-xs-6">
-        <h3>Hygiene<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
+        <h3>Hygiene</h3>
         <div class="CSSTableGenerator">
         <table>
             <tr>
@@ -279,7 +279,7 @@
     <%}
            }%>
              <tr>
-                    <td><strong>TOTAL</strong></td>
+                    <td><strong>TOTAL  <img type="image" src="images/add.png" height="35" width="35" /></strong></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -290,7 +290,7 @@
         </div>
         
         <div class="col-xs-6">
-        <h3>Medication<input type="image" src="images/add.png" height="25" width="25" onclick="myFunction()"/></h3>
+        <h3>Medication</h3>
         <div class="table-responsive">
         <div class="CSSTableGenerator">
 
@@ -317,7 +317,7 @@
     <%}
            }%>
             <tr>
-                    <td><strong>TOTAL</strong></td>
+                    <td><strong>TOTAL  <img type="image" src="images/add.png" height="35" width="35" /></strong></td>
                     <td><strong></td>
                     <td><strong></td>
                     <td></td>
@@ -348,7 +348,7 @@ function change( el )
         });
         
 function myFunction() {
-   var table = document.getElementById("electronics");
+   var table = document.getElementById("clothing");
             var rowCount = table.rows.length;
             var row = table.insertRow(rowCount - 1);
             var cell1 = row.insertCell(0);
