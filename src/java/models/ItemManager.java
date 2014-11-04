@@ -241,11 +241,12 @@ public class ItemManager {
 
     public String getWeather(String country) {
         if (country.equals("Shanghai")) {
-            return "-5 to 3 degrees Celsius";
+            return "-5;3";
         } else if (country.equals("Melbourne")) {
-            return "25 to 32 degrees Celsius";
+            return "25;32";
+        }else{
+            return "3;11";
         }
-        return null;
     }
 
     public void add(String country, String name, int quantity, double weight, String category) {

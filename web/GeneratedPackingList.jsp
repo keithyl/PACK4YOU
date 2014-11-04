@@ -65,6 +65,8 @@
                 essentialList = im.retrieveEssentialList();
             }
         }
+        String weather = im.getWeather(packingListAttribute);
+        String[] deg = weather.split(";");
         if(addItemToMyList != null && !addItemToMyList.equalsIgnoreCase("")){
             itemList.add(new Item("Passport", 1, 0.1, "essentials"));
             //im.updatePackingList("Shanghai", itemList);
@@ -87,7 +89,7 @@
                                            
                     <td width="25%" align="center">
                       
-                        <img src="images/coldTemp.png" id="weather"  value="" height="50"/> 3°C to 11°C 
+                        <img src="images/coldTemp.png" id="weather"  value="" height="50"/> <%=deg[0]%>°C to <%=deg[1]%>°C 
                          
                     </td>
                 
@@ -325,7 +327,7 @@
 
         <script>
             function modify(){
-            document.getElementById('weightChange').innerHTML = "<font color='red'>Total baggage: 24kg</font>";
+            document.getElementById('weightChange').innerHTML = "<font color='red'>Total: 24kg</font>";
         }
 function change( el )
 {
