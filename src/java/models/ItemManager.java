@@ -57,12 +57,12 @@ public class ItemManager {
         Item i7 = new Item("Slippers", 1, 0.3, "clothes");
         Item i8 = new Item("Panadol box", 1, 0.1, "medication");
         Item i9 = new Item("Toiletries box", 1, 0.7, "hygiene");
-        Item i10 = new Item("winter jacket", 2, 1.9, "clothes");
+        Item i10 = new Item("Winter Jacket", 1, 1.6, "clothes");
         Item i11 = new Item("Scarf", 2, 0.3, "clothes");
         Item i12 = new Item("Mufflers", 1, 0.6, "clothes");
         Item i15 = new Item("Boarding Pass", 1, 0.1, "essentials");
         Item i16 = new Item("Laptop", 1, 1.5, "electronics");
-        Item i17 = new Item("Toothbrush set", 1, 0.9, "hygiene");
+        Item i17 = new Item("Toothbrush set", 1, 0.5, "hygiene");
 
         Item l1 = new Item("Shirts", 8, 0.3, "clothes");
         Item l2 = new Item("Shorts", 4, 0.3, "clothes");
@@ -128,6 +128,23 @@ public class ItemManager {
         cheukyShanghai2.add(i11);
         cheukyShanghai2.add(i12);
         cheukyShanghai2.add(i14);
+        
+        Item l14 = new Item("Windbreaker", 1, 0.4, "clothes");
+        Item l15 = new Item("Hats", 1, 0.2, "clothes");
+        //Item l16 = new Item("Scarf", 1, 0.1, "clothes");
+        Item l17 = new Item("Gloves", 1, 0.1, "clothes");
+        Item l18 = new Item("Jacket", 1, 0.5, "clothes");
+        //Item l19 = new Item("Mufflers", 1, 0.2, "clothes");
+        Item l20 = new Item("Leggings", 2, 0.3, "clothes");
+        Item l21 = new Item("Boots", 1, 0.8, "clothes");
+        //Item l22 = new Item("Boarding Pass", 1, 0.1, "clothes");
+        cheukyShanghai2.add(l14);
+        cheukyShanghai2.add(l15);
+        cheukyShanghai2.add(l17);
+        cheukyShanghai2.add(l18);
+        //cheukyShanghai2.add(l19);
+        cheukyShanghai2.add(l20);
+        cheukyShanghai2.add(l21);
         
         itemList2.add(l1);
         itemList2.add(l2);

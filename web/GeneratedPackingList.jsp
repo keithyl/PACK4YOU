@@ -95,15 +95,18 @@
                 
                     <td width="50%" align="center">
                         
-                        <img src="images/WeightLimit.png" id="weightLimit"  value="" height="50"/><input type="button" class="BlueButton" value="Recalculate!" onclick="modify()"/>  
-                        <div id='weightChange'><font color="Green">Total: 19 kg</font></div>
+                        <img src="images/WeightLimit.png" id="weightLimit"  value="" height="50"/>  
+                        <span id='weightChange'><font color="Green">Total: 19 kg</font></span> &nbsp;
+                        <input type="button" class="BlueButton" value="Recalculate!" onclick="modify()"/>
                                             
                     </td>
                     <td width="25%" align="center">
+                          
                     <form id="savePackingListForm" name="savePackingListForm" method="post" action="SavePackingList" >
+                        <img src="images/save.png" id="save"  value="" height="50"/>&nbsp;
                         <input type="hidden" name ="packingListName" value = "<%=packingListName%>"/>
                         <input type="hidden" name ="packingListAttribute" value = "<%=packingListAttribute%>"/>
-                        <h2><center><input class="BlueButton" align="right" type="submit" value="Save"></center></h2><input type="hidden" name="packingList" value="packingList">
+                        <input class="BlueButton" align="right" type="submit" value="Save"><input type="hidden" name="packingList" value="packingList">
                         <p/>
                     </form>
                         
