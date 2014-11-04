@@ -116,7 +116,9 @@
             </table>
             </center>               
         </div>
-   <br>
+   <br>     
+   <center>
+          <div class="container">
           <div class="col-xs-6">
           <h3>Essentials &nbsp</h3> 
            <div class="table-responsive">
@@ -326,6 +328,8 @@
         </div>
         </div>
         </div>
+          </div>
+   </center>
         </form>
 
         <script>
