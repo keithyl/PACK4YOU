@@ -119,9 +119,12 @@
    <br>     
    <center>
           <div class="container">
-          <div class="col-xs-6">
-          <h3>Essentials &nbsp</h3> 
-           <div class="table-responsive">
+          <div id="widnow" class="col-xs-6 col-centered">
+               <div id="title_bar">
+                   <div id="category">Essentials&nbsp&nbsp&nbsp;</div>
+                   <div id="minMaxButton"><img src="images/minimise.png" id="minTabImg" onclick="showTable1(this)" value="" height="35"/></div>
+               </div>
+           <div id="box1" class="table-responsive">
               
              <table class="CSSTableGenerator">
                
@@ -132,8 +135,7 @@
                         <td class="col-sm-1">Action</td>
                     </tr>
             <%
-            int quantity = 0;
-            double weight = 0;
+            
             for (Item i: essentialList){
                 String c = i.getCategory();
 
@@ -150,8 +152,7 @@
                 String c = i.getCategory();
                  
                 if (c.equalsIgnoreCase("essentials")){
-                    quantity = quantity+=i.getQuantity();
-                    weight = weight+=i.getTotalWeight();
+                  
                     %>
                     <tr>
                         <td class="col-md-1"><%=i.getName()%></td><input type = "hidden" name = "clothes1" value = "<%=i.getName()%>">
@@ -168,18 +169,22 @@
                     %>
                      <tr>
                     <td class="col-md-1"><strong>TOTAL   <img type="image" src="images/add.png" height="35" width="35" /></strong></td>
-                    <td class="col-md-2"><%=quantity%><strong></strong></td>
-                    <td class="col-md-3"><%=weight%><strong></strong></td>
+                    <td class="col-md-2"><strong></strong></td>
+                    <td class="col-md-3"><strong></strong></td>
                     <td></td>
                 </tr>
                 </table>
             </div>
         </div>
+          
         
         
-        <div class="col-xs-6">
-            <h3>Clothing &nbsp</a></h3>
-          <div class="table-responsive">
+        <div id="widnow" class="col-xs-6 col-centered">
+            <div id="title_bar">
+                <div id="category">Clothing&nbsp&nbsp;</div>
+                <div id="minMaxButton"><img src="images/minimise.png" id="minTabImg" onclick="showTable2(this)" value="" height="35"/></div>
+            </div>
+            <div id="box2" class="table-responsive">
               <div class="CSSTableGenerator">
               <table class="CSSTableGenerator" id="clothing">
            
@@ -196,8 +201,7 @@
            for (Item i: itemList){
                String c = i.getCategory();
              if (c.equalsIgnoreCase("clothes")){
-                  quantity = quantity+=i.getQuantity();
-                    weight = weight+=i.getTotalWeight();
+                  
         %>    
             <tr>
                 <input type = "hidden" name = "dest" value="<% destination = (String) request.getAttribute("Destination");%>">
@@ -220,9 +224,12 @@
         </div>
                
         
-        <div class="col-xs-6">
-            <h3>Electronics </a></h3>
-       <div class="table-responsive">
+        <div id="widnow" class="col-xs-6 col-centered">
+            <div id="title_bar">
+                <div id="category">Electronics&nbsp&nbsp;</div>
+                <div id="minMaxButton"><img src="images/minimise.png" id="minTabImg" onclick="showTable3(this)" value="" height="35"/></div>
+            </div>
+       <div id = "box3" class="table-responsive">
          <table class="CSSTableGenerator">
                
           <tr>
@@ -256,9 +263,12 @@
         </div>
         </div>
        
-        <div class="col-xs-6">
-        <h3>Hygiene</h3>
-        <div class="CSSTableGenerator">
+        <div id="widnow" class="col-xs-6 col-centered">
+             <div id="title_bar">
+                <div id="category">Hygiene&nbsp&nbsp;</div>
+                <div id="minMaxButton"><img src="images/minimise.png" id="minTabImg" onclick="showTable4(this)" value="" height="35"/></div>
+            </div>
+        <div id="box4" class="CSSTableGenerator">
         <table>
             <tr>
                      <td class="col-md-1">Item</td>
@@ -291,13 +301,13 @@
         </div>
         </div>
         
-        <div class="col-xs-6">
-        <h3>Medication</h3>
-        <div class="table-responsive">
-        <div class="CSSTableGenerator">
-
-          
-        <table class="Medication">
+        <div id="widnow" class="col-xs-6 col-centered">
+            <div id="title_bar">
+                <div id="category">Medication&nbsp&nbsp;</div>
+                <div id="minMaxButton"><img src="images/minimise.png" id="minTabImg" onclick="showTable5(this)" value="" height="35"/></div>
+            </div>
+        <div id="box5" class="table-responsive">
+        <table class="CSSTableGenerator">
             <tr>
                     <td class="col-md-1">Item</td>
                     <td class="col-md-2">Quantity</td>
@@ -350,6 +360,52 @@ function change( el )
           $(this).closest('tr').remove();
           numeric-input-example();
         });
+         function showTable1(img) 
+        {
+            if(img.src.match("images/minimise.png")){
+                img.src = "images/maximise.png";
+            }else {
+               img.src = "images/minimise.png";
+           }
+           $("#box1").slideToggle();
+        }
+        function showTable2(img) 
+        {
+            if(img.src.match("images/minimise.png")){
+                img.src = "images/maximise.png";
+            }else {
+               img.src = "images/minimise.png";
+           }
+           $("#box2").slideToggle();
+        }
+        function showTable3(img) 
+        {
+            if(img.src.match("images/minimise.png")){
+                img.src = "images/maximise.png";
+            }else {
+               img.src = "images/minimise.png";
+           }
+           $("#box3").slideToggle();
+        }
+        function showTable4(img) 
+        {
+            if(img.src.match("images/minimise.png")){
+                img.src = "images/maximise.png";
+            }else {
+               img.src = "images/minimise.png";
+           }
+           $("#box4").slideToggle();
+        }
+
+        function showTable5(img) 
+        {
+            if(img.src.match("images/minimise.png")){
+                img.src = "images/maximise.png";
+            }else {
+               img.src = "images/minimise.png";
+           }
+           $("#box5").slideToggle();
+        }
         
 function myFunction() {
    var table = document.getElementById("clothing");
